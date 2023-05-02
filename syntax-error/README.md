@@ -18,4 +18,4 @@
 5. Commit your changes `git commit -a -m "Add some feature"`
 6. Push to the branch `git push origin feature-name`
 7. Create a new pull request
-**Congratulations on your first Pull Request in syntax-error! 🎉**
+**Congratulations on your first Pull Request in syntax-erreur! 🎉**
