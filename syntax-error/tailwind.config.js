@@ -6,7 +6,6 @@ export default {
   ],
   theme: {
     extend: {
-
       fontFamily: {
         Montserrat: ['Montserrat', 'sans-serif'],
         Kanit: ['Kanit', 'sans-serif'],

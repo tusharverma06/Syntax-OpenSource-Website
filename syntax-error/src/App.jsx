@@ -1,9 +1,12 @@
-import {motion} from 'framer-motion'
+import Home from './components/Home'
+import Marquee from './components/Marquee'
+
 function App() {
   return (
-    <>
-      Hello world
-    </>
+    <div className='text-white'>
+      <Home />
+      <Marquee/>
+    </div>
   )
 }
 
