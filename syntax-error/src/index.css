@@ -4,9 +4,18 @@
 @tailwind components;
 @tailwind utilities;
 
+body{
+  background-image: url('./assets/images/BackgroundImg.svg');
+  background-size: cover;
+}
 .gradient-text {
   background: -webkit-linear-gradient(#c51498, #3c0bb9);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+.swiper-button-next::after,
+.swiper-button-prev::after {
+    font-size: 80px;
+    color: #fff;
 }
