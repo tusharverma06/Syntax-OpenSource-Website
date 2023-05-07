@@ -4,6 +4,7 @@ import Project from './components/Project'
 import Home from './components/Home'
 import Marquee from './components/Marquee'
 import { useEffect } from 'react'
+import Projectandabout from './components/Projectandabout'
 
 function App() {
   useEffect(()=>{
@@ -21,6 +22,7 @@ function App() {
   return (
     <div className='text-white'>
       <Home />
+      <Projectandabout />
       <div className='relative'>
         {/* White Line */}
         <div className='line w-0 border-[4px] border-solid border-white h-screen -z-10 sticky mx-auto top-0 sm:left-[50%]'>
