@@ -10,14 +10,17 @@ body{
 }
 
 .gradient-text{
-  transition: 1s ease-in-out;
+  transition-duration: 1s;
+  transition-property: all;
+  transform-style: preserve-3d;
+  transition-delay:1s
 }
 .gradient-text:hover {
-  background: -webkit-linear-gradient(#c51498, #3c0bb9);
-  background-clip: text;
+  background: linear-gradient(90deg, #364E9D -1.03%, #794897 53.5%, #DB3F8F 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  background-color: #0000;
+  background-clip: text;
+
 }
 .swiper-button-next::after,
 .swiper-button-prev::after {
