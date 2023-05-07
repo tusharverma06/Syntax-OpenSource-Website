@@ -8,20 +8,20 @@ const Carousel = () => {
             id: 1,
             title: 'THE WEB APP',
             description: 'lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem',
-            image: `${Icon}`            
+            image: `${Icon}`
         },
         {
             id: 2,
             title: 'REVOLUTIONARY',
             description: 'lotren n njn jnfkjn kjnkjnkfj lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem',
-            image: `${Icon}`            
+            image: `${Icon}`
 
         },
         {
             id: 3,
             title: 'HELOO 3',
             description: 'lotren n njn jnfkjn kjnkjnkfj lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem',
-            image: `${Icon}`            
+            image: `${Icon}`
 
         },
     ];
@@ -45,14 +45,16 @@ const Carousel = () => {
     return (
         <div className="flex flex-col items-center justify-center" >
             <div className="w-[1000px] mx-auto flex items-center justify-between ">
-                <button
-                    className="w-8 h-8 text-[100px] font-extrabold text-center flex items-center justify-center bg-none p-16"
-                    onClick={prevItem}
-                >
-                    &lt;
-                </button>
+                <div className="flex items-start justify-center h-72">
+                    <button
+                        className="w-8 h-8 text-[80px] font-extrabold text-center flex items-center justify-center bg-none p-12"
+                        onClick={prevItem}
+                    >
+                        &lt;
+                    </button>
+                </div>
 
-                <div className="w-[90%] mx-auto" >
+                <div className="w-[100%] mx-auto" >
                     <div className="relative h-[600px] w-[900px] rounded-lg overflow-hidden">
                         {items.map((item, index) => (
                             <div
@@ -84,13 +86,15 @@ const Carousel = () => {
                         ))}
                     </div>
                 </div>
+                <div className="flex items-start justify-center h-72">
 
-                <button
-                    className="w-8 h-8 text-[100px] font-extrabold text-center flex items-center justify-center bg-none p-16"
-                    onClick={nextItem}
-                >
-                    &gt;
-                </button>
+                    <button
+                        className="w-8 h-8 text-[80px] font-extrabold text-center flex items-center justify-center bg-none p-12"
+                        onClick={nextItem}
+                    >
+                        &gt;
+                    </button>
+                </div>
             </div>
         </div>
     );

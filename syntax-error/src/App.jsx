@@ -1,5 +1,5 @@
 import About from './components/About'
-import {motion} from 'framer-motion'
+import { motion } from 'framer-motion'
 import Project from './components/Project'
 import Home from './components/Home'
 import Marquee from './components/Marquee'
@@ -7,6 +7,18 @@ import { useEffect } from 'react'
 import Contactus from './components/Contactus'
 
 function App() {
+  useEffect(()=>{
+    window.addEventListener("scroll", function() {
+      const myDiv = document.querySelector(".line");
+      const position = myDiv.getBoundingClientRect().top;
+      const screenHeight = window.innerHeight;
+    
+      if (position < screenHeight - 100) {
+        myDiv.classList.add("show");
+      }
+    });  
+
+  },[window.innerHeight])
   return (
     <div className='text-white'>
       <Home />

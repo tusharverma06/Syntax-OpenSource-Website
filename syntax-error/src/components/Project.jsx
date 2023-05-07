@@ -26,7 +26,7 @@ const Project = () => {
         <img src={HomePlanet} alt="" className='w-[1041px] h-[1081px]  block mx-auto ' />
       </div> */}
 
-      <div className="w-[80%] mx-auto absolute overflow-hidden" style={{ left: `calc(50% - 1357.76px/2 - 2.12px)`, top: '98px' }}>
+      <div className="max-w-[1215px] flex items-center justify-center mx-auto absolute overflow-hidden w-full" style={{ left: `calc(50% - 1357.76px/2 - 2.12px)`, top: '98px' }}>
       <Carousel/>
 
         {/* <Swiper
