@@ -8,7 +8,7 @@ const Home = () => {
   return (
     <Element name="Home" className='relative flex flex-col items-center justify-center h-screen bg-center bg-cover'> 
     <NavBar/>
-    <img src={homePlanet} alt="homeplanet"  className='absolute -bottom-2/4 lg:-bottom-[90%] '/>
+      <img src={homePlanet} alt="homeplanet"  className='absolute -bottom-1/3 lg:-bottom-[90%] '/>
       <img src={earth} alt="homeplanet"  className='absolute left-10 top-1/2 '/>
       <img src={moon} alt="homeplanet"  className='absolute right-10 lg:right-16 top-1/2 '/>
       <div className='absolute gradient-text hover:bg-black hover:transition hover:border-none p-2 text-4xl uppercase cursor-default border-white  lg:text-8xl lg:p-4 text-white font-Kanit border-[10px] bottom-72 font-bold'>

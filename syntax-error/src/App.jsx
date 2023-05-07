@@ -7,6 +7,7 @@ import { useEffect } from 'react'
 import Contactus from './components/Pages/Contactus'
 import Projectandabout from './components/Project/Projectandabout'
 import Contributors from './components/Pages/Contributors'
+import Contactusdiv from './components/Pages/Contactusdiv'
 
 function App() {
   useEffect(()=>{
@@ -25,13 +26,14 @@ function App() {
     <div className='text-white'>
       <Home />
       <Projectandabout />
-      <div className='relative'>
+      <div >
         {/* White Line */}
         <div className='line w-0 border-[4px] border-solid border-white h-screen -z-10 sticky mx-auto top-0 sm:left-[50%]'>
         </div>
         <Project />
         <About />
         <Contributors />
+        <Contactusdiv/>
         <Contactus/>
       </div>
       <Marquee />
