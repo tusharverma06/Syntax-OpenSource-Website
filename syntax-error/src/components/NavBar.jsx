@@ -31,7 +31,7 @@ const NavBar = () => {
 
       <div className={`space-x-7  text-xl  flex flex-col lg:items-center justify-center lg:justify-evenly gap-5 absolute bg-white  bg-opacity-5  backdrop-blur-lg  lg:bg-none lg:bg-opacity-0 lg:backdrop-blur-none lg:relative  lg:flex lg:p-4 lg:rounded-md top-0 right-0 w-9/12   h-screen  z-40 lg:flex-row lg:h-fit   ${showMediaIcons ? "hidden" : "block"}`}>
 
-        <GiCrossedBones className='absolute block right-4 top-10 Cross lg:hidden text-white' onClick={() => handleToggle()} />
+        <GiCrossedBones className='absolute block text-white right-4 top-10 Cross lg:hidden' onClick={() => handleToggle()} />
         <Link activeClass="active"
           to="About"
           spy={true}

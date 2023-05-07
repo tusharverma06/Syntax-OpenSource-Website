@@ -30,3 +30,15 @@ body{
 .line.show {
   display: block;
 }
+/* .marqueediv {
+  animation: marquee1 8s linear infinite;
+}
+
+@keyframes marquee1 {
+  0% {
+      transform: translateY(0);
+  }
+  100% {
+      transform: translateY(-100%);
+  }
+} */
