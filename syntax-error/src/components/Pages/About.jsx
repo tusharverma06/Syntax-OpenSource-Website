@@ -1,17 +1,21 @@
 import React from "react";
-import aboutprofile from "../assets/images/aboutprofile.png";
-import aboutprofile2 from "../assets/images/aboutprofile2.png";
-import aboutprofile3 from "../assets/images/aboutprofile3.png";
-import abouthr from '../assets/images/abouthr.svg'
-import abouthr2 from '../assets/images/abouthr2.svg'
+
+
+import aboutprofile from "../../assets/images/aboutprofile.png";
+import aboutprofile2 from "../../assets/images/aboutprofile2.png";
+import aboutprofile3 from "../../assets/images/aboutprofile3.png";
+import abouthr from '../../assets/images/abouthr.svg'
+import abouthr2 from '../../assets/images/abouthr2.svg'
 import {motion} from 'framer-motion'
+import { Element } from "react-scroll";
 // import Navbar2 from "./Navbar2";
 const About = () => {
 // used for rotation of planet in framer motion instead of uing state
     //   const [rotate, cycleRotate] = useCycle(0,360);
+
   return (
     <>
-      <div className="" >
+      <Element name="About" className="" >
         <motion.div className="">
           {/* <motion.img
             src={aboutplanet}
@@ -143,7 +147,7 @@ className="relative  top-[-120px] left-[170px] "
 
    />
         </motion.div> */}
-      </div>
+      </Element>
     </>
   );
 };

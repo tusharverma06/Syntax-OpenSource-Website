@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "tailwindcss/tailwind.css";
-import Icon from '../assets/images/Icon.svg'
+import Icon from '../../assets/images/Icon.svg'
 const Carousel = () => {
 
     const items = [

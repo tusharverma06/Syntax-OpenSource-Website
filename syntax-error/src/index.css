@@ -42,3 +42,14 @@ body{
       transform: translateY(-100%);
   }
 } */
+.transition-text {
+  opacity: 0;
+  transition: opacity 800ms ease-in-out;
+  visibility: hidden;
+
+}
+
+.circle:hover .transition-text {
+  opacity: 1;
+  visibility: visible;
+}

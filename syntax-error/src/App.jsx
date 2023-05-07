@@ -1,11 +1,12 @@
-import About from './components/About'
+import About from './components/Pages/About'
 import { motion } from 'framer-motion'
-import Project from './components/Project'
-import Home from './components/Home'
-import Marquee from './components/Marquee'
+import Project from './components/Pages/Project'
+import Home from './components/Pages/Home'
+import Marquee from './components/Marquee/Marquee'
 import { useEffect } from 'react'
-import Contactus from './components/Contactus'
-import Projectandabout from './components/Projectandabout'
+import Contactus from './components/Pages/Contactus'
+import Projectandabout from './components/Project/Projectandabout'
+import Contributors from './components/Pages/Contributors'
 
 function App() {
   useEffect(()=>{
@@ -30,9 +31,11 @@ function App() {
         </div>
         <Project />
         <About />
+        <Contributors />
         <Contactus/>
       </div>
       <Marquee />
+      
     </div>
   )
 }
