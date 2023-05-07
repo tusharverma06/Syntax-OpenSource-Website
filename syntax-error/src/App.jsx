@@ -4,6 +4,7 @@ import Project from './components/Project'
 import Home from './components/Home'
 import Marquee from './components/Marquee'
 import { useEffect } from 'react'
+import Contactus from './components/Contactus'
 import Projectandabout from './components/Projectandabout'
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
         </div>
         <Project />
         <About />
+        <Contactus/>
       </div>
       <Marquee />
     </div>
