@@ -1,11 +1,12 @@
 import React from "react";
-import disclogo from "../assets/images/discordlogo.svg";
-import instalogo from "../assets/images/instalogo.svg";
-import logo from "../assets/images/SElogo.svg";
+import disclogo from "../../assets/images/discordlogo.svg";
+import instalogo from "../../assets/images/instalogo.svg";
+import logo from "../../assets/images/SElogo.svg";
+import { Element } from "react-scroll";
 const Contactus = () => {
   return (
-    <div>
-      <div className="flex justify-center items-center gap-36 mt-20">
+    <Element name="Contact">
+      <div className="flex items-center justify-center mt-20 gap-36">
         <div className="p-10 rounded-lg bg-[#24272D]  bg-opacity-50 w-[361px] h-[391px] flex flex-col justify-center items-center">
           <img src={disclogo} width="157px" alt="" />
           <p className="w-[300px] ">
@@ -36,7 +37,7 @@ const Contactus = () => {
           <div className="uppercase font-Kanit font-semibold text-[81px] leading-[121px]">
             Contact us
           </div>
-          <div className="flex justify-center items-center p-10 gap-36">
+          <div className="flex items-center justify-center p-10 gap-36">
             <div>
               <div class="  w-full mb-6  group flex flex-col gap-16">
                 <input
@@ -78,19 +79,19 @@ const Contactus = () => {
             </button>
           </div>
           <div>
-            <p className="rounded-md pl-10 pr-10  font-Kanit text-lg tracking-widest mt-8 p-2">
+            <p className="p-2 pl-10 pr-10 mt-8 text-lg tracking-widest rounded-md font-Kanit">
               Based in Mumbai, Maharashtra
             </p>
           </div>
         </div>
       </div>
       <div className="relative z-10 flex flex-row justify-start  gap-5 bg-[#24272D] bg-opacity-90 pt-8 pb-8 pr-5">
-        <div className="ml-5 mt-1">
+        <div className="mt-1 ml-5">
           <h1 className="whitespace-nowrap font-extrabold font-Kanit uppercase flex justify-center text-[31px] ">syntax erreur </h1>
 
         </div>
           <div>
-          <p className="text-left font-Kanit text-lg font-light">
+          <p className="text-lg font-light text-left font-Kanit">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
             vulputate libero et velit interdum, ac aliquet odio mattis. Class
             aptent taciti sociosqu ad litora torquent per conubia nostra, per
@@ -99,7 +100,7 @@ const Contactus = () => {
             
           </div>
       </div>
-    </div>
+    </Element>
   );
 };
 
