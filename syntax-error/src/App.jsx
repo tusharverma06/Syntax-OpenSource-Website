@@ -31,39 +31,47 @@ function App() {
   // animate x for moon
   const x = useTransform(
     scrollYProgress,
-    [0.1, 0.12, 0.15, 0.20,0.25,0.30],
-    ["0vw", "-55vw", "-70vw", "-85vw","-75vw","-70vw"]
+    [0.1, 0.12, 0.15, 0.20,0.25,0.30,0.35,0.40],
+    ["0vw", "-55vw", "-70vw", "-85vw","-75vw","-70vw","-50vw","-30vw"]
   );
 
   // animate y for moon
   const y = useTransform(
     scrollYProgress,
-    [0.1, 0.12, 0.15, 0.20,0.25,0.30],
-    ["0vh", "80vh", "110vh", "160vh","250vh","260vh"]
+    [0.1, 0.12, 0.15, 0.20,0.25,0.30,0.35,0.40],
+    ["0vh", "80vh", "110vh", "160vh","250vh","260vh","370vh","480vh"]
+  );
+  const xHomeplanet = useTransform(
+    scrollYProgress,
+    [0.1, 0.12, 0.15, 0.20,0.25,0.30 ,0.35,0.40],
+    ["0vw", "-1vw", "-2.5vw", "-4vw","-4vw","-4vw" ,"-4vw","-70vw"]
   );
   // animation for homeplanet
   const yHomeplanet = useTransform(
     scrollYProgress,
-    [0.1, 0.12, 0.15, 0.20,0.25,0.30],
-    ["0vh", "-10vh", "-30vh", "-40vh","50vh","40vh" ]
+    [0.1, 0.12, 0.15, 0.20,0.25,0.30,0.35,0.40],
+    ["0vh", "-10vh", "-30vh", "-40vh","50vh","40vh","150vh","150vh" ]
   );
   // rotate animation for homeplanet
   const rotate = useTransform(
     scrollYProgress,
-    [0.1, 0.12, 0.15, 0.20,0.25,0.30 ],
-    ["0deg", "90deg", "100deg", "180deg","270deg","360deg"]
+    [0.1, 0.12, 0.15, 0.20,0.25,0.30 ,0.35,0.40],
+    ["0deg", "90deg", "100deg", "180deg","270deg","360deg" ,"450deg","490deg"]
   );
+  
+    
+
   // y animation for earth
   const yEarth = useTransform(
     scrollYProgress,
-    [0.1, 0.12, 0.15, 0.20 ,0.25,0.30],
-    ["0vh", "10vh", "30vh", "80vh","150vh","220vh"]
+    [0.1, 0.12, 0.15, 0.20 ,0.25,0.30,0.35,0.40],
+    ["0vh", "10vh", "30vh", "80vh","150vh","220vh","270vh","300vh"]
   );
   // x animation for earth
   const xEarth = useTransform(
     scrollYProgress,
-    [0.1, 0.12, 0.15, 0.20,0.25,0.30 ],
-    ["0vw", "-1vw", "-2.5vw", "-4vw","-4vw","-4vw" ]
+    [0.1, 0.12, 0.15, 0.20,0.25,0.30,0.35,0.40 ],
+    ["0vw", "-1vw", "-2.5vw", "-4vw","-4vw","-4vw","-4vw","-4vw"]
   );
 
   useEffect(()=>{
@@ -81,7 +89,10 @@ function App() {
   return (
     <div className='text-white ' ref={targetRef}>
       <Home />
-      <motion.img src={homePlanet} alt="homeplanet"  className='absolute -bottom-1/3 lg:-bottom-[90%] lg:w-2/3 -z-10 lg:left-[20%]' style={{rotate,y:yHomeplanet}}/>
+      <motion.img src={homePlanet} alt="homeplanet"  className='absolute -bottom-1/3 lg:-bottom-[90%] lg:w-2/3 -z-10 lg:left-[20%]' style={{rotate,
+        y:yHomeplanet,
+        x:xHomeplanet,
+        }}/>
       <motion.img src={earth} alt="earth"  className='absolute left-14 top-1/2 -z-10' style={{
         y:yEarth,
         x:xEarth,
