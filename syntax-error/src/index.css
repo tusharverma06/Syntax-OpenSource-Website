@@ -10,6 +10,7 @@ body{
 }
 
 .gradient-text{
+<<<<<<< Updated upstream
   transition-duration: 1s;
   transition-property: all;
   transform-style: preserve-3d;
@@ -21,6 +22,16 @@ body{
   -webkit-text-fill-color: transparent;
   background-clip: text;
 
+=======
+  transition: 1s ease-in-out;
+}
+.gradient-text:hover {
+  background: -webkit-linear-gradient(#c51498, #3c0bb9);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-color: #0000;
+>>>>>>> Stashed changes
 }
 .swiper-button-next::after,
 .swiper-button-prev::after {
