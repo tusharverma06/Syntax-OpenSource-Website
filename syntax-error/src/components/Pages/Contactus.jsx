@@ -38,12 +38,12 @@ const Contactus = () => {
           </div>
           <div className="flex items-center justify-center p-10 gap-36">
             <div>
-              <div class="  w-full mb-6  group flex flex-col gap-16">
+              <div className="flex flex-col w-full gap-16 mb-6  group">
                 <input
                   type="email"
                   name="floating_email"
                   id="floating_email"
-                  class="py-2.5 px-0 w-56 text-sm text-gray-900 bg-transparent border-0 border-b-2 border-white-300 appearance-none dark:text-white dark:border-white-600 dark:focus:border-black-500 focus:outline-none  "
+                  className="py-2.5 px-0 w-56 text-sm text-gray-900 bg-transparent border-0 border-b-2 border-white-300 appearance-none dark:text-white dark:border-white-600 dark:focus:border-black-500 focus:outline-none  "
                   placeholder="xyz@mail.com"
                   required
                 />
@@ -52,7 +52,7 @@ const Contactus = () => {
                   type="text"
                   name="floating_email"
                   id="floating_email"
-                  class=" py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-white-300 appearance-none dark:text-white dark:border-white-600 dark:focus:border-black-500 focus:outline-none  "
+                  className=" py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-white-300 appearance-none dark:text-white dark:border-white-600 dark:focus:border-black-500 focus:outline-none  "
                   placeholder="Enter your number"
                   required
                 />
@@ -61,7 +61,7 @@ const Contactus = () => {
                   type="text"
                   name="floating_email"
                   id="floating_email"
-                  class=" py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-white-300 appearance-none dark:text-white dark:border-white-600 dark:focus:border-black-500 focus:outline-none  "
+                  className=" py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-white-300 appearance-none dark:text-white dark:border-white-600 dark:focus:border-black-500 focus:outline-none  "
                   placeholder="Message"
                   required
                 />
