@@ -32,13 +32,13 @@ const About = () => {
 <br />
 <br />
 
-            <section className="flex justify-center pt-10 pl-12 text-white rounded-lg backdrop-blur-sm gap-60 bg-opacity-80 ">
-              <div className="w-[500px] h-[212px]">
+            <section className="flex flex-col justify-center sm:flex sm:flex-row sm:justify-center  pt-10 pl-12 text-white rounded-lg backdrop-blur-sm gap-24 sm:gap-60 bg-opacity-80 sm:w-[85%] w-full  ">
+              <div className= " h-0 w-0 sm:w-[500px] sm:h-[212px]">
                 {" "}
                 <h1 className="mt-5 text-5xl font-Kanit">About</h1>
               </div>
-              <div className="bg-[#101010] pt-5 " >
-                <p className=" leading-7 pl-[40px] pr-[40px] text-lg">
+              <div className="bg-[#101010] pt-5 sm:pr-0 " >
+                <p className=" leading-7 pl-10 pr-2  sm:pr-[40px] sm:pl-[40px] text-lg">
                   {" "}
                   Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                   Praesentium ut incidunt aliquam tempora iste nisi illo?
@@ -50,8 +50,8 @@ const About = () => {
                 </p>
               </div>
             </section>
-            <section className="backdrop-blur-sm text-white flex justify-center gap-32 bg-opacity-80 pl-12 pt-[10px] pr-[48px] pb-[20px] rounded-lg  ">
-              <div className="w-[500px] h-[212px]">
+            <section className="backdrop-blur-sm text-white flex flex-col justify-center sm:flex sm:flex-row sm:justify-center gap-32 bg-opacity-80 pl-12 pt-[10px] sm:w-[85%] w-full pb-[20px] rounded-lg  ">
+              <div className="h-0 w-[200px] sm:w-[500px] sm:h-[212px]">
                 <h1 className="mt-5 text-5xl font-Kanit whitespace-nowrap">
                   What we do
                 </h1>
