@@ -12,7 +12,7 @@ const Participant = ({ link, icon, title }) => {
 
   return (
     <div
-      className={`w-[5.0625rem] rounded-full h-[5.0625rem] relative cursor-pointer circle`}
+      className={`w-16 h-16 sm:w-[5.0625rem] rounded-full sm:h-[5.0625rem] relative cursor-pointer circle z-10`}
       style={{ filter: `drop-shadow(0px 0px 32.6316px #FFFFFF)` }}
       onClick={() => window.open(link, "_blank")}
       onMouseEnter={handleHover}
@@ -21,10 +21,10 @@ const Participant = ({ link, icon, title }) => {
       <img
         src={icon}
         alt=""
-        className="object-contain w-full h-full rounded-full !-z-10"
+        className="object-contain w-full h-full rounded-full"
       />
       <div
-         className={`bg-white w-max px-3  py-2 rounded-xl text-black text-xl font-bold absolute top-16 left-12 transition-text `}
+         className={`bg-white w-max px-3  py-2 rounded-xl text-black text-xl font-bold absolute top-20 -left-10 transition-text z-30 `}
       >
         {title}
       </div>

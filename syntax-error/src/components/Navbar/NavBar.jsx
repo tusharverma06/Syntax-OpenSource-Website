@@ -13,7 +13,7 @@ const NavBar = () => {
     setShowMediaIcons(true)
   };
   return (
-    <header className='flex justify-between lg:justify-around items-center w-[100%]  pt-8 pb-8 p-20 lg:w-[70%]  lg:mt-12   fixed top-0 left-0 lg:left-40 text-white font-Kanit lg:bg-black  lg:bg-opacity-20    backdrop-blur-md rounded-lg  z-[20]'>
+    <header className='flex justify-between lg:justify-around items-center w-[100%]  pt-8 pb-8 p-20 lg:w-[70%]  lg:mt-12   fixed top-0 left-0 lg:left-40 text-white font-Kanit lg:bg-black  lg:bg-opacity-20    backdrop-blur-md rounded-lg  z-50'>
       <div >
         <Link activeClass="active"
           to="Home"
@@ -33,18 +33,18 @@ const NavBar = () => {
 
         <GiCrossedBones className='absolute block text-white right-4 top-10 Cross lg:hidden' onClick={() => handleToggle()} />
         <Link activeClass="active"
-          to="About"
-          spy={true}
-          smooth={true}
-          offset={-70}
-          duration={500}
-          className={`tracking-wider cursor-pointer`} onClick={handleLinkClick}>About</Link>
-        <Link activeClass="active"
           to="Projects"
           spy={true}
           smooth={true}
           offset={-70}
-          duration={500} className={`tracking-wider  cursor-pointer`} onClick={handleLinkClick}>Projects</Link>
+          duration={500}
+          className={`tracking-wider cursor-pointer`} onClick={handleLinkClick}>Projects</Link>
+        <Link activeClass="active"
+          to="About"
+          spy={true}
+          smooth={true}
+          offset={-70}
+          duration={500} className={`tracking-wider  cursor-pointer`} onClick={handleLinkClick}>About</Link>
         <Link activeClass="active"
           to="Contributors"
           spy={true}
@@ -57,7 +57,7 @@ const NavBar = () => {
           smooth={true}
           offset={-70}
           duration={500} className={`tracking-wider  cursor-pointer`} onClick={handleLinkClick}>
-          <span className='whitespace-nowrap pl-8 pr-8 rounded-md pt-2 pb-2 border-2 border-white '> Contact Us </span>
+          <span className='pt-2 pb-2 pl-8 pr-8 border-2 border-white rounded-md whitespace-nowrap '> Contact Us </span>
         </Link>
 
       </div>
