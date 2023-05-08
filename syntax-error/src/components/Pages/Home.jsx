@@ -3,16 +3,30 @@ import homePlanet from '../../assets/images/homeplanet.png'
 import earth from '../../assets/images/earth.png' 
 import moon from '../../assets/images/moon.svg'
 import { Element } from 'react-scroll'
+import { useRef } from 'react'
+import { useScroll, useTransform ,motion} from 'framer-motion'
 const Home = () => {
- 
+  const targetRef1 = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: targetRef1,
+    offset: ["start end", "end start"],
+  });
+  const opacity = useTransform(
+    scrollYProgress,
+    [0.1, 0.12, 0.15, 0.20],
+    [1, 0.5, 0.2, 0]
+  );
+
   return (
-    <Element name="Home" className='relative flex flex-col items-center justify-center h-screen bg-center bg-cover'> 
-    <NavBar/>
-      <img src={homePlanet} alt="homeplanet"  className='absolute -bottom-1/3 lg:-bottom-[90%] '/>
-      <img src={earth} alt="homeplanet"  className='absolute left-10 top-1/2 '/>
-      <img src={moon} alt="homeplanet"  className='absolute right-10 lg:right-16 top-1/2 '/>
-      <div className='absolute gradient-text hover:bg-black hover:transition hover:border-none p-2 text-4xl uppercase cursor-default border-white  lg:text-8xl lg:p-4 text-white font-Kanit border-[10px] bottom-72 font-bold'>
-        Syntax Erreur
+    <Element name="Home"  > 
+      <div className='relative flex flex-col items-center justify-center h-screen bg-center bg-cover' ref={targetRef1}>
+      <NavBar/>
+        
+       <motion.div className='absolute '  >
+        <motion.div className='gradient-text hover:bg-black hover:transition hover:border-none p-2 text-4xl uppercase cursor-default border-white  lg:text-8xl lg:p-4 text-white font-Kanit border-[10px] bottom-72 font-bold' >
+            Syntax Erreur
+          </motion.div>
+       </motion.div>
       </div>
     </Element>
   )
