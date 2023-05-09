@@ -40,7 +40,7 @@ const Contributors = () => {
   ]
   return (
     <Element name='Contributors'>
-      <div className='relative flex items-center justify-center w-full min-h-screen overflow-y-hidden' style={{ background: `url(${Background})`, backgroundSize: 'cover' }}>
+      <div className='relative flex items-center justify-center w-full min-h-screen overflow-y-hidden -z-50' style={{ background: `url(${Background})`, backgroundSize: 'cover' }}>
 
         {/* White line */}
         <div className='w-0 border-[0.375rem] h-[17rem] sm:h-[11.1rem] xl:h-28   border-solid border-white  absolute top-0 z-10  mx-auto  sm:left-[50%]'>
