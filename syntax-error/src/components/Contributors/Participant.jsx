@@ -13,7 +13,7 @@ const Participant = ({ link, icon, title }) => {
   return (
     <div
       className={`w-16 h-16 sm:w-[5.0625rem] rounded-full sm:h-[5.0625rem] relative cursor-pointer circle z-10`}
-      style={{ filter: `drop-shadow(0px 0px 32.6316px #FFFFFF)` }}
+      style={{ filter: `drop-shadow(0px 0px 28.6316px #FFFFFF)` }}
       onClick={() => window.open(link, "_blank")}
       onMouseEnter={handleHover}
       onMouseLeave={handleHoverGo}

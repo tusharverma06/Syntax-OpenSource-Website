@@ -8,11 +8,11 @@ const Projectandabout = () => {
     offset: ["start end", "end start"],
   });
   const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
-  const height = useTransform(scrollYProgress, [0, 1], ["0%", "100%"])
+  const height = useTransform(scrollYProgress, [0, 0.8], ["0%", "100%"])
   const border = useTransform(scrollYProgress, [0, 1], ["0%", "100%"])
   return (
-    <div  className='h-screen' ref={targetRef}>
-        <motion.div className='line w-0 border-[4px] border-solid border-white h-screen z-10 sticky mx-auto top-0 sm:left-[50%]' style={{height}}>
+    <div  className='relative h-screen' ref={targetRef}>
+        <motion.div className='line w-0 border-[4px] border-solid border-white h-screen z-10 mx-auto top-0 left-[50%] absolute' style={{height}}>
           <motion.div className='relative w-24 lg:w-64 border-t-8 border-l-8 rounded-t-lg h-28 top-1/4 left-[-6rem] lg:left-[-16rem]'  style={{border}}>
           </motion.div>
           <div className='relative w-24 lg:w-64 flex items-center justify-center text-2xl rounded-xl h-16 lg:h-28 top-1/4 left-[-9rem] lg:left-[-24rem] text-center font-Kanit bg-white  bg-opacity-25   backdrop-blur-sm'>

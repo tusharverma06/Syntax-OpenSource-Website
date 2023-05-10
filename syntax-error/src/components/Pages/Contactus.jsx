@@ -5,9 +5,9 @@ import logo from "../../assets/images/SElogo.svg";
 const Contactus = () => {
   return (
     <div>
-      <div className="flex items-center justify-center mt-20 gap-36">
+      <div className="flex flex-col items-center justify-center mt-20 sm:flex-row gap-36">
         <div className="p-10 rounded-lg bg-[#24272D]  bg-opacity-50 w-[361px] h-[391px] flex flex-col justify-center items-center">
-          <img src={disclogo} width="157px" alt="" />
+          <img src={disclogo} className="w-[157px]" alt="" />
           <p className="w-[300px] ">
             {" "}
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto cum
@@ -30,15 +30,15 @@ const Contactus = () => {
       <div className="flex justify-center mt-28">
         {" "}
         {/* Main container */}
-        <div className="flex flex-col justify-center items-center w-[934px] p-16 backdrop-blur-md">
+        <div className="flex flex-col justify-center items-center w-full lg:w-[934px] p-16 backdrop-blur-md bg-[rgba(43,43,43,0.26)] ">
           {" "}
           {/* container */}
-          <div className="uppercase font-Kanit font-semibold text-[81px] leading-[121px]">
+          <div className="uppercase font-Kanit font-semibold text-[40px] md:text-[81px] leading-[121px]">
             Contact us
           </div>
-          <div className="flex items-center justify-center p-10 gap-36">
+          <div className="flex flex-col-reverse items-center justify-center p-10 sm:flex-row gap-36">
             <div>
-              <div className="flex flex-col w-full gap-16 mb-6  group">
+              <div className="flex flex-col w-full gap-16 mx-auto mb-6 group">
                 <input
                   type="email"
                   name="floating_email"
@@ -78,13 +78,13 @@ const Contactus = () => {
             </button>
           </div>
           <div>
-            <p className="p-2 pl-10 pr-10 mt-8 text-lg tracking-widest rounded-md font-Kanit">
+            <p className="p-2 px-10 mt-8 text-lg tracking-widest rounded-md w-max font-Kanit">
               Based in Mumbai, Maharashtra
             </p>
           </div>
         </div>
       </div>
-      <div className="relative z-10 flex flex-row justify-start  gap-5 bg-[#24272D] bg-opacity-90 pt-8 pb-8 pr-5">
+      <div className="relative z-10 flex flex-col px-4 md:flex-row justify-start  gap-5 bg-[#24272D] bg-opacity-90 pt-8 pb-8 pr-5">
         <div className="mt-1 ml-5">
           <h1 className="whitespace-nowrap font-extrabold font-Kanit uppercase flex justify-center text-[31px] ">syntax erreur </h1>
 
