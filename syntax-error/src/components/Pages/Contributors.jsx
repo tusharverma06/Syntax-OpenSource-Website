@@ -4,8 +4,29 @@ import Background from '../../assets/images/BackgroundImg.svg'
 import ContributorBG from '../../assets/images/contributorBG.svg'
 import { Element } from 'react-scroll'
 import Participant from '../Contributors/Participant'
-import { motion } from 'framer-motion'
+import { useRef, useState, useEffect } from 'react'
+import { useScroll, useTransform ,motion} from 'framer-motion'
 const Contributors = () => {
+  let width;
+  if (typeof window !== "undefined") {
+    width = window.innerWidth;
+  }
+  const [windowWidth, setWindowWidth] = useState(width);
+
+useEffect(() => {
+    function watchWidth() {
+      setWindowWidth(window.innerWidth);
+    }
+
+    window.addEventListener("resize", watchWidth);
+  }, [windowWidth]);
+  const targetRef = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: targetRef,
+    offset: ["start end", "end start"],
+  });
+  const height = useTransform(scrollYProgress, [0, 0.3], ["0%", `${windowWidth<600? '30%': '17.5%'}`])
+  const height2 = useTransform(scrollYProgress, [0.2, 0.4], ["0%",  `${windowWidth<600? '30%': '17.5%'}`])
   const contributors = [
     {
       id: 1,
@@ -40,15 +61,15 @@ const Contributors = () => {
   ]
   return (
     <Element name='Contributors'>
-      <div className='relative flex items-center justify-center w-full min-h-screen overflow-y-hidden -z-50' style={{ background: `url(${Background})`, backgroundSize: 'cover' }}>
+      <div ref={targetRef}  className='relative flex items-center justify-center w-full h-screen overflow-x-hidden overflow-y-hidden' style={{ background: `url(${Background})`, backgroundSize: 'cover' }}>
 
         {/* White line */}
-        <div className='w-0 border-[0.375rem] h-[17rem] sm:h-[11.1rem] xl:h-28   border-solid border-white  absolute top-0 z-10  mx-auto  sm:left-[50%]'>
-        </div>
+        <motion.div className='w-0 border-[0.375rem] h-[30%] xl:h-[17.5%]   border-solid border-white  absolute top-0 z-10  mx-auto  sm:left-[50%]' style={{height: height}}>
+        </motion.div>
 
         {/* Main circle containing ids */}
         <div
-          className="w-[18.75rem] h-[18.75rem] px-10 py-10 sm:w-[31.5rem] sm:h-[31rem] border-[0.25rem] sm:px-20 sm:py-20 border-solid border-white mx-auto rounded-full z-30 flex flex-wrap items-center justify-center gap-6 relative "
+          className="w-[85vw] h-[40%] px-4 py-10 sm:w-[60vw] sm:px-14 xl:w-[30vw] xl:h-[65%] border-[0.25rem] xl:px-10 sm:py-20 border-solid border-white mx-auto rounded-full z-30 flex flex-wrap items-center justify-center gap-6 relative max-w-[25rem] sm:max-w-[40rem] "
         >
           {contributors.map(contributor => <Participant
             key={contributor.id}
@@ -64,8 +85,8 @@ const Contributors = () => {
       </div> */}
 
       {/* White line */}
-      <div className='w-0 border-[0.375rem] h-[17rem] sm:h-[11.1rem] xl:h-28 border-solid border-white  absolute bottom-0 z-10  mx-auto  sm:left-[50%]'>
-      </div>
+      <motion.div className='w-0 border-[0.375rem] h-[30%] xl:h-[17.5%]  border-solid border-white  absolute bottom-0 z-10  mx-auto  sm:left-[50%]' style={{height: height2}}>
+      </motion.div>
       </div>
 
     </Element>

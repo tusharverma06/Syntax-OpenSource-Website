@@ -1,7 +1,3 @@
-import NavBar from '../Navbar/NavBar'
-import homePlanet from '../../assets/images/homeplanet.png'
-import earth from '../../assets/images/earth.png' 
-import moon from '../../assets/images/moon.svg'
 import { Element } from 'react-scroll'
 import { useRef } from 'react'
 import { useScroll, useTransform ,motion} from 'framer-motion'
@@ -19,9 +15,7 @@ const Home = () => {
 
   return (
     <Element name="Home"  > 
-      <div className='relative flex flex-col items-center justify-center h-screen bg-center bg-cover' ref={targetRef1}>
-      <NavBar/>
-        
+      <div className='relative flex flex-col items-center justify-center h-screen bg-center bg-cover' ref={targetRef1}>        
        <motion.div className='absolute '  >
         <motion.div className='gradient-text hover:bg-black hover:transition hover:border-none p-2 text-4xl uppercase cursor-default border-white  lg:text-8xl lg:p-4 text-white font-Kanit border-[10px] bottom-72 font-bold' >
             Syntax Erreur

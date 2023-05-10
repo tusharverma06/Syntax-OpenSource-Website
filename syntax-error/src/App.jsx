@@ -13,6 +13,7 @@ import { useScroll, useTransform } from 'framer-motion'
 import homePlanet from './assets/images/homeplanet.png'
 import earth from './assets/images/earth.png'
 import moon from './assets/images/moon.svg'
+import NavBar from './components/Navbar/NavBar'
 
 function App() {
   // note 0 to 0.20 is the range of scrollYProgress for first two pages
@@ -93,6 +94,7 @@ function App() {
   },[window.innerHeight])
   return (
     <div className='text-white ' ref={targetRef}>
+      <NavBar />
       <Home />
       <motion.img src={homePlanet} alt="homeplanet"  className='absolute -bottom-1/3 lg:-bottom-[90%] lg:w-2/3 -z-10 lg:left-[20%]' style={{rotate,
         y:yHomeplanet,
