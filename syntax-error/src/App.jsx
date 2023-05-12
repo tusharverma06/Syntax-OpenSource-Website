@@ -58,7 +58,7 @@ function App() {
   const rotate = useTransform(
     scrollYProgress,
     [0.1, 0.12, 0.15, 0.20,0.25,0.30 ,0.35,0.40],
-    ["0deg", "90deg", "100deg", "180deg","270deg","360deg" ,"450deg","490deg"]
+    ["0deg", "90deg", "100deg", "180deg","345deg","360deg" ,"450deg","490deg"]
   );
   
     

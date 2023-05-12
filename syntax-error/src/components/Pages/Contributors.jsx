@@ -61,7 +61,7 @@ useEffect(() => {
   ]
   return (
     <Element name='Contributors'>
-      <div ref={targetRef}  className='relative flex items-center justify-center w-full h-screen overflow-x-hidden overflow-y-hidden' style={{ background: `url(${Background})`, backgroundSize: 'cover' }}>
+      <div ref={targetRef}  className='relative flex items-center justify-center w-full h-screen overflow-x-hidden overflow-y-hidden' >
 
         {/* White line */}
         <motion.div className='w-0 border-[0.375rem] h-[30%] xl:h-[17.5%]   border-solid border-white  absolute top-0 z-10  mx-auto  sm:left-[50%]' style={{height: height}}>
@@ -69,7 +69,7 @@ useEffect(() => {
 
         {/* Main circle containing ids */}
         <div
-          className="w-[85vw] h-[40%] px-4 py-10 sm:w-[60vw] sm:px-14 xl:w-[30vw] xl:h-[65%] border-[0.25rem] xl:px-10 sm:py-20 border-solid border-white mx-auto rounded-full z-30 flex flex-wrap items-center justify-center gap-6 relative max-w-[25rem] sm:max-w-[40rem] "
+          className="w-[85vw] h-[40%] px-4 py-10 sm:w-[60vw] sm:px-14 xl:w-[30vw] xl:h-[65%] border-[0.25rem] xl:px-10 sm:py-20 2xl:px-20 2xl:py-28 border-solid border-white mx-auto rounded-full z-50 flex flex-wrap items-center justify-center gap-6 relative max-w-[25rem] sm:max-w-[40rem] 2xl:max-w-[3n0vw] "
         >
           {contributors.map(contributor => <Participant
             key={contributor.id}
