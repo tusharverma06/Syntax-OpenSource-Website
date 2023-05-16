@@ -1,9 +1,9 @@
-# Syntax-OpenSource-Website
+# Syntax-Erreur-Website
 
 ## 🛠️ Installation
 
 1. Fork the repo
-2. Clone the repository git `clone https://github.com/<USERNAME>/Syntax-OpenSource-Website.git`
+2. Clone the repository ` git clone https://github.com/<USERNAME>/Syntax-Erreur-Website.git`
 3. Run `cd syntax-error` to change the working directory
 4. Run `npm install`  to install all dependencies
 5. Run `npm run  dev` to start the application
@@ -23,6 +23,6 @@
 
 ## 💪 Thanks to all Contributors
 
-<a href="https://github.com/Syntax-Erreur/Syntax-OpenSource-Website/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=Syntax-Erreur/Syntax-OpenSource-Website" />
+<a href="https://github.com/Syntax-Erreur/Syntax-Erreur-Website/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=Syntax-Erreur/Syntax-Erreur-Website" />
 </a>
