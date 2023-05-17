@@ -4,6 +4,7 @@ import { GiCrossedBones } from 'react-icons/gi'
 import { Link } from 'react-scroll';
 
 const NavBar = () => {
+  
   const [showMediaIcons, setShowMediaIcons] = useState(true)
   const handleToggle = () => {
     setShowMediaIcons(!showMediaIcons)
@@ -12,13 +13,13 @@ const NavBar = () => {
   const handleLinkClick = () => {
     setShowMediaIcons(true)
   };
-  
+
 
 
 
   return (
     <div className="w-full">
-      <div className='flex justify-between lg:justify-around items-center w-full  py-8 px-2 lg:w-[90%] xl:w-[70%]  lg:mt-12   fixed top-0 left-0 lg:left-1/2 lg:-translate-x-1/2 text-white font-Kanit lg:bg-[rgba(43,43,43,0.26)]  lg:bg-opacity-20    backdrop-blur-md rounded-lg  z-50 '>
+      <div className='flex h-36 justify-between lg:justify-around items-center w-full  py-8 px-8 2xl:max-w-[1800px] lg:w-[90%] xl:w-[70%]  lg:mt-12   fixed -top-2 left-0 lg:left-1/2 lg:-translate-x-1/2 text-white font-Kanit lg:bg-[rgba(43,43,43,0.26)]  lg:bg-opacity-20 backdrop-blur-md rounded-lg  z-50 '>
         <div>
           <Link activeClass="active"
             to="Home"
@@ -26,7 +27,7 @@ const NavBar = () => {
             smooth={true}
             offset={-70}
             duration={500}>
-            <p className='gradient-text w-56 h-12 pt-1 mr-8 text-xl text-center uppercase border-[3.16px] border-white cursor-pointer lg:text-3xl lg:w-64 max-w-none text-white font-Kanit font-bold tracking-wide' > <span className='hover:gradient-text '>Syntax erreur</span>
+            <p className='gradient-text w-56 h-12 pt-1 mr-8 text-xl text-center uppercase border-[3.16px] border-white cursor-pointer lg:text-3xl lg:w-64 max-w-none text-white font-Kanit font-bold tracking-wide ' > <span className='hover:gradient-text '>Syntax erreur</span>
             </p>
           </Link>
         </div>
@@ -42,29 +43,38 @@ const NavBar = () => {
             spy={true}
             smooth={true}
             offset={-70}
-            duration={500}
-            className={`tracking-wider cursor-pointer bg-transparent `} onClick={handleLinkClick}>Projects</Link>
+            duration={2000}
+            className={`tracking-wider cursor-pointer bg-transparent group`} onClick={handleLinkClick}>
+            Projects
+            <span class="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 navLink"></span>
+          </Link>
           <Link activeClass="active"
             to="About"
             spy={true}
             smooth={true}
             offset={-70}
-            duration={500} className={`tracking-wider  cursor-pointer`} onClick={handleLinkClick}>About</Link>
+            duration={1000} className={`tracking-wider  cursor-pointer group`} onClick={handleLinkClick}>
+            About
+            <span class="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 navLink"></span>
+          </Link>
           <Link activeClass="active"
             to="Contributors"
             spy={true}
             smooth={true}
             offset={-70}
-            duration={500} className={`tracking-wider cursor-pointer `} onClick={handleLinkClick}>Contributors</Link>
+            duration={1000} className={`tracking-wider cursor-pointer group `} onClick={handleLinkClick}>
+            Contributors
+            <span class="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 navLink"></span>
+          </Link>
           <Link activeClass="active"
             to="Contact"
             spy={true}
             smooth={true}
             offset={-70}
-            duration={500} className={`tracking-wider  cursor-pointer`} onClick={handleLinkClick}>
-            <span className='pt-2 pb-2 pl-8 pr-8 border-2 border-white rounded-md whitespace-nowrap '> Contact Us </span>
+            duration={500} className={`tracking-wider  cursor-pointer group h-12 px-4 py-2 border-2 border-white rounded-md w-36 whitespace-nowrap `} onClick={handleLinkClick}>
+            Contact Us
+            <span class="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 navLink"></span>
           </Link>
-
         </div>
       </div>
     </div>

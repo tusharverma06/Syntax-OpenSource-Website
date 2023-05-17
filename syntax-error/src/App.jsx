@@ -14,9 +14,24 @@ import homePlanet from './assets/images/homeplanet.png'
 import earth from './assets/images/earth.png'
 import moon from './assets/images/moon.svg'
 import NavBar from './components/Navbar/NavBar'
-
+import { useState } from 'react'
 function App() {
-  const isLargeDevice = window.innerWidth > 768; // Adjust the breakpoint as per your needs
+  //for responsiveness
+  let width;
+  if (typeof window !== "undefined") {
+    width = window.innerWidth;
+  }
+  const [windowWidth, setWindowWidth] = useState(width);
+
+  useEffect(() => {
+    function watchWidth() {
+      setWindowWidth(window.innerWidth);
+    }
+    
+    window.addEventListener("resize", watchWidth);
+  }, [windowWidth]);
+  
+  // const isLargeDevice = windowWidth > 768; // Adjust the breakpoint as per your needs
   // note 0 to 0.20 is the range of scrollYProgress for first two pages
   // 0.65 contributers page
   const targetRef = useRef(null);
@@ -69,7 +84,7 @@ function App() {
   const rotate = useTransform(
     scrollYProgress,
     [0.1, 0.12, 0.15, 0.20,0.25,0.30 ,0.35,0.40],
-    ["0deg", "90deg", "100deg", "180deg","270deg","360deg" ,"450deg","490deg"]
+    ["0deg", "90deg", "100deg", "180deg","350deg","360deg" ,"450deg","490deg"]
   );
   // smooth transition for homeplanet
   const transitionHomeplanet = useTransform(
@@ -121,7 +136,7 @@ function App() {
       <NavBar />
       <Home />
      {
-      isLargeDevice  ? 
+      windowWidth > 768  ? 
       <>
         <motion.img src={homePlanet} alt="homeplanet"  className='absolute -bottom-1/3 lg:-bottom-[90%] lg:w-2/3 -z-10 lg:left-[20%]' style={{rotate,
           y:yHomeplanet,

@@ -33,6 +33,13 @@ body{
 .line.show {
   display: block;
 }
+
+/* Nav link underline effect */
+.navLink{
+  background: linear-gradient(90deg, #364E9D -1.03%, #794897 53.5%, #DB3F8F 100%);
+}
+
+
 /* .marqueediv {
   animation: marquee1 8s linear infinite;
 }
