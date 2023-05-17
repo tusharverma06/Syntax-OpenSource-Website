@@ -2,9 +2,10 @@ import React from "react";
 import disclogo from "../../assets/images/discordlogo.svg";
 import instalogo from "../../assets/images/instalogo.svg";
 import logo from "../../assets/images/SElogo.svg";
+import { Element } from "react-scroll";
 const Contactus = () => {
   return (
-    <div>
+    <Element name="MainContact">
       <div className="flex flex-col items-center justify-center mt-20 sm:flex-row gap-36">
         <div className="p-10 rounded-lg bg-[#24272D]  bg-opacity-50 w-[361px] h-[391px] flex flex-col justify-center items-center">
           <img src={disclogo} className="w-[157px]" alt="" />
@@ -99,7 +100,7 @@ const Contactus = () => {
             
           </div>
       </div>
-      </div>
+      </Element>
   );
 };
 

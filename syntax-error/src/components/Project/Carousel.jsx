@@ -10,20 +10,36 @@ const Carousel = () => {
             id: 1,
             title: 'THE WEB APP',
             description: 'lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem',
-            image: `${Icon}`
+            image: `${Icon}`,
+            softwareUsed: [
+                'https://i0.wp.com/theicom.org/wp-content/uploads/2016/03/js-logo.png?fit=500%2C500&ssl=1&w=640',
+                'https://cdn.pixabay.com/photo/2017/08/05/11/16/logo-2582747_1280.png',
+                'https://cdn.pixabay.com/photo/2017/08/05/11/16/logo-2582748_640.png'
+            ]
         },
         {
             id: 2,
             title: 'REVOLUTIONARY',
             description: 'lotren n njn jnfkjn kjnkjnkfj lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem',
-            image: `${Icon}`
+            image: `${Icon}`,
+            softwareUsed: [
+                'https://cdn.pixabay.com/photo/2017/08/05/11/16/logo-2582748_640.png',
+                'https://i0.wp.com/theicom.org/wp-content/uploads/2016/03/js-logo.png?fit=500%2C500&ssl=1&w=640',
+                'https://seeklogo.com/images/C/c-sharp-c-logo-02F17714BA-seeklogo.com.png',
+                'https://cdn.freebiesupply.com/logos/large/2x/react-1-logo-svg-vector.svg'
+            ]
 
         },
         {
             id: 3,
             title: 'HELOO 3',
             description: 'lotren n njn jnfkjn kjnkjnkfj lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem',
-            image: `${Icon}`
+            image: `${Icon}`,
+            softwareUsed: [
+                'https://cdn.freebiesupply.com/logos/large/2x/react-1-logo-svg-vector.svg',
+                'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tailwind_CSS_Logo.svg/2048px-Tailwind_CSS_Logo.svg.png',
+                'https://avatars.githubusercontent.com/u/54212428?s=280&v=4'
+            ]
 
         },
     ];
@@ -46,11 +62,11 @@ const Carousel = () => {
 
     return (
         <div className="flex flex-col items-center justify-center w-11/12 sm:w-full" >
-            <div className="w-[90%]  sm:w-[90%] lg:w-[80%] xl:w-[60rem] mx-auto flex items-center sm:justify-between ">
+            <div className="w-[90%]  sm:w-[90%] lg:w-[80%] xl:w-[60rem] mx-auto flex items-center flex-col sm:flex-row sm:justify-between ">
 
                 {/* Mapping the projects */}
                 <div className="w-full mx-auto" >
-                    <div className="relative sm:w-full lg:w-[97%] h-[600px] xl:w-[900px] rounded-lg overflow-hidden">
+                    <div className="relative sm:w-full lg:w-[97%] h-[510px] sm:h-[600px] xl:w-[900px] rounded-lg overflow-hidden">
                         {items.map((item, index) => (
                             <div
                                 key={index}
@@ -72,7 +88,8 @@ const Carousel = () => {
                                             {/* Software Used */}
                                             <div className='flex flex-col items-start justify-center gap-2 mt-12 items'>
                                                 <p className='w-28 h-5 font-Kanit font-light text-[14px] leading-5 '>Software Used :</p>
-                                                <div className="w-[10rem] h-[3rem] sm:w-[13.875rem] sm:h-[4.6875rem] bg-[rgba(0,0,0,0.15)] rounded-md" style={{ boxShadow: `inset 0px 0px 3.2px #292929` }}>
+                                                <div className="w-[10rem] h-[3rem] sm:w-[13.875rem] sm:h-[4.6875rem] bg-[rgba(0,0,0,0.15)] rounded-md flex items-center justify-evenly gap-1" style={{ boxShadow: `inset 0px 0px 3.2px #292929` }}>
+                                                    {item.softwareUsed.map(software => <img src={software} alt="" className="w-8 h-8 sm:w-10 sm:h-10" />)}
                                                 </div>
                                             </div>
 
@@ -90,19 +107,19 @@ const Carousel = () => {
                 </div>
 
                 {/* Arrow Buttons */}
-                <div className="flex flex-col items-center justify-start xl:gap-12 gap-2 pl-[6px] w-[12%] sm:px-2 md:px-0 md:w-[10%] lg:px-0 sm:w-[10%] lg:w-[4%]  xl:px-0  h-96">
+                <div className="flex flex-row sm:flex-col items-center justify-center  sm:justify-start xl:gap-12 gap-10 pl-[6px] w-[62%] sm:px-2 md:px-0 md:w-[10%] lg:px-0 sm:w-[10%] lg:w-[4%]  xl:px-0 h-12 sm:h-96">
 
                     <button
                         className="text-[50px] sm:text-[70px]  lg:text-[100px] xl:text-[120px] h-20 2xl:h-32 2xl:text-[180px] font-extralight text-center flex items-center justify-center bg-none p-2 sm:p-0"
                         onClick={prevItem}
                     >
-                        <img src={LeftArrowIcon} alt="" className="w-10 h-16" />
+                        <img src={LeftArrowIcon} alt="" className="w-8 h-8 sm:w-10 sm:h-16" />
                     </button>
                     <button
                         className="text-[50px] sm:text-[70px]  lg:text-[100px] xl:text-[120px] h-20 2xl:h-32 2xl:text-[180px] font-extralight text-center flex items-center justify-center bg-none p-2  sm:p-0"
                         onClick={nextItem}
                     >
-                        <img src={RightArrowIcon} alt="" className="w-12 h-20" />
+                        <img src={RightArrowIcon} alt="" className="w-8 h-8 sm:w-12 sm:h-20" />
                     </button>
                 </div>
             </div>
