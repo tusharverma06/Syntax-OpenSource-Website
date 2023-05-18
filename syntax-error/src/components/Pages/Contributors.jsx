@@ -25,9 +25,9 @@ useEffect(() => {
     target: targetRef,
     offset: ["start end", "end start"],
   });
-  const height = useTransform(scrollYProgress, [0, 0.3], ["0%", `${windowWidth<600? '30%': '17.5%'}`])
-  const height2 = useTransform(scrollYProgress, [0.2, 0.4], ["0%",  `${windowWidth<600? '30%': '17.5%'}`])
-  const contributors = [
+   const height = useTransform(scrollYProgress, [0, 0.4], ["0%", `${windowWidth<600? '25%': '12.5%'}`])
+  const height2 = useTransform(scrollYProgress, [0.2, 0.4], ["0%",  `${windowWidth<600? '25%': '13.5%'}`])
+ const contributors = [
     {
       id: 1,
       icon: 'https://avatars.githubusercontent.com/u/117444846?v=4',
@@ -69,7 +69,7 @@ useEffect(() => {
 
         {/* Main circle containing ids */}
         <div
-          className="w-[85vw] h-[40%] px-4 py-10 sm:w-[60vw] sm:px-14 xl:w-[30vw] xl:h-[65%] border-[0.25rem] xl:px-10 sm:py-20 2xl:px-20 2xl:py-28 border-solid border-white mx-auto rounded-full z-50 flex flex-wrap items-center justify-center gap-6 relative max-w-[25rem] sm:max-w-[40rem] 2xl:max-w-[3n0vw] "
+          className="w-[21rem] h-[21rem] sm:w-[31.375rem] sm:h-[31rem] sm:px-8 px-8 py-10  border-[0.25rem] xl:px-14 sm:py-16 2xl:px-20 2xl:py-28 border-solid border-white mx-auto rounded-full z-30 flex flex-wrap items-center justify-center gap-4 sm:gap-10 relative sm:max-w-[40rem] "
         >
           {contributors.map(contributor => <Participant
             key={contributor.id}

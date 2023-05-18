@@ -56,29 +56,38 @@ const NavBar = forwardRef((props, ref) => {
             spy={true}
             smooth={true}
             offset={-70}
-            duration={500}
-            className={`tracking-wider cursor-pointer bg-transparent `} onClick={handleLinkClick}>Projects</Link>
+            duration={2000}
+            className={`tracking-wider cursor-pointer bg-transparent group`} onClick={handleLinkClick}>
+            Projects
+            <span class="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 navLink"></span>
+          </Link>
           <Link activeClass="active"
             to="About"
             spy={true}
             smooth={true}
             offset={-70}
-            duration={500} className={`tracking-wider  cursor-pointer`} onClick={handleLinkClick}>About</Link>
+            duration={1000} className={`tracking-wider  cursor-pointer group`} onClick={handleLinkClick}>
+            About
+            <span class="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 navLink"></span>
+          </Link>
           <Link activeClass="active"
             to="Contributors"
             spy={true}
             smooth={true}
             offset={-70}
-            duration={500} className={`tracking-wider cursor-pointer `} onClick={handleLinkClick}>Contributors</Link>
+            duration={1000} className={`tracking-wider cursor-pointer group `} onClick={handleLinkClick}>
+            Contributors
+            <span class="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 navLink"></span>
+          </Link>
           <Link activeClass="active"
             to="Contact"
             spy={true}
             smooth={true}
             offset={-70}
-            duration={500} className={`tracking-wider  cursor-pointer`} onClick={handleLinkClick}>
-            <span className='pt-2 pb-2 pl-8 pr-8 border-2 border-white rounded-md whitespace-nowrap '> Contact Us </span>
+            duration={500} className={`tracking-wider  cursor-pointer group h-12 px-4 py-2 border-2 border-white rounded-md w-36 whitespace-nowrap `} onClick={handleLinkClick}>
+            Contact Us
+            <span class="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 navLink"></span>
           </Link>
-
         </div>
       </div>
     </div>
