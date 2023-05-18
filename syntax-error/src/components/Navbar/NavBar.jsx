@@ -39,7 +39,7 @@ const NavBar = () => {
 
           <GiCrossedBones className='absolute block text-white right-4 top-10 Cross lg:hidden' onClick={() => handleToggle()} />
           <Link activeClass="active"
-            to="Projects"
+            to="CommonAboutAndProject"
             spy={true}
             smooth={true}
             offset={-70}
@@ -49,7 +49,7 @@ const NavBar = () => {
             <span class="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 navLink"></span>
           </Link>
           <Link activeClass="active"
-            to="About"
+            to="CommonAboutAndProject"
             spy={true}
             smooth={true}
             offset={-70}

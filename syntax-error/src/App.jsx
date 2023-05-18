@@ -1,5 +1,5 @@
 import About from './components/Pages/About'
-import { motion } from 'framer-motion'
+import { motion, transform } from 'framer-motion'
 import Project from './components/Pages/Project'
 import Home from './components/Pages/Home'
 import Marquee from './components/Marquee/Marquee'
@@ -78,7 +78,7 @@ function App() {
   const yHomeplanet = useTransform(
     scrollYProgress,
     [0.1, 0.12, 0.15, 0.20,0.25,0.30,0.35,0.40],
-    ["0vh", "-10vh", "-30vh", "-40vh","50vh","40vh","150vh","150vh" ]
+    ["0vh", "-10vh", "-50vh", "-40vh","50vh","40vh","150vh","150vh" ]
   );
   // rotate animation for homeplanet
   const rotate = useTransform(
@@ -132,17 +132,19 @@ function App() {
 
   },[window.innerHeight])
   return (
-    <div className='text-white ' ref={targetRef}>
+    <div className='text-white' ref={targetRef}>
       <NavBar />
       <Home />
      {
       windowWidth > 768  ? 
       <>
-        <motion.img src={homePlanet} alt="homeplanet"  className='absolute -bottom-1/3 lg:-bottom-[90%] lg:w-2/3 -z-10 lg:left-[20%]' style={{rotate,
+        <motion.img src={homePlanet} alt="homeplanet"  className='absolute -bottom-1/3 lg:-bottom-[90%] lg:w-2/3 -z-10 lg:left-[20%]'
+        style={{rotate,
           y:yHomeplanet,
           x:xHomeplanet,
           transition:transitionHomeplanet,
-        }}/>
+        }}
+        />
         <motion.img src={earth} alt="earth"  className='absolute left-14 top-1/2 -z-10' style={{
           y:yEarth,
           x:xEarth,
