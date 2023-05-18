@@ -2,9 +2,12 @@ import React, { useState } from 'react'
 import { RiMenuFoldLine } from 'react-icons/ri'
 import { GiCrossedBones } from 'react-icons/gi'
 import { Link } from 'react-scroll';
+import { motion } from 'framer-motion'
+import { useScroll, useTransform } from 'framer-motion'
+import { forwardRef } from 'react';
 
-const NavBar = () => {
-  
+
+const NavBar = forwardRef((props, ref) => {
   const [showMediaIcons, setShowMediaIcons] = useState(true)
   const handleToggle = () => {
     setShowMediaIcons(!showMediaIcons)
@@ -13,13 +16,22 @@ const NavBar = () => {
   const handleLinkClick = () => {
     setShowMediaIcons(true)
   };
-
-
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start start", "end start"],
+  });
+  
+  const opacity = useTransform(
+    scrollYProgress,
+    [0,0.5,0.10],
+    [0,10,2 ]
+  );
+  
 
 
   return (
-    <div className="w-full">
-      <div className='flex h-36 justify-between lg:justify-around items-center w-full  py-8 px-8 2xl:max-w-[1800px] lg:w-[90%] xl:w-[70%]  lg:mt-12   fixed -top-2 left-0 lg:left-1/2 lg:-translate-x-1/2 text-white font-Kanit lg:bg-[rgba(43,43,43,0.26)]  lg:bg-opacity-20 backdrop-blur-md rounded-lg  z-50 '>
+    <div className="w-full" ref={ref}>
+      <div className='flex justify-between lg:justify-around items-center w-full  py-8 px-2 lg:w-[90%] xl:w-[70%]  lg:mt-12   fixed top-0 left-0 lg:left-1/2 lg:-translate-x-1/2 text-white font-Kanit lg:bg-[rgba(43,43,43,0.26)]  lg:bg-opacity-20    backdrop-blur-md rounded-lg  z-50 '>
         <div>
           <Link activeClass="active"
             to="Home"
@@ -27,8 +39,9 @@ const NavBar = () => {
             smooth={true}
             offset={-70}
             duration={500}>
-            <p className='gradient-text w-56 h-12 pt-1 mr-8 text-xl text-center uppercase border-[3.16px] border-white cursor-pointer lg:text-3xl lg:w-64 max-w-none text-white font-Kanit font-bold tracking-wide ' > <span className='hover:gradient-text '>Syntax erreur</span>
-            </p>
+            <motion.p className='gradient-text w-56 h-12 pt-1 mr-8 text-xl text-center uppercase border-[3.16px] border-white cursor-pointer lg:text-3xl lg:w-64 max-w-none text-white font-Kanit font-bold tracking-wide' style={{ opacity } } > <span className='hover:gradient-text ' 
+            >Syntax erreur</span>
+            </motion.p>
           </Link>
         </div>
         {
@@ -81,5 +94,6 @@ const NavBar = () => {
 
   )
 }
+)
 
 export default NavBar
