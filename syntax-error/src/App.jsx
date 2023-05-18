@@ -61,8 +61,6 @@ function App() {
     [0.1,   0.12,    0.15,    0.20,    0.25,   0.30,   0.35,   0.40,  0.45,  0.50],
     ["0.5s", "0.5s", "0.5s", "0.5s","0.5s","0.5s","0.5s","0.5s","0.5s","0.5s"]
   );
-  
-
   // animate y for moon
   const y = useTransform(
     scrollYProgress,
@@ -72,7 +70,7 @@ function App() {
   const xHomeplanet = useTransform(
     scrollYProgress,
     [0.1, 0.12, 0.15, 0.20,0.25,0.30 ,0.35,0.40],
-    ["0vw", "-1vw", "-2.5vw", "-4vw","-4vw","-4vw" ,"-4vw","-70vw"]
+    ["0vw", "-1vw", "-2.5vw", "-4vw","-4vw","-4vw" ,"-4vw","-50vw"]
   );
   // animation for homeplanet
   const yHomeplanet = useTransform(
@@ -133,12 +131,13 @@ function App() {
   },[window.innerHeight])
   return (
     <div className='text-white ' ref={targetRef}>
-      <NavBar />
+      <NavBar  ref={targetRef}/>
       <Home />
      {
       windowWidth > 768  ? 
       <>
-        <motion.img src={homePlanet} alt="homeplanet"  className='absolute -bottom-1/3 lg:-bottom-[90%] lg:w-2/3 -z-10 lg:left-[20%]' style={{rotate,
+        <motion.img src={homePlanet} alt="homeplanet"  className='absolute -bottom-1/3 lg:-bottom-[90%] lg:w-2/3 -z-10 lg:left-[20%]'
+         style={{rotate,
           y:yHomeplanet,
           x:xHomeplanet,
           transition:transitionHomeplanet,
@@ -154,7 +153,7 @@ function App() {
       </>
         : 
         <>
-         <img src={homePlanet} alt="homeplanet"  className='absolute -bottom-1/3 lg:-bottom-[90%] lg:w-2/3 -z-10 lg:left-[20%]'/>
+         <img src={homePlanet} alt="homeplanet"  className='absolute -bottom-1/3 lg:-bottom-[90%]  lg:w-2/3 -z-10 lg:left-[20%]'/>
         <img src={earth} alt="earth"  className='absolute left-14 top-1/2 -z-10' />
         <img src={moon} alt="moon"  className='absolute right-10 lg:right-16 top-1/2 -z-10' />
         </>
