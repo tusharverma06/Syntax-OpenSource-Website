@@ -31,7 +31,7 @@ const NavBar = forwardRef((props, ref) => {
 
   return (
     <div className="w-full" ref={ref}>
-      <div className='flex justify-between lg:justify-around items-center w-full  py-8 px-2 lg:w-[90%] xl:w-[70%]  lg:mt-12   fixed top-0 left-0 lg:left-1/2 lg:-translate-x-1/2 text-white font-Kanit lg:bg-[rgba(43,43,43,0.26)]  lg:bg-opacity-20    backdrop-blur-md rounded-lg  z-50 '>
+      <div className='flex justify-between lg:justify-around items-center w-full  py-8 px-8 lg:w-[90%] xl:w-[70%]  lg:mt-12   fixed top-0 left-0 lg:left-1/2 lg:-translate-x-1/2 text-white font-Kanit lg:bg-[rgba(43,43,43,0.26)]  lg:bg-opacity-20    backdrop-blur-md rounded-lg h-32  z-50 '>
         <div>
           <Link activeClass="active"
             to="Home"
