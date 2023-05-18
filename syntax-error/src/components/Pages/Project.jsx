@@ -19,13 +19,17 @@ const Project = () => {
     offset: ["start end", "end start"],
   });
   const height = useTransform(scrollYProgress, [0, 0.8], ["0%", "50%"])
-  
+  const transitionWhiteLine = useTransform(
+    scrollYProgress,
+    [0.1, 0.12, 0.15, 0.20,0.25,0.30 ,0.35,0.40],
+    ["0.5s", "0.5s", "0.5s", "0.5s","0.5s","0.5s" ,"0.5s","0.5s"]
+  );
   return (
 
     <Element name='Projects' className='relative w-full h-screen '>
       <div ref={targetRef}>
         {/* White Line */}
-        <motion.div className='w-0 border-[4px] border-solid border-white h-[456px] absolute mx-auto top-0 left-[50%] 2xl:left-[50%]' style={{ height }}>
+        <motion.div className='w-0 border-[4px] border-solid border-white h-[456px] absolute mx-auto top-0 left-[50%] 2xl:left-[50%]' style={{ height, transition: transitionWhiteLine }}>
         </motion.div>
       </div>
 

@@ -6,6 +6,7 @@ import { Element } from 'react-scroll'
 import Participant from '../Contributors/Participant'
 import { useRef, useState, useEffect } from 'react'
 import { useScroll, useTransform ,motion} from 'framer-motion'
+import { contributors } from '../Contributors/contributorsData'
 const Contributors = () => {
   let width;
   if (typeof window !== "undefined") {
@@ -27,49 +28,23 @@ useEffect(() => {
   });
    const height = useTransform(scrollYProgress, [0, 0.4], ["0%", `${windowWidth<600? '25%': '12.5%'}`])
   const height2 = useTransform(scrollYProgress, [0.2, 0.4], ["0%",  `${windowWidth<600? '25%': '13.5%'}`])
- const contributors = [
-    {
-      id: 1,
-      icon: 'https://avatars.githubusercontent.com/u/117444846?v=4',
-      title: '@tusharverma06',
-      link: 'https://github.com/tusharverma06'
-    },
-    {
-      id: 2,
-      icon: 'https://avatars.githubusercontent.com/u/73684596?v=4',
-      title: '@sahil-develops',
-      link: 'https://github.com/sahil-develops'
-    },
-    {
-      id: 3,
-      icon: 'https://avatars.githubusercontent.com/u/106579572?v=4',
-      title: '@MudassirKhan2',
-      link: 'https://github.com/MudassirKhan2'
-    },
-    {
-      id: 4,
-      icon: 'https://avatars.githubusercontent.com/u/76222238?v=4',
-      title: '@itsApex',
-      link: 'https://github.com/itsApex'
-    },
-    {
-      id: 5,
-      icon: 'https://avatars.githubusercontent.com/u/102750772?v=4',
-      title: '@RohitGhosh7703',
-      link: 'https://github.com/RohitGhosh7703'
-    }
-  ]
+  const transitionWhiteLine = useTransform(
+    scrollYProgress,
+    [0.1, 0.12, 0.15, 0.20,0.25,0.30 ,0.35,0.40],
+    ["0.5s", "0.5s", "0.5s", "0.5s","0.5s","0.5s" ,"0.5s","0.5s"]
+  );
+ 
   return (
     <Element name='Contributors'>
       <div ref={targetRef}  className='relative flex items-center justify-center w-full h-screen overflow-x-hidden overflow-y-hidden' >
 
         {/* White line */}
-        <motion.div className='w-0 border-[0.375rem] h-[30%] xl:h-[17.5%]   border-solid border-white  absolute top-0 z-10  mx-auto  sm:left-[50%]' style={{height: height}}>
+        <motion.div className='w-0 border-[0.375rem] h-[30%] xl:h-[17.5%]   border-solid border-white  absolute top-0 z-10  mx-auto  sm:left-[50%]' style={{height: height, transition: transitionWhiteLine}}>
         </motion.div>
 
         {/* Main circle containing ids */}
         <div
-          className="w-[21rem] h-[21rem] sm:w-[31.375rem] sm:h-[31rem] sm:px-8 px-8 py-10  border-[0.25rem] xl:px-14 sm:py-16 2xl:px-20 2xl:py-28 border-solid border-white mx-auto rounded-full z-30 flex flex-wrap items-center justify-center gap-4 sm:gap-10 relative sm:max-w-[40rem] "
+          className="w-[21rem] h-[21rem] sm:w-[30.375rem] sm:h-[30rem] sm:px-8 px-8 py-10  border-[0.25rem] xl:px-14 sm:py-16 2xl:px-10 2xl:py-28 border-solid border-white mx-auto rounded-full z-30 flex flex-wrap items-center justify-center gap-4 sm:gap-10 relative sm:max-w-[40rem] "
         >
           {contributors.map(contributor => <Participant
             key={contributor.id}
@@ -85,7 +60,7 @@ useEffect(() => {
       </div> */}
 
       {/* White line */}
-      <motion.div className='w-0 border-[0.375rem] h-[30%] xl:h-[17.5%]  border-solid border-white  absolute bottom-0 z-10  mx-auto  sm:left-[50%]' style={{height: height2}}>
+      <motion.div className='w-0 border-[0.375rem] h-[30%] xl:h-[17.5%]  border-solid border-white  absolute bottom-0 z-10  mx-auto  sm:left-[50%]' style={{height: height2, transition: transitionWhiteLine}}>
       </motion.div>
       </div>
 
