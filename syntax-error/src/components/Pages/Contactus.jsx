@@ -28,16 +28,16 @@ const Contactus = () => {
       </div>
 
       {/* Contact Us Container */}
-      <div className="flex justify-center mt-28">
+      <div className="flex justify-center mt-28 mb-10 px-5 ">
         {" "}
         {/* Main container */}
-        <div className="flex flex-col justify-center items-center w-full lg:w-[934px] p-16 backdrop-blur-md bg-[rgba(43,43,43,0.26)] ">
+        <div className="rounded-2xl border-[1px] border-[#eee] flex flex-col justify-center items-center w-full lg:w-[934px] p-16 lg:pb-[39px] backdrop-blur-md bg-[rgba(43,43,43,0.26)] ">
           {" "}
           {/* container */}
-          <div className="uppercase font-Kanit font-semibold text-[40px] md:text-[81px] leading-[121px]">
+          <div className="uppercase font-Kanit font-semibold text-[35px] md:text-[81px] whitespace-nowrap leading-[121px]">
             Contact us
           </div>
-          <div className="flex flex-col-reverse items-center justify-center p-10 sm:flex-row gap-36">
+          <div className="flex flex-col-reverse items-center justify-center p-10 sm:flex-row gap-20 sm:gap-36">
             <div>
               <div className="flex flex-col w-full gap-16 mx-auto mb-6 group">
                 <input
@@ -79,7 +79,7 @@ const Contactus = () => {
             </button>
           </div>
           <div>
-            <p className="p-2 px-10 mt-8 text-lg tracking-widest rounded-md w-max font-Kanit">
+            <p className=" px-10 mt-8 text-sm sm:text-lg tracking-widest rounded-md w-max font-Kanit">
               Based in Mumbai, Maharashtra
             </p>
           </div>
@@ -91,7 +91,7 @@ const Contactus = () => {
 
         </div>
           <div>
-          <p className="text-lg font-light text-left font-Kanit">
+          <p className="text-lg font-light text-left font-Kanit  ">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
             vulputate libero et velit interdum, ac aliquet odio mattis. Class
             aptent taciti sociosqu ad litora torquent per conubia nostra, per

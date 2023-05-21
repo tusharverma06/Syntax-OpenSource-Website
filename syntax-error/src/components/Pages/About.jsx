@@ -53,7 +53,7 @@ const About = () => {
               </div>
 
               <div className="bg-[#101010] w-full pt-5 sm:pr-3 sm:w-[720px] ">
-                <p className=" leading-7 px-6 sm:px-[40px] text-lg">
+                <p className=" leading-7 px-6 sm:px-[40px] lg:pl-16 lg:pb-4 text-lg">
                   {" "}
                   Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                   Praesentium ut incidunt aliquam tempora iste nisi illo?
@@ -67,7 +67,7 @@ const About = () => {
             </section>
           </motion.div>
         </motion.div>
-        <div className="flex flex-col gap-4 mb bg-[#0B0B0B] bg-fixed ">
+        <div className="flex flex-col gap-4 mb bg-[#0B0B0B] bg-fixed bg-center bg-no-repeat bg-cover min-h-[100vh]">
           <div className="z-10 flex flex-col gap-10 pt-10 pl-12 mt-8 ml-5 text-white rounded-lg sm:pl-32 sm:flex-row">
             <div>
               <img src={aboutprofile} className="w-[60vw] sm:w-[100vw]" alt="" />
@@ -94,7 +94,7 @@ const About = () => {
               <img src={aboutprofile2} className="w-[60vw] sm:w-[100vw]" alt="" />
             </div>
             <div className="flex flex-col">
-              <h1 className="font-Kanit text-[40px] sm:text-[55px] font-semibold">
+              <h1 className="font-Kanit text-[36px] sm:text-[55px] font-semibold">
                 VASUDHA SINGH
               </h1>
               <p className="text-xl leading-6">FOUNDER & CEO</p>

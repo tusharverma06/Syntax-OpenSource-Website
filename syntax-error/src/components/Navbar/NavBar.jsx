@@ -28,10 +28,24 @@ const NavBar = forwardRef((props, ref) => {
   );
   
 
+  var prevScrollpos = window.pageYOffset;
+  window.onscroll = function() {
+  var currentScrollPos = window.pageYOffset;
+    if (prevScrollpos > currentScrollPos) {
+      document.getElementById("navbar").style.top = "0";
 
+      
+    } else {
+
+      
+      document.getElementById("navbar").style.top = "-300px";
+      document.getElementById("navbar").style.transition = "0.8s ease-in-out";
+    }
+    prevScrollpos = currentScrollPos;
+  }
   return (
     <div className="w-full" ref={ref}>
-      <div className='flex justify-between lg:justify-around items-center w-full  py-8 px-8 lg:w-[90%] xl:w-[70%]  lg:mt-12   fixed top-0 left-0 lg:left-1/2 lg:-translate-x-1/2 text-white font-Kanit lg:bg-[rgba(43,43,43,0.26)]  lg:bg-opacity-20    backdrop-blur-md rounded-lg h-32  z-50 '>
+      <div id='navbar' className='flex justify-between lg:justify-around items-center w-full  py-8 px-8 lg:w-[90%] xl:w-[70%]  lg:mt-12   fixed top-0 left-0 lg:left-1/2 lg:-translate-x-1/2 text-white font-Kanit lg:bg-[rgba(43,43,43,0.26)]  lg:bg-opacity-20    backdrop-blur-md rounded-lg h-32  z-50 '>
         <div>
           <Link activeClass="active"
             to="Home"
@@ -48,7 +62,7 @@ const NavBar = forwardRef((props, ref) => {
           showMediaIcons ? <RiMenuFoldLine className='block text-2xl lg:hidden animate-bounce' onClick={handleToggle} /> : " "
         }
 
-        <div className={`space-x-7  text-xl  flex flex-col lg:items-center justify-center lg:justify-evenly gap-5 absolute bg-white  bg-opacity-5  backdrop-blur-lg  lg:bg-none lg:bg-opacity-0 lg:backdrop-blur-none lg:relative  lg:flex lg:p-4 lg:rounded-md top-0 right-0 w-9/12   h-screen  z-40 lg:flex-row lg:h-fit   ${showMediaIcons ? "hidden" : "block"}`}>
+        <div id='linkSpacing' className={` space-x-7  text-xl  flex flex-col lg:items-center justify-center lg:justify-evenly gap-5  absolute bg-white  bg-opacity-25  backdrop-blur-xl  lg:bg-none lg:bg-opacity-0 lg:backdrop-blur-none lg:relative  lg:flex lg:p-4 lg:rounded-md top-0 right-0 w-9/12   h-screen  z-40 lg:flex-row lg:h-full   ${showMediaIcons ? "hidden" : "block"}`}>
 
           <GiCrossedBones className='absolute block text-white right-4 top-10 Cross lg:hidden' onClick={() => handleToggle()} />
           <Link activeClass="active"

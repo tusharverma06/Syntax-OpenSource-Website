@@ -15,6 +15,7 @@ import earth from './assets/images/earth.png'
 import moon from './assets/images/moon.svg'
 import NavBar from './components/Navbar/NavBar'
 import { useState } from 'react'
+import earthclear from './assets/images/earthclear.png'
 function App() {
   //for responsiveness
   let width;
@@ -143,7 +144,7 @@ function App() {
           transition:transitionHomeplanet,
         }}
         />
-        <motion.img src={earth} alt="earth"  className='absolute left-14 top-1/2 -z-10' style={{
+        <motion.img src={earthclear} alt="earth" width='100px'  className='absolute left-14 top-1/2 -z-10' style={{
           y:yEarth,
           x:xEarth,
           scale:scaleEarth,
@@ -155,7 +156,7 @@ function App() {
         : 
         <>
          <img src={homePlanet} alt="homeplanet"  className='absolute -bottom-1/3 lg:-bottom-[90%]  lg:w-2/3 -z-10 lg:left-[20%]'/>
-        <img src={earth} alt="earth"  className='absolute left-14 top-1/2 -z-10' />
+        <img src={earthclear} alt="earth"  className='absolute left-14 top-1/2 -z-10' />
         <img src={moon} alt="moon"  className='absolute right-10 lg:right-16 top-1/2 -z-10' />
         </>
      }

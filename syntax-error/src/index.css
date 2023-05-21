@@ -4,22 +4,29 @@
 @tailwind components;
 @tailwind utilities;
 
+
+
+
 body{
-  background-image: url('./assets/images/BackgroundImg.svg');
+  background-image: url('./assets/images/grad&startbg.png');
   background-size: cover;
+scroll-behavior:smooth
 }
 
 .gradient-text{
-  transition-duration: 1s;
-  transition-property: all;
-  transform-style: preserve-3d;
-  transition-delay:100ms;
+
+  transition-delay:2s;
+  transition: all 0.8s cubic-bezier(0.000, 0.000, 0.230, 1);
+  background-size: 200% 100%;
+  background-position: 100%;
 }
 .gradient-text:hover {
   background: linear-gradient(90deg, #364E9D -1.03%, #794897 53.5%, #DB3F8F 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  background-position: 3%;
+  
 
 }
 .swiper-button-next::after,
@@ -62,4 +69,28 @@ body{
 .circle:hover .transition-text {
   opacity: 1;
   visibility: visible;
+}
+
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 1px 1px 2px #0D152C; 
+  background-color: #0D172E;
+
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #FFF;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background-blend-mode: color-burn; 
 }
