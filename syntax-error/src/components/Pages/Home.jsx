@@ -33,10 +33,12 @@ const Home = () => {
     <Element name="Home"  > 
       <div className='relative flex flex-col items-center justify-center h-screen bg-center bg-cover' ref={targetRef1}>        
        <motion.div className='absolute '  >
-        <motion.div className='gradient-text  p-2 text-4xl uppercase cursor-default border-white  lg:text-8xl lg:p-4 text-white font-Kanit border-[10px] bottom-72 font-bold'
+        <motion.div className='heading--text p-2 transition-colors duration-500 text-4xl uppercase cursor-default border-white  lg:text-8xl lg:p-4 text-white font-Kanit border-[10px] bottom-72 font-bold'
         style={{y,x,scale,opacity}}
         >
-            Syntax Erreur
+          <div className="gradient-text">
+            Syn<span>tax Er</span>reur
+          </div>
           </motion.div>
        </motion.div>
       </div>

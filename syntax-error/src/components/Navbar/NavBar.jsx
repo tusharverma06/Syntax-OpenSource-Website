@@ -7,7 +7,7 @@ import { useScroll, useTransform } from 'framer-motion'
 import { forwardRef } from 'react';
 
 
-const NavBar = forwardRef((props, ref) => {
+const NavBar = forwardRef((props, ref, windowWidth) => {
   const [showMediaIcons, setShowMediaIcons] = useState(true)
   const handleToggle = () => {
     setShowMediaIcons(!showMediaIcons)
@@ -53,20 +53,21 @@ const NavBar = forwardRef((props, ref) => {
             smooth={true}
             offset={-70}
             duration={500}>
-            <motion.p className='gradient-text w-56 h-12 pt-1 mr-8 text-xl text-center uppercase border-[3.16px] border-white cursor-pointer lg:text-3xl lg:w-64 max-w-none text-white font-Kanit font-bold tracking-wide' style={{ opacity } } > <span className='hover:gradient-text ' 
+            <motion.p className=' w-56 h-12 pt-1 mr-8 text-xl text-center uppercase border-[3.16px] border-white cursor-pointer lg:text-3xl lg:w-64 max-w-none text-white font-Kanit font-bold tracking-wide' style={{opacity: windowWidth>700? opacity :'1' }}   >
+               <span className='gradient-text' 
             >Syntax erreur</span>
             </motion.p>
           </Link>
         </div>
         {
-          showMediaIcons ? <RiMenuFoldLine className='block text-2xl lg:hidden animate-bounce' onClick={handleToggle} /> : " "
+          showMediaIcons ? <RiMenuFoldLine className='block text-2xl lg:hidden ' onClick={handleToggle} /> : " "
         }
 
         <div id='linkSpacing' className={` space-x-7  text-xl  flex flex-col lg:items-center justify-center lg:justify-evenly gap-5  absolute bg-white  bg-opacity-25  backdrop-blur-xl  lg:bg-none lg:bg-opacity-0 lg:backdrop-blur-none lg:relative  lg:flex lg:p-4 lg:rounded-md top-0 right-0 w-9/12   h-screen  z-40 lg:flex-row lg:h-full   ${showMediaIcons ? "hidden" : "block"}`}>
 
           <GiCrossedBones className='absolute block text-white right-4 top-10 Cross lg:hidden' onClick={() => handleToggle()} />
           <Link activeClass="active"
-            to="CommonAboutAndProject"
+            to="Projects"
             spy={true}
             smooth={true}
             offset={-70}
@@ -76,7 +77,7 @@ const NavBar = forwardRef((props, ref) => {
             <span class="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 navLink"></span>
           </Link>
           <Link activeClass="active"
-            to="CommonAboutAndProject"
+            to="About"
             spy={true}
             smooth={true}
             offset={-70}
