@@ -14,7 +14,6 @@ scroll-behavior:smooth
 }
 
 .gradient-text{
-
   transition-delay:2s;
   transition: all 0.8s cubic-bezier(0.000, 0.000, 0.230, 1);
   background-size: 200% 100%;
@@ -27,7 +26,21 @@ scroll-behavior:smooth
   background-clip: text;
   background-position: 3%;
   
+}
+.heading--text{
+  transition-delay:2s;
+  transition: all 0.8s cubic-bezier(0.000, 0.000, 0.230, 1);
+}
+.heading--text:hover{
+  background: black;
+  border: black;
+}
 
+.gradient-text:hover span {
+  background: radial-gradient(circle, #F7CC21 17.9%, #DB3F8F 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 .swiper-button-next::after,
 .swiper-button-prev::after {
@@ -93,4 +106,20 @@ scroll-behavior:smooth
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background-blend-mode: color-burn; 
+}
+/* Float animation */
+@keyframes floatAnimation {
+  0% {
+    transform: translate(0, 0) rotate(0) scale(1);
+  }
+  50% {
+    transform: translate(-5px, -5px) rotate(5deg) scale(1.02);
+  }
+  100% {
+    transform: translate(0, 0) rotate(0) scale(1);
+  }
+}
+
+.float{
+  animation: floatAnimation 3s ease-in-out infinite;
 }

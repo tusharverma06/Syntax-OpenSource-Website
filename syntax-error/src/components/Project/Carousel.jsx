@@ -8,37 +8,35 @@ const Carousel = () => {
     const items = [
         {
             id: 1,
-            title: 'THE WEB APP',
-            description: 'lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem',
+            title: 'KODIAC LABS',
+            description: 'Our development team created a revolutionary website that seamlessly integerate discord bots with non fungible tokens(NFTS). The client Provided a visually-stunning design, and our team expertly utilized the react framework to bring it to life in just three weeks',
             image: `${Icon}`,
             softwareUsed: [
-                'https://i0.wp.com/theicom.org/wp-content/uploads/2016/03/js-logo.png?fit=500%2C500&ssl=1&w=640',
+                'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png',
                 'https://cdn.pixabay.com/photo/2017/08/05/11/16/logo-2582747_1280.png',
                 'https://cdn.pixabay.com/photo/2017/08/05/11/16/logo-2582748_640.png'
             ]
         },
         {
             id: 2,
-            title: 'REVOLUTIONARY',
-            description: 'lotren n njn jnfkjn kjnkjnkfj lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem',
+            title: 'Carbon Coins',
+            description: 'We developed the innovative Carbon Coins mobile app, utilizing flutter technology and utilizing firebase as its database, to efficiently track and reduce carbon emissions from vehicles. Our team successfully delivered this solution in just two months.',
             image: `${Icon}`,
             softwareUsed: [
-                'https://cdn.pixabay.com/photo/2017/08/05/11/16/logo-2582748_640.png',
-                'https://i0.wp.com/theicom.org/wp-content/uploads/2016/03/js-logo.png?fit=500%2C500&ssl=1&w=640',
-                'https://seeklogo.com/images/C/c-sharp-c-logo-02F17714BA-seeklogo.com.png',
-                'https://cdn.freebiesupply.com/logos/large/2x/react-1-logo-svg-vector.svg'
+                'https://cdn.iconscout.com/icon/free/png-256/free-flutter-2038877-1720090.png',
+                'https://firebase.google.com/static/downloads/brand-guidelines/PNG/logo-logomark.png'
             ]
 
         },
         {
             id: 3,
-            title: 'HELOO 3',
-            description: 'lotren n njn jnfkjn kjnkjnkfj lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem',
+            title: 'News App',
+            description: 'The news app notify you when a news is released instantly. Our flutter team successfully completed the app for an agency within 3 months of a time period. The project contained the app, the backend panel and rest api with AWS servers.',
             image: `${Icon}`,
             softwareUsed: [
-                'https://cdn.freebiesupply.com/logos/large/2x/react-1-logo-svg-vector.svg',
-                'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tailwind_CSS_Logo.svg/2048px-Tailwind_CSS_Logo.svg.png',
-                'https://avatars.githubusercontent.com/u/54212428?s=280&v=4'
+                'https://cdn.iconscout.com/icon/free/png-256/free-flutter-2038877-1720090.png',
+                'https://static-00.iconduck.com/assets.00/aws-icon-512x512-hniukvcn.png',
+                'https://apps.odoo.com/apps/icon_image?module_id=37657'
             ]
 
         },
@@ -61,12 +59,12 @@ const Carousel = () => {
     };
 
     return (
-        <div className="flex flex-col items-center justify-center w-11/12 sm:w-full" >
-            <div className="w-[90%]  sm:w-[90%] lg:w-[80%] xl:w-[60rem] mx-auto flex items-center flex-col sm:flex-row sm:justify-between ">
+        
+            <div className="w-[90%] lg:w-[80%] xl:w-[60rem] mx-auto flex items-center flex-col sm:flex-row sm:justify-between ">
 
                 {/* Mapping the projects */}
                 <div className="w-full mx-auto" >
-                    <div className="relative sm:w-full lg:w-[97%] h-[510px] sm:h-[600px] xl:w-[900px] rounded-lg overflow-hidden">
+                    <div className="relative sm:w-full lg:w-[97%] h-[800px] sm:h-[600px] xl:w-[900px] rounded-lg overflow-hidden">
                         {items.map((item, index) => (
                             <div
                                 key={index}
@@ -74,14 +72,14 @@ const Carousel = () => {
                                     } absolute top-0 left-0 w-full h-full transition-opacity duration-500`}
                             >
                                 {/* Layout of projects container */}
-                                <div className="w-full xl:w-[56.125rem] h-[30.5rem] bg-[rgba(43,43,43,0.26)] mx-auto rounded-[14px]  backdrop-blur-[10px]  flex flex-col-reverse sm:flex-row items-center justify-evenly sm:justify-between" >
+                                <div className="w-full xl:w-[56.125rem] h-[50.5rem] sm:h-[38rem] md:h-[35rem] bg-[rgba(43,43,43,0.26)] mx-auto rounded-[14px]  backdrop-blur-[10px]  flex flex-col-reverse sm:flex-row items-center justify-evenly sm:justify-between" >
                                     <div className="h-1/2 w-[80%] sm:w-[48%] sm:h-full text-white">
-                                        <div className="w-[90%] sm:w-[70%] h-[90%] pt-8 sm:pt-24 flex flex-col items-start justify-between mx-auto">
-                                            <div className='flex flex-col items-start justify-center gap-2 sm:gap-8 items '>
+                                        <div className="w-[90%] sm:w-[80%] h-[90%] pt-8 sm:pt-16 flex flex-col items-start justify-between mx-auto">
+                                            <div className='flex flex-col items-start justify-center gap-2 sm:gap-4 items '>
                                                 {/* Project Title */}
                                                 <h1 className='font-Kanit font-medium text-[20px] sm:text-[24px] leading-9 w-44 h-9 tracking-wider'>{item.title}</h1>
                                                 {/* Project Description */}
-                                                <p className='w-[90%] max-w-64 h-9 font-light text-[12px] sm:text-[14px] leading-4 tracking-wider'>
+                                                <p className='w-full  h-9 font-light text-[12px] sm:text-[18px] text-left leading-6 py-4 tracking-wider'>
                                                     {item.description}
                                                 </p>
                                             </div>
@@ -97,8 +95,8 @@ const Carousel = () => {
                                     </div>
                                     {/* Project Images */}
                                     <div className="relative flex items-center justify-center w-full bg-black sm:w-1/2 h-1/2 sm:h-full">
-                                        <img src={item.image} alt="" className="absolute bottom-0 sm:w-auto left-8 w-52 sm:-left-2 sm:bottom-32 lg:-left-12 lg:bottom-0 md:bottom-20 md:-left-4" />
-                                        <img src={item.image} alt="" className="absolute top-0 left-16 sm:left-8 sm:top-28 w-52 sm:w-auto lg:top-2 lg:left-16 md:top-28 md:left-8" />
+                                        <img src={item.image} alt="" className="absolute top-32 sm:w-auto left-24 w-52 sm:-left-2 sm:bottom-32 lg:-left-12 lg:bottom-0 md:bottom-20 md:-left-4" />
+                                        <img src={item.image} alt="" className="absolute bottom-28 left-14 sm:left-8 sm:top-28 w-52 sm:w-auto lg:top-2 lg:left-16 md:top-28 md:left-8" />
                                     </div>
                                 </div>
                             </div>
@@ -123,7 +121,6 @@ const Carousel = () => {
                     </button>
                 </div>
             </div>
-        </div>
     );
 };
 

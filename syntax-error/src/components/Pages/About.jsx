@@ -28,7 +28,7 @@ const About = () => {
             <br />
 
             <section className="flex flex-col justify-center sm:flex sm:flex-row sm:justify-between  pt-10 sm:pt-0   text-white rounded-lg backdrop-blur-sm gap-24 sm:gap-0  bg-opacity-80 bg-[rgba(43,43,43,0.26)] sm:w-[85%] w-full z-10 ">
-              <div className=" h-0 w-0 sm:w-[500px] sm:h-[212px] sm:flex sm:items-center sm:justify-center">
+              <div className=" h-0 w-0 sm:w-[500px] sm:h-[212px] sm:flex sm:items-center sm:justify-start sm:px-16">
                 {" "}
                 <h1 className="px-6 mt-2 text-6xl sm:mt-5 font-Kanit">About</h1>
               </div>
@@ -46,8 +46,8 @@ const About = () => {
               </div>
             </section>
             <section className="backdrop-blur-sm text-white flex flex-col justify-center sm:flex sm:flex-row sm:justify-between gap-0  bg-opacity-80 pl-0 pt-[10px] sm:w-[85%] w-full pb-[20px] sm:py-0 rounded-lg  bg-[rgba(43,43,43,0.26)] z-10">
-              <div className=" h-28 w-44 sm:w-[500px] sm:h-[212px] sm:flex sm:items-center sm:justify-center">
-                <h1 className="px-6 mt-5 text-5xl font-Kanit whitespace-nowrap">
+              <div className=" h-28 w-44 sm:w-[500px] sm:h-[212px] sm:flex sm:items-center sm:justify-start sm:px-16">
+                <h1 className="px-6 mt-5 text-6xl font-Kanit whitespace-nowrap">
                   What we do
                 </h1>
               </div>
