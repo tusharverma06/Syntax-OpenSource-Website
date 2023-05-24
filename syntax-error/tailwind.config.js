@@ -10,6 +10,9 @@ export default {
         Montserrat: ['Montserrat', 'sans-serif'],
         Kanit: ['Kanit', 'sans-serif'],
       },
+      colors:{
+        bgPrimary: " rgba(133, 133, 133, 0.26)"
+      }
     },
   },
   plugins: [],
