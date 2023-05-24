@@ -118,21 +118,10 @@ function App() {
     ["0.5s", "0.5s", "0.5s","0.5s","0.5s","0.5s","0.5s","0.5s","0.5s", "0.5s", "0.5s","0.5s","0.5s","0.5s","0.5s","0.5s"]
 
   );
-  useEffect(()=>{
-    window.addEventListener("scroll", function() {
-      const myDiv = document.querySelector(".line");
-      const position = myDiv.getBoundingClientRect().top;
-      const screenHeight = window.innerHeight;
-    
-      if (position < screenHeight - 100) {
-        myDiv.classList.add("show");
-      }
-    });  
 
-  },[window.innerHeight])
   return (
     <div className='text-white ' ref={targetRef}>
-      <NavBar  ref={targetRef}/>
+      <NavBar windowWidth={windowWidth}  ref={targetRef}/>
       <Home />
      {
       windowWidth > 768  ? 
@@ -149,22 +138,21 @@ function App() {
           x:xEarth,
           scale:scaleEarth,
           transition:transitionEarth,
-        }}/>
+        }}
+        />
         <motion.img src={moon} alt="moon"  className='absolute right-10 lg:right-16 top-1/2 -z-10' style={{scale,x,y,transition,
         }}/>
       </>
         : 
         <>
          <img src={homePlanet} alt="homeplanet"  className='absolute -bottom-1/3 lg:-bottom-[90%]  lg:w-2/3 -z-10 lg:left-[20%]'/>
-        <img src={earthclear} alt="earth"  className='absolute left-14 top-1/2 -z-10' />
+        <img src={earthclear} alt="earth"  className='absolute w-20 left-14 top-1/2 -z-10' />
         <img src={moon} alt="moon"  className='absolute right-10 lg:right-16 top-1/2 -z-10' />
         </>
      }
       <Projectandabout />
       <div >
-        {/* White Line */}
-        <div className='line w-0 border-[4px] border-solid border-white h-screen -z-10 sticky mx-auto top-0 sm:left-[50%]'>
-        </div>
+
         <Project />
         <About />
         <Contributors />
