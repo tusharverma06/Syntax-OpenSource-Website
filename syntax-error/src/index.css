@@ -99,7 +99,7 @@ scroll-behavior:smooth
  
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #FFF;
+  background: #000;
   border-radius: 10px;
 }
 

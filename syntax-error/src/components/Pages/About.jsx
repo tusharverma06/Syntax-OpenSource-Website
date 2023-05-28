@@ -1,11 +1,12 @@
 import React, { useRef } from "react";
-import aboutprofile from "../../assets/images/aboutprofile.png";
-import aboutprofile2 from "../../assets/images/aboutprofile2.png";
-import aboutprofile3 from "../../assets/images/aboutprofile3.png";
 import abouthr from '../../assets/images/abouthr.svg'
 import abouthr2 from '../../assets/images/abouthr2.svg'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import { Element } from "react-scroll";
+import Card from "../Card/Card";
+import {AiFillCaretLeft} from 'react-icons/ai'
+import {AiFillCaretRight} from 'react-icons/ai'
+
 // import Navbar2 from "./Navbar2";
 const About = () => {
   // used for rotation of planet in framer motion instead of uing state
@@ -16,6 +17,37 @@ const About = () => {
     offset: ["start end", "end start"],
   });
   // const height = useTransform(scrollYProgress, [0, 0.4], ["0%", `30%`])
+
+
+
+
+// For Left and Right in Card Section
+
+const contentRef = useRef()
+
+
+const scrollLeft = () => {
+
+  if (contentRef.current) {
+
+    contentRef.current.scrollLeft -= 300
+
+  }
+
+}
+
+
+const scrollRight = () => {
+
+  if (contentRef.current) {
+
+    contentRef.current.scrollLeft += 300
+
+  }
+
+}
+
+
   return (
     <>
       <Element name="About" className="relative" >
@@ -68,69 +100,26 @@ const About = () => {
           </motion.div>
         </motion.div>
         <div className="flex flex-col gap-4 mb bg-[#0B0B0B] bg-fixed bg-center bg-no-repeat bg-cover min-h-[100vh]">
-          <div className="z-10 flex flex-col gap-10 pt-10 pl-12 mt-8 ml-5 text-white rounded-lg sm:pl-32 sm:flex-row">
-            <div>
-              <img src={aboutprofile} className="w-[60vw] sm:w-[100vw]" alt="" />
-            </div>
-            <div className="flex flex-col">
-              <h1 className="font-Kanit text-[40px] sm:text-[55px] font-semibold">
-                ROHIT GHOSH
-              </h1>
-              <p className="text-xl leading-6">FOUNDER & CEO</p>
-              <p className="w-4/5 mt-10 leading-8 text-md sm:text-xl font-Montserrat">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio
-                blanditiis deserunt exercitationem totam laudantium cum
-                consequuntur veritatis saepe consectetur nam error mollitia
-                perferendis esse, reprehenderit hic soluta suscipit amet
-                possimus corporis officia facilis impedit velit. Iusto
-                cupiditate veniam est, soluta dolorem, dolores nisi animi unde
-                ex amet possimus sed? Tempore.
-              </p>
-            </div>
-          </div>
+          <p className="flex justify-center items-center text-5xl pt-8 font-Kanit ">The TEAM</p>
           <img src={abouthr} className="w-full mt-8" alt="" />
-          <div className="flex flex-col gap-10 pt-10 pl-12 mt-8 ml-5 text-white rounded-lg sm:pl-32 sm:flex-row ">
-            <div>
-              <img src={aboutprofile2} className="w-[60vw] sm:w-[100vw]" alt="" />
-            </div>
-            <div className="flex flex-col">
-              <h1 className="font-Kanit text-[36px] sm:text-[55px] font-semibold">
-                VASUDHA SINGH
-              </h1>
-              <p className="text-xl leading-6">FOUNDER & CEO</p>
-              <p className="w-4/5 mt-10 leading-8 text-md sm:text-xl font-Montserrat">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio
-                blanditiis deserunt exercitationem totam laudantium cum
-                consequuntur veritatis saepe consectetur nam error mollitia
-                perferendis esse, reprehenderit hic soluta suscipit amet
-                possimus corporis officia facilis impedit velit. Iusto
-                cupiditate veniam est, soluta dolorem, dolores nisi animi unde
-                ex amet possimus sed? Tempore.
-              </p>
-            </div>
-          </div>
-          <img src={abouthr2} className="w-full mt-8" alt="" />
 
-          <div className="flex flex-col gap-10 pt-10 pb-4 pl-12 mt-8 ml-5 text-white rounded-lg sm:pl-32 sm:flex-row ">
-            <div>
-              <img src={aboutprofile3} className="w-[60vw] sm:w-[100vw]" alt="" />
-            </div>
-            <div className="flex flex-col">
-              <h1 className="font-Kanit text-[40px] sm:text-[55px] font-semibold">
-                ARYA SAWANT
-              </h1>
-              <p className="text-xl leading-6">FOUNDER & CEO</p>
-              <p className="w-4/5 mt-10 leading-8 text-md sm:text-xl font-Montserrat">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio
-                blanditiis deserunt exercitationem totam laudantium cum
-                consequuntur veritatis saepe consectetur nam error mollitia
-                perferendis esse, reprehenderit hic soluta suscipit amet
-                possimus corporis officia facilis impedit velit. Iusto
-                cupiditate veniam est, soluta dolorem, dolores nisi animi unde
-                ex amet possimus sed? Tempore.
-              </p>
-            </div>
-          </div>
+
+
+<div   ref={contentRef}
+ className="flex flex-row justify-start overflow-x-auto p-8 items-center scrollbar-hide scroll-smooth  ">
+<div>
+  <Card/>
+</div>
+</div>
+
+<div className="relative p-4 gap-8 flex items-center justify-center overflow-x-auto">
+<button onClick={scrollLeft} className="text-3xl"><AiFillCaretLeft/></button>
+<button onClick={scrollRight} className="text-3xl"><AiFillCaretRight/></button>
+</div>
+
+          <img src={abouthr2} className="w-full mt-8 mb-10" alt=""  />
+
+       
         </div>
 
         {/* <motion.div className=" h-[70vh] flex justify-end overflow-x-hidden">
