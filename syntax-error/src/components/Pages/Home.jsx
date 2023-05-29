@@ -9,7 +9,7 @@ const Home = () => {
   });
   const opacity = useTransform(
     scrollYProgress,
-    [0.1, 0.12, 0.15, 0.20],
+    [0.1, 0.12, 0.15, 0.30],
     [1, 0.5, 0, 0]
   );
   const y = useTransform(
