@@ -20,24 +20,24 @@ const NavBar = forwardRef((props, ref, windowWidth) => {
     target: ref,
     offset: ["start start", "end start"],
   });
-  
+
   const opacity = useTransform(
     scrollYProgress,
-    [0,0.5,0.10],
-    [0,10,2 ]
+    [0, 0.5, 0.10],
+    [0, 10, 2]
   );
-  
+
 
   var prevScrollpos = window.pageYOffset;
-  window.onscroll = function() {
-  var currentScrollPos = window.pageYOffset;
+  window.onscroll = function () {
+    var currentScrollPos = window.pageYOffset;
     if (prevScrollpos > currentScrollPos) {
       document.getElementById("navbar").style.top = "0";
 
-      
+
     } else {
 
-      
+
       document.getElementById("navbar").style.top = "-300px";
       document.getElementById("navbar").style.transition = "0.8s ease-in-out";
     }
@@ -53,9 +53,9 @@ const NavBar = forwardRef((props, ref, windowWidth) => {
             smooth={true}
             offset={-70}
             duration={500}>
-            <motion.p className=' w-56 h-12 pt-1 mr-8 text-xl text-center uppercase border-[3.16px] border-white cursor-pointer lg:text-3xl lg:w-64 max-w-none text-white font-Kanit font-bold tracking-wide' style={{opacity: windowWidth>700? opacity :'1' }}   >
-               <span className='gradient-text' 
-            >Syntax erreur</span>
+            <motion.p className=' w-56 h-12 pt-1 mr-8 text-xl text-center uppercase border-[3.16px] border-white cursor-pointer lg:text-3xl lg:w-64 max-w-none text-white font-Kanit font-bold tracking-wide' style={{ opacity: windowWidth > 700 ? opacity : '1' }}   >
+              <span className='gradient-text'
+              >Syntax erreur</span>
             </motion.p>
           </Link>
         </div>
@@ -99,9 +99,8 @@ const NavBar = forwardRef((props, ref, windowWidth) => {
             spy={true}
             smooth={true}
             offset={-70}
-            duration={500} className={`tracking-wider  cursor-pointer group h-12 px-4 py-2 border-2 border-white rounded-md w-36 whitespace-nowrap `} onClick={handleLinkClick}>
+            duration={500} className={`tracking-wider  cursor-pointer gradient-link px-4 py-2 border-2 hover:text-black hover:bg-white transition-all duration-700 border-white rounded-md w-36 whitespace-nowrap `} onClick={handleLinkClick}>
             Contact Us
-            <span class="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 navLink"></span>
           </Link>
         </div>
       </div>
