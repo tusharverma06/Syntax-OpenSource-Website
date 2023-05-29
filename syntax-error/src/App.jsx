@@ -155,7 +155,7 @@ function App() {
 
         <Project />
         <About />
-        <Contributors />
+        <Contributors windowWidth={windowWidth} />
         <Contactusdiv/>
         <Contactus/>
       </div>

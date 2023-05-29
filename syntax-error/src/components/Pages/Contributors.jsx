@@ -85,7 +85,7 @@ const Contributors = () => {
         </div>
         {/* Main circle containing ids */}
         <div
-          className="w-[21rem] h-[21rem] sm:w-[25.6875rem] sm:h-[25.375rem] sm:px-8 px-8 py-10  border-[0.25rem] xl:px-14 sm:py-16 2xl:px-10 2xl:py-20 border-solid border-white mx-auto rounded-full z-30 flex flex-wrap items-center justify-center gap-4 sm:gap-10 relative sm:max-w-[40rem] backdrop-blur-xl bg-black bg-opacity-[0.56] "
+          className={`${windowWidth<300? 'w-[17rem] h-[17rem] px-2 py-10':'w-[21rem] h-[21rem] px-8 py-10'} sm:w-[25.6875rem] sm:h-[25.375rem] sm:px-8 lg:px-0 lg:py-10   border-[0.25rem] xl:px-14 sm:py-16 2xl:px-10 2xl:py-20 border-solid border-white mx-auto rounded-full z-30 flex flex-wrap items-center justify-center gap-4 sm:gap-10 relative sm:max-w-[40rem] backdrop-blur-xl bg-black bg-opacity-[0.56]`}
         >
           {contributors.map(contributor => <Participant
             key={contributor.id}
