@@ -9,13 +9,13 @@
 
 body{
   background-image: url('./assets/images/grad&startbg.png');
+  /* background: #494949; */
   background-size: cover;
 scroll-behavior:smooth
 }
 
 .gradient-text{
-  transition-delay:2s;
-  transition: all 0.8s cubic-bezier(0.000, 0.000, 0.230, 1);
+  transition: all ;
   background-size: 200% 100%;
   background-position: 100%;
 }
@@ -28,8 +28,7 @@ scroll-behavior:smooth
   
 }
 .heading--text{
-  transition-delay:2s;
-  transition: all 0.8s cubic-bezier(0.000, 0.000, 0.230, 1);
+  transition: all 500ms ease-in-out;
 }
 .heading--text:hover{
   background: black;
@@ -122,4 +121,27 @@ scroll-behavior:smooth
 
 .float{
   animation: floatAnimation 3s ease-in-out infinite;
+}
+
+
+/* contributors border animation */
+@keyframes gradientAnimation {
+  0% {
+    border-image-slice: 1;
+    border-image-source: linear-gradient(to right, #ff00ff, #00ffff);
+  }
+  50% {
+    border-image-slice: 1;
+    border-image-source: linear-gradient(to right, #00ffff, #ffff00);
+  }
+  100% {
+    border-image-slice: 1;
+    border-image-source: linear-gradient(to right, #ffff00, #ff00ff);
+  }
+}
+
+.gradient-border{
+  /* animation: gradientAnimation 3s linear infinite; */
+  border-width: 4px;
+  border-style: solid;
 }

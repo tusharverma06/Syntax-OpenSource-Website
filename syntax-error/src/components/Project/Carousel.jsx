@@ -60,11 +60,11 @@ const Carousel = () => {
 
     return (
         
-            <div className="w-[90%] lg:w-[80%] xl:w-[60rem] mx-auto flex items-center flex-col sm:flex-row sm:justify-between ">
+            <div className="relative w-[90%] lg:w-[80%] xl:w-[60rem] mx-auto flex items-center flex-col sm:flex-row sm:justify-between ">
 
                 {/* Mapping the projects */}
-                <div className="w-full mx-auto" >
-                    <div className="relative sm:w-full lg:w-[97%] h-[800px] sm:h-[600px] xl:w-[900px] rounded-lg overflow-hidden">
+                <div className="w-full mx-auto sm:flex sm:items-center sm:justify-center" >
+                    <div className="relative sm:w-[87%] lg:w-[97%] h-[800px] sm:h-[600px] xl:w-[900px] rounded-lg overflow-visible sm:overflow-hidden">
                         {items.map((item, index) => (
                             <div
                                 key={index}
@@ -74,7 +74,7 @@ const Carousel = () => {
                                 {/* Layout of projects container */}
                                 <div className="w-full xl:w-[56.125rem] h-[50.5rem] sm:h-[38rem] md:h-[35rem] bg-[rgba(43,43,43,0.26)] mx-auto rounded-[14px]  backdrop-blur-[10px]  flex flex-col-reverse sm:flex-row items-center justify-evenly sm:justify-between" >
                                     <div className="h-1/2 w-[80%] sm:w-[48%] sm:h-full text-white">
-                                        <div className="w-[90%] sm:w-[80%] h-[90%] pt-8 sm:pt-16 flex flex-col items-start justify-between mx-auto">
+                                        <div className="w-[90%] sm:w-[90%] h-[90%] pt-8 sm:pt-16 flex flex-col items-start justify-between mx-auto">
                                             <div className='flex flex-col items-start justify-center gap-2 sm:gap-4 items '>
                                                 {/* Project Title */}
                                                 <h1 className='font-Kanit font-medium text-[20px] sm:text-[24px] leading-9 w-44 h-9 tracking-wider'>{item.title}</h1>
@@ -94,9 +94,9 @@ const Carousel = () => {
                                         </div>
                                     </div>
                                     {/* Project Images */}
-                                    <div className="relative flex items-center justify-center w-full bg-black sm:w-1/2 h-1/2 sm:h-full">
-                                        <img src={item.image} alt="" className="absolute top-32 sm:w-auto left-24 w-52 sm:-left-2 sm:bottom-32 lg:-left-12 lg:bottom-0 md:bottom-20 md:-left-4" />
-                                        <img src={item.image} alt="" className="absolute bottom-28 left-14 sm:left-8 sm:top-28 w-52 sm:w-auto lg:top-2 lg:left-16 md:top-28 md:left-8" />
+                                    <div className="relative flex items-center justify-center w-full bg-black sm:w-[52%] h-1/2 sm:h-full">
+                                        <img src={item.image} alt="" className="absolute w-72 top-1/4 sm:w-auto left-1/4 sm:-left-2 sm:bottom-32 lg:-left-12 lg:bottom-0 md:bottom-20 md:-left-4" />
+                                        <img src={item.image} alt="" className="absolute w-72 bottom-1/4 right-1/4 sm:left-8 sm:top-28 sm:w-auto lg:top-2 lg:left-16 md:top-28 md:left-8" />
                                     </div>
                                 </div>
                             </div>
@@ -105,19 +105,19 @@ const Carousel = () => {
                 </div>
 
                 {/* Arrow Buttons */}
-                <div className="flex flex-row sm:flex-col items-center justify-center  sm:justify-start xl:gap-12 gap-10 pl-[6px] w-[62%] sm:px-2 md:px-0 md:w-[10%] lg:px-0 sm:w-[10%] lg:w-[4%]  xl:px-0 h-12 sm:h-96">
+                <div className="absolute -bottom-14 sm:-right-7  lg:-right-10  sm:top-20 flex flex-row sm:flex-col items-center justify-center xl:gap-12 gap-10 pl-[6px] w-[62%] sm:px-2 md:px-0 md:w-[10%] lg:px-0 sm:w-[10%] lg:w-[4%]  xl:px-0 h-12 sm:h-96">
 
                     <button
                         className="text-[50px] sm:text-[70px]  lg:text-[100px] xl:text-[120px] h-20 2xl:h-32 2xl:text-[180px] font-extralight text-center flex items-center justify-center bg-none p-2 sm:p-0"
                         onClick={prevItem}
                     >
-                        <img src={LeftArrowIcon} alt="" className="w-8 h-8 sm:w-10 sm:h-16" />
+                        <img src={LeftArrowIcon} alt="" className="w-8 h-8 sm:w-9 lg:w-10 sm:h-16" />
                     </button>
                     <button
                         className="text-[50px] sm:text-[70px]  lg:text-[100px] xl:text-[120px] h-20 2xl:h-32 2xl:text-[180px] font-extralight text-center flex items-center justify-center bg-none p-2  sm:p-0"
                         onClick={nextItem}
                     >
-                        <img src={RightArrowIcon} alt="" className="w-8 h-8 sm:w-12 sm:h-20" />
+                        <img src={RightArrowIcon} alt="" className="w-8 h-8 sm:w-9 lg:w-10 sm:h-20" />
                     </button>
                 </div>
             </div>
