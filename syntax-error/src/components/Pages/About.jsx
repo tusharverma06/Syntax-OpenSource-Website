@@ -4,8 +4,8 @@ import abouthr2 from '../../assets/images/abouthr2.svg'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import { Element } from "react-scroll";
 import Card from "../Card/Card";
-import {AiFillCaretLeft} from 'react-icons/ai'
-import {AiFillCaretRight} from 'react-icons/ai'
+import { AiFillCaretLeft } from 'react-icons/ai'
+import { AiFillCaretRight } from 'react-icons/ai'
 
 // import Navbar2 from "./Navbar2";
 const About = () => {
@@ -16,44 +16,51 @@ const About = () => {
     target: targetRef,
     offset: ["start end", "end start"],
   });
-  // const height = useTransform(scrollYProgress, [0, 0.4], ["0%", `30%`])
+
+  const height = useTransform(scrollYProgress, [0, 0.9], ["0%", "100%"])
+
+// TRansition to make it better(Line)
+  const transitionWhiteLine = useTransform(
+    scrollYProgress,
+    [0.1, 0.12, 0.15, 0.20, 0.25, 0.30, 0.35, 0.40],
+    ["1s", "1s", "1s", "1s", "1s", "1s", "1s", "1s"]
+  );
 
 
+  // For Left and Right in Card Section
+
+  const contentRef = useRef()
 
 
-// For Left and Right in Card Section
+  const scrollLeft = () => {
 
-const contentRef = useRef()
+    if (contentRef.current) {
 
+      contentRef.current.scrollLeft -= 300
 
-const scrollLeft = () => {
-
-  if (contentRef.current) {
-
-    contentRef.current.scrollLeft -= 300
-
-  }
-
-}
-
-
-const scrollRight = () => {
-
-  if (contentRef.current) {
-
-    contentRef.current.scrollLeft += 300
+    }
 
   }
 
-}
+
+  const scrollRight = () => {
+
+    if (contentRef.current) {
+
+      contentRef.current.scrollLeft += 300
+
+    }
+
+  }
 
 
   return (
     <>
       <Element name="About" className="relative" >
         {/* White line */}
-        {/* <motion.div className='w-0 border-[0.375rem] h-[30%] xl:h-[17.5%]   border-solid border-white  absolute top-0 z-10  mx-auto  sm:left-[50%]'>
-        </motion.div> */}
+          {/* White line */}
+          <motion.div className='w-0 border-[4px] h-[30%] xl:h-[17.5%]   border-solid border-white  absolute top-0 z-[1]  mx-auto  sm:left-[50%]' style={{ height: height, transition: transitionWhiteLine }}>
+        </motion.div>
         <motion.div className="">
           <motion.div className="container flex flex-col items-center justify-around gap-10 p-4 mx-auto">
             <br />
@@ -99,27 +106,27 @@ const scrollRight = () => {
             </section>
           </motion.div>
         </motion.div>
-        <div className="flex flex-col gap-4 mb bg-[#0B0B0B] bg-fixed bg-center bg-no-repeat bg-cover min-h-[100vh]">
+        <div className="flex flex-col gap-4 mb bg-[#0B0B0B] bg-fixed bg-center bg-no-repeat bg-cover min-h-[100vh] z-10 relative">
           <p className="flex items-center justify-center pt-8 text-5xl font-Kanit ">The TEAM</p>
           <img src={abouthr} className="w-full mt-8" alt="" />
 
 
 
-<div   ref={contentRef}
- className="flex flex-row items-center justify-start p-8 overflow-x-auto scrollbar-hide scroll-smooth ">
-<div>
-  <Card/>
-</div>
-</div>
+          <div ref={contentRef}
+            className="flex flex-row items-center justify-start p-8 overflow-x-auto scrollbar-hide scroll-smooth ">
+            <div>
+              <Card />
+            </div>
+          </div>
 
-<div className="relative flex items-center justify-center gap-8 p-4 overflow-x-auto">
-<button onClick={scrollLeft} className="text-3xl"><AiFillCaretLeft/></button>
-<button onClick={scrollRight} className="text-3xl"><AiFillCaretRight/></button>
-</div>
+          <div className="relative flex items-center justify-center gap-8 p-4 overflow-x-auto">
+            <button onClick={scrollLeft} className="text-3xl"><AiFillCaretLeft /></button>
+            <button onClick={scrollRight} className="text-3xl"><AiFillCaretRight /></button>
+          </div>
 
-          <img src={abouthr2} className="w-full mt-8 mb-10" alt=""  />
+          <img src={abouthr2} className="w-full mt-8 mb-10" alt="" />
 
-       
+
         </div>
 
         {/* <motion.div className=" h-[70vh] flex justify-end overflow-x-hidden">

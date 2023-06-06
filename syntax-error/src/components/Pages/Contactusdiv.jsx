@@ -22,7 +22,7 @@ const Contactusdiv = () => {
     <Element name="Contact">
       <div className='relative flex items-center justify-center h-screen ' ref={targetRef}>
         {/* White line */}
-        <motion.div className='w-0 border-[0.375rem] h-[45%] border-solid border-white  absolute top-0 z-[-1]  mx-auto  sm:left-[50%]' style={{ height, transition: transitionWhiteLine }} >
+        <motion.div className='w-0 border-[4px] h-[45%] border-solid border-white  absolute top-0 z-[-1]  mx-auto  sm:left-[50%]' style={{ height, transition: transitionWhiteLine }} >
         </motion.div>
         {/* Contact us div */}
         <Link activeClass="active"
@@ -38,7 +38,7 @@ const Contactusdiv = () => {
           </motion.div>
         </Link>
         {/* White line */}
-        <motion.div className='w-0 border-[0.375rem] h-[45%] border-solid border-white  absolute bottom-0 z-[-1]  mx-auto  sm:left-[50%]' style={{ height, transition: transitionWhiteLine }}>
+        <motion.div className='w-0 border-[4px] h-[45%] border-solid border-white  absolute bottom-0 z-[-1]  mx-auto  sm:left-[50%]' style={{ height, transition: transitionWhiteLine }}>
         </motion.div>
       </div>
     </Element>
