@@ -70,14 +70,14 @@ function App() {
   );
   const xHomeplanet = useTransform(
     scrollYProgress,
-    [0.1, 0.12, 0.15, 0.20,0.25,0.30 ,0.35,0.40],
-    ["0vw", "-1vw", "-2.5vw", "-4vw","-4vw","-4vw" ,"-4vw","-50vw"]
+    [0, 0.12, 0.15, 0.20,0.25,0.30 ,0.35,0.37,0.40],
+    ["0vw", "-1vw", "-2.5vw", "-4vw","-4vw","-4vw" ,"-4vw","-30vw","-50vw"]
   );
   // animation for homeplanet
   const yHomeplanet = useTransform(
     scrollYProgress,
     [0.1, 0.12, 0.15, 0.20,0.25,0.30,0.35,0.40],
-    ["0vh", "-10vh", "-50vh", "-40vh","50vh","40vh","150vh","150vh" ]
+    ["0vh", "-10vh", "-50vh", "-40vh","50vh","40vh","130vh","150vh" ]
   );
   // rotate animation for homeplanet
   const rotate = useTransform(
@@ -97,13 +97,13 @@ function App() {
   const yEarth = useTransform(
     scrollYProgress,
     [0.1, 0.12, 0.15, 0.20 ,0.25,0.30,0.35,0.40,0.45,0.50,0.55,0.60,0.65,0.70,0.75,0.80],
-    ["0vh", "10vh", "30vh", "80vh","150vh","220vh","270vh","300vh","370vh","420vh","500vh","540vh","630vh","630vh","700vh","800vh" ]
+    ["0vh", "10vh", "30vh", "120vh","150vh","220vh","270vh","300vh","370vh","420vh","500vh","540vh","630vh","630vh","700vh","800vh" ]
   );
   // x animation for earth
   const xEarth = useTransform(
     scrollYProgress,
     [0.1, 0.12, 0.15, 0.20,0.25,0.30,0.35,0.40 ,0.45,0.50,0.55,0.60,0.65,0.70,0.75,0.80],
-    ["0vw", "-1vw", "-2.5vw", "-4vw","-4vw","-4vw","-4vw","-4vw","-4vw","-4vw","-4vw","-4vw","10vw","0vw","-4vw","-4vw"]
+    ["0vw", "55vw", "70vw", "85vw","-4vw","-4vw","-4vw","-4vw","-4vw","-4vw","-4vw","-4vw","10vw","0vw","-4vw","-4vw"]
   );
   // scale animation for earth
   const scaleEarth = useTransform(
@@ -126,14 +126,15 @@ function App() {
      {
       windowWidth > 768  ? 
       <>
-        <motion.img src={homePlanet} alt="homeplanet"  className='absolute -bottom-1/3 lg:-bottom-[90%] lg:w-2/3 -z-10 lg:left-[20%]'
+        <motion.img src={homePlanet} alt="homeplanet"  className='absolute -bottom-1/3 lg:-bottom-[90%] lg:w-2/3  -z-10 lg:left-[20%]'
          style={{rotate,
           y:yHomeplanet,
           x:xHomeplanet,
           transition:transitionHomeplanet,
         }}
         />
-        <motion.img src={earthclear} alt="earth" width='100px'  className='absolute left-14 top-1/2 -z-10' style={{
+        <motion.img src={earthclear} alt="earth" width='100px'  
+        className='absolute left-14 top-1/2 -z-10' style={{
           y:yEarth,
           x:xEarth,
           scale:scaleEarth,
