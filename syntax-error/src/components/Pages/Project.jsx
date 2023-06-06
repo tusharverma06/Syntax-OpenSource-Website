@@ -18,11 +18,11 @@ const Project = () => {
     target: targetRef,
     offset: ["start end", "end start"],
   });
-  const height = useTransform(scrollYProgress, [0, 0.2], ["0%", "40%"])
+  const height = useTransform(scrollYProgress, [0, 0.6], ["0%", "100%"])
   const transitionWhiteLine = useTransform(
     scrollYProgress,
     [0.1, 0.12, 0.15, 0.20, 0.25, 0.30, 0.35, 0.40],
-    ["1s", "3s", "3s", "3s", "3s", "3s", "3s", "3s"]
+    ["1s", "3s", "3s", "3s", "3s", "3s", "1s", "1s"]
   );
   return (
 

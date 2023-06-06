@@ -76,7 +76,7 @@ const Contributors = () => {
       <div ref={targetRef} className='relative flex flex-col items-center justify-center w-full h-screen overflow-x-hidden overflow-y-hidden gap-36 xl:gap-12' >
 
         {/* White line */}
-        <motion.div className='w-0 border-[0.375rem] h-[30%] xl:h-[17.5%]   border-solid border-white  absolute top-0 z-[1]  mx-auto  sm:left-[50%]' style={{ height: height, transition: transitionWhiteLine }}>
+        <motion.div className='w-0 border-[4px] h-[30%] xl:h-[17.5%]   border-solid border-white  absolute top-0 z-[1]  mx-auto  sm:left-[50%]' style={{ height: height, transition: transitionWhiteLine }}>
         </motion.div>
 
         {/* Contributors heading */}
@@ -99,7 +99,7 @@ const Contributors = () => {
         </div>
 
         {/* White line */}
-        <motion.div className='w-0 border-[0.375rem] h-[30%] xl:h-[17.5%]  border-solid border-white  absolute bottom-0 z-10  mx-auto  sm:left-[50%]' style={{ height: height2, transition: transitionWhiteLine }}>
+        <motion.div className='w-0 border-[4px] h-[30%] xl:h-[17.5%]  border-solid border-white  absolute bottom-0 z-10  mx-auto  sm:left-[50%]' style={{ height: height2, transition: transitionWhiteLine }}>
         </motion.div>
       </div>
 
