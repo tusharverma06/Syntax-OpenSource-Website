@@ -1,8 +1,8 @@
-import React from 'react'
+import React, { memo } from 'react'
 import { useRef } from 'react'
 import { useScroll, useTransform, motion } from 'framer-motion'
 import { Link, Element } from 'react-scroll';
-const Projectandabout = () => {
+const Projectandabout = memo(() => {
   const targetRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: targetRef,
@@ -18,15 +18,21 @@ const Projectandabout = () => {
   );
   return (
     <div className='relative w-full pt-16 min-h-[60vh] lg:min-h-screen'>
-      <div className="w-5/6 sm:w-11/12 max-w-[56.125rem] h-max min-h-[70vh] bg-[rgba(43,43,43,0.26)] border border-[#fff] border-opacity-50 mx-auto rounded-[14px]  backdrop-blur-[10px]  flex flex-col items-center justify-center gap-16  py-4 px-10 z-[1]" >
-        <h1 className="text-2xl font-bold text-center sm:text-4xl lg:text-5xl">WE ARE SYNTAX ERREUR</h1>
-        {/* <p className="text-sm leading-6 text-left sm:text-lg xl:text-lg">
-Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magnam, qui. Ea commodi exercitationem aperiam, repudiandae ad quaerat. Dolorum, consequatur saepe praesentium, eos optio est impedit, neque quisquam at dolore debitis.
-Aliquid nam, quisquam sunt omnis a dignissimos neque ab voluptatibus magni! Necessitatibus nulla at atque dicta molestiae, tempora, laborum, laboriosam fuga ab rerum mollitia eos suscipit sunt accusamus provident fugit.
-        </p> */}
+      <div className="w-5/6 sm:w-11/12 max-w-[56.125rem] h-max min-h-[70vh] bg-[rgba(43,43,43,0.26)] border border-[#fff] border-opacity-50 mx-auto rounded-[14px]  backdrop-blur-[10px]  flex flex-col items-center justify-center gap-16 px-4 py-2  sm:py-4 sm:px-10 z-[1] 2xl:max-w-4xl" >
+        <h1 className="text-2xl font-bold text-center transition-all duration-1000 cursor-pointer group sm:text-4xl lg:text-5xl xl:text-6xl">WE ARE SYNTAX ERREUR
+        <span class="block w-0 group-hover:w-full   transition-all duration-500 h-0.5 navLink"></span>
+        </h1>
+        <p className="text-sm font-medium leading-6 text-left sm:text-lg xl:text-2xl xl:leading-8 font-Kanit">
+          Syntax Erreur is a full-service digital agency with 2 years of
+          experience delivering quality web and mobile app development
+          services.
+          Our team of experienced professionals strives to provide custom
+          solutions that meet the unique needs of our clients.
+          Trust us to bring your vision to life.
+        </p>
       </div>
       {/* white line */}
-      <motion.div className='w-0 border-[4px] border-solid border-white h-screen mx-auto bottom-0 left-[50%] absolute -z-[1]' style={{ height, transition: transitionWhiteLine }}>
+      <motion.div className='w-0 border-[2px] border-solid border-white h-screen mx-auto bottom-0 left-[50%] absolute -z-[1]' style={{ height, transition: transitionWhiteLine }}>
       </motion.div>
       {/* <div className='relative h-screen' ref={targetRef}>
         <motion.div className='line w-0 border-[4px] border-solid border-white h-screen z-10 mx-auto top-0 left-[50%] absolute' style={{ height, transition: transitionWhiteLine }}>
@@ -61,5 +67,6 @@ Aliquid nam, quisquam sunt omnis a dignissimos neque ab voluptatibus magni! Nece
     </div>
   )
 }
+)
 
 export default Projectandabout

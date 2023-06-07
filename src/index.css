@@ -13,19 +13,18 @@ body{
   background-size: cover;
 scroll-behavior:smooth
 }
-
-.gradient-text{
-  transition: all ;
-  background-size: 200% 100%;
-  background-position: 100%;
-}
-.gradient-text:hover {
-  background: linear-gradient(90deg, #364E9D -1.03%, #794897 53.5%, #DB3F8F 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+.gradient-text {
   background-clip: text;
-  background-position: 3%;
-  
+  -webkit-background-clip: text;
+  transition: all ease-in-out 400ms;
+}
+
+.gradient-text:hover {
+  background: linear-gradient(90deg, #DB3F8F -1.03%, #794897 53.5%, #364E9D 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  transition: all linear 400ms;
 }
 .heading--text{
   transition: all 500ms ease-in-out;
@@ -40,6 +39,7 @@ scroll-behavior:smooth
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  transition: all ease-in-out 400ms;
 }
 .swiper-button-next::after,
 .swiper-button-prev::after {

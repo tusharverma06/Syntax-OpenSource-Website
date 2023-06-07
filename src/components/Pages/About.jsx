@@ -1,14 +1,13 @@
-import React, { useRef } from "react";
+import React, { memo, useRef } from "react";
 import abouthr from '../../assets/images/abouthr.svg'
 import abouthr2 from '../../assets/images/abouthr2.svg'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import { Element } from "react-scroll";
 import Card from "../Card/Card";
-import { AiFillCaretLeft } from 'react-icons/ai'
-import { AiFillCaretRight } from 'react-icons/ai'
+
 
 // import Navbar2 from "./Navbar2";
-const About = () => {
+const About = memo(() => {
   // used for rotation of planet in framer motion instead of uing state
   //   const [rotate, cycleRotate] = useCycle(0,360);
   const targetRef = useRef(null);
@@ -17,7 +16,7 @@ const About = () => {
     offset: ["start end", "end start"],
   });
 
-  const height = useTransform(scrollYProgress, [0, 0.9], ["0%", "100%"])
+  const height = useTransform(scrollYProgress, [0, 0.85], ["0%", "100%"])
 
 // TRansition to make it better(Line)
   const transitionWhiteLine = useTransform(
@@ -59,7 +58,7 @@ const About = () => {
       <Element name="About" className="relative" >
         {/* White line */}
           {/* White line */}
-          <motion.div className='w-0 border-[4px] h-[30%] xl:h-[17.5%]   border-solid border-white  absolute top-0 z-[1]  mx-auto  sm:left-[50%]' style={{ height: height, transition: transitionWhiteLine }}>
+          <motion.div className='w-0 border-[2px] h-[30%] xl:h-[17.5%]   border-solid border-white  absolute top-0 z-[1]  mx-auto  left-[50%]' style={{ height: height, transition: transitionWhiteLine,transitionDelay:"500ms" }}>
         </motion.div>
         <motion.div className="">
           <motion.div className="container flex flex-col items-center justify-around gap-10 p-4 mx-auto">
@@ -69,7 +68,7 @@ const About = () => {
             <section className="flex flex-col justify-center sm:flex sm:flex-row sm:justify-between  pt-10 sm:pt-0   text-white rounded-lg backdrop-blur-sm gap-24 sm:gap-0  bg-opacity-80 bg-[rgba(43,43,43,0.26)] sm:w-[85%] w-full z-10 ">
               <div className=" h-0 w-0 sm:w-[500px] sm:h-[212px] sm:flex sm:items-center sm:justify-start sm:px-16">
                 {" "}
-                <h1 className="px-6 mt-2 text-5xl sm:text-6xl sm:mt-5 font-Kanit">About</h1>
+                <h1 className="px-6 mt-2 text-5xl sm:text-5xl sm:mt-5 font-Kanit">About</h1>
               </div>
               <div className="bg-[#101010] px-6 pb-2  pt-5 sm:pr-0 sm:w-[720px]" >
                 <p className=" leading-7  sm:px-[40px] text-lg">
@@ -84,9 +83,9 @@ const About = () => {
                 </p>
               </div>
             </section>
-            <section className="backdrop-blur-sm text-white flex flex-col justify-center sm:flex sm:flex-row sm:justify-between gap-0  bg-opacity-80 pl-0 pt-[10px] sm:w-[85%] w-full pb-[20px] sm:py-0 rounded-lg  bg-[rgba(43,43,43,0.26)] z-10">
+            <section className="backdrop-blur-sm text-white flex flex-col justify-center sm:flex sm:flex-row sm:justify-between gap-0  bg-opacity-80  pt-[10px] sm:w-[85%] w-full pb-[20px] sm:py-0 rounded-lg  bg-[rgba(43,43,43,0.26)] z-10">
               <div className=" h-28 w-44 sm:w-[500px] sm:h-[212px] sm:flex sm:items-center sm:justify-start sm:px-16">
-                <h1 className="px-6 mt-5 text-5xl sm:text-6xl font-Kanit whitespace-nowrap">
+                <h1 className="px-6 mt-5 text-5xl sm:text-5xl font-Kanit whitespace-nowrap">
                   What we do
                 </h1>
               </div>
@@ -119,9 +118,9 @@ const About = () => {
             </div>
           </div>
 
-          <div className="relative flex items-center justify-center gap-8 p-4 overflow-x-auto">
-            <button onClick={scrollLeft} className="text-3xl"><AiFillCaretLeft /></button>
-            <button onClick={scrollRight} className="text-3xl"><AiFillCaretRight /></button>
+          <div className="relative flex items-center justify-center gap-8 p-2 overflow-x-auto">
+            <button onClick={scrollLeft} className="text-2xl"><img src="https://img.icons8.com/ios-glyphs/30/FFFFFF/sort-left.png" alt="" /></button>
+            <button onClick={scrollRight} className="text-2xl"><img src="https://img.icons8.com/ios-glyphs/30/FFFFFF/sort-right.png" alt="" /></button>
           </div>
 
           <img src={abouthr2} className="w-full mt-8 mb-10" alt="" />
@@ -141,6 +140,6 @@ className="relative  top-[-120px] left-[170px] "
       </Element>
     </>
   );
-};
+});
 
 export default About;
