@@ -1,11 +1,11 @@
-import React from 'react'
+import React, { memo } from 'react'
 import { Element } from 'react-scroll'
 import Participant from '../Contributors/Participant'
 import { useRef, useState, useEffect } from 'react'
 import { useScroll, useTransform, motion } from 'framer-motion'
 import { contributors } from '../Contributors/contributorsData'
 
-const Contributors = () => {
+const Contributors = memo(() => {
   // Setting windowWidth for making the site responsive
   let width;
   if (typeof window !== "undefined") {
@@ -76,7 +76,7 @@ const Contributors = () => {
       <div ref={targetRef} className='relative flex flex-col items-center justify-center w-full h-screen overflow-x-hidden overflow-y-hidden gap-36 xl:gap-12' >
 
         {/* White line */}
-        <motion.div className='w-0 border-[4px] h-[30%] xl:h-[17.5%]   border-solid border-white  absolute top-0 z-[1]  mx-auto  sm:left-[50%]' style={{ height: height, transition: transitionWhiteLine }}>
+        <motion.div className='w-0 border-[2px] h-[30%] xl:h-[17.5%]   border-solid border-white  absolute top-0 z-[1]  mx-auto  sm:left-[50%]' style={{ height: height, transition: transitionWhiteLine }}>
         </motion.div>
 
         {/* Contributors heading */}
@@ -99,12 +99,12 @@ const Contributors = () => {
         </div>
 
         {/* White line */}
-        <motion.div className='w-0 border-[4px] h-[30%] xl:h-[17.5%]  border-solid border-white  absolute bottom-0 z-10  mx-auto  sm:left-[50%]' style={{ height: height2, transition: transitionWhiteLine }}>
+        <motion.div className='w-0 border-[2px] h-[30%] xl:h-[17.5%]  border-solid border-white  absolute bottom-0 z-10  mx-auto  sm:left-[50%]' style={{ height: height2, transition: transitionWhiteLine }}>
         </motion.div>
       </div>
 
     </Element>
   )
 }
-
+);
 export default Contributors

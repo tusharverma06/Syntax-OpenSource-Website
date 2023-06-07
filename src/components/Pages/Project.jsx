@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 import HomePlanet from '../../assets/images/homeplanet.png';
 import Moon from '../../assets/images/moon.svg'
 import Earth from '../../assets/images/earth.png'
@@ -12,7 +12,7 @@ import { useScroll, useTransform, motion } from 'framer-motion'
 import { useRef } from 'react';
 
 SwiperCore.use([Autoplay, Navigation]);
-const Project = () => {
+const Project = memo(() => {
   const targetRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: targetRef,
@@ -29,7 +29,7 @@ const Project = () => {
     <Element name='Projects' className='relative w-full h-[125vh] sm:h-screen '>
       <div ref={targetRef}>
         {/* White Line */}
-        <motion.div className='w-0 border-[4px] border-solid border-white h-[456px] absolute mx-auto top-0 left-[50%] 2xl:left-[50%]' style={{ height, transition: transitionWhiteLine }}>
+        <motion.div className='w-0 border-[2px] border-solid border-white h-[456px] absolute mx-auto top-0 left-[50%] 2xl:left-[50%]' style={{ height, transition: transitionWhiteLine }}>
         </motion.div>
       </div>
       <div className="max-w-[1260px] flex items-center justify-center mx-auto absolute sm:overflow-hidden w-full top-28 sm:top-16 md:top-20 left-1/2 -translate-x-1/2 " >
@@ -38,5 +38,5 @@ const Project = () => {
     </Element >
   )
 }
-
+);
 export default Project

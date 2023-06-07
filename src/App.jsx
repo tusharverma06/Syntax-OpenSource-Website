@@ -97,7 +97,7 @@ function App() {
   const yEarth = useTransform(
     scrollYProgress,
     [0.1, 0.12, 0.15, 0.20 ,0.25,0.30,0.35,0.40,0.45,0.50,0.55,0.60,0.65,0.70,0.75,0.80],
-    ["0vh", "10vh", "30vh", "120vh","150vh","220vh","270vh","300vh","370vh","420vh","500vh","540vh","630vh","630vh","700vh","800vh" ]
+    ["0vh", "10vh", "30vh", "120vh","150vh","220vh","270vh","300vh","370vh","420vh","500vh","540vh","630vh","630vh","700vh","760vh" ]
   );
   // x animation for earth
   const xEarth = useTransform(
@@ -126,14 +126,14 @@ function App() {
      {
       windowWidth > 768  ? 
       <>
-        <motion.img src={homePlanet} alt="homeplanet"  className='absolute -bottom-1/3 lg:-bottom-[90%] lg:w-2/3  -z-10 lg:left-[20%]'
+        <motion.img src="https://i.ibb.co/bXc0zxY/homeplanet.png"  alt="homeplanet"  className='absolute -bottom-1/3 lg:-bottom-[90%] lg:w-2/3  -z-10 lg:left-[20%]'
          style={{rotate,
           y:yHomeplanet,
           x:xHomeplanet,
           transition:transitionHomeplanet,
         }}
         />
-        <motion.img src={earthclear} alt="earth" width='100px'  
+        <motion.img src="https://i.ibb.co/QQjhF4n/earthclear.png" alt="earth" width='100px'  
         className='absolute left-14 top-1/2 -z-10' style={{
           y:yEarth,
           x:xEarth,
@@ -146,9 +146,9 @@ function App() {
       </>
         : 
         <>
-         <img src={homePlanet} alt="homeplanet"  className='absolute -bottom-1/3 lg:-bottom-[90%]  lg:w-2/3 -z-10 lg:left-[20%]'/>
-        <img src={earthclear} alt="earth"  className='absolute w-20 left-14 top-1/2 -z-10' />
-        <img src={moon} alt="moon"  className='absolute right-10 lg:right-16 top-1/2 -z-10' />
+         <img src="https://i.ibb.co/bXc0zxY/homeplanet.png"  alt="homeplanet"  className='absolute -bottom-1/4 w-full left-1/2 -translate-x-1/2 lg:-bottom-[90%]  lg:w-2/3 -z-10 lg:left-[20%]'/>
+        <img src="https://i.ibb.co/QQjhF4n/earthclear.png" alt="earth"  className='absolute w-20 animate-floatingrotation left-14 top-[55%] -z-10' />
+        <img src={moon} alt="moon"  className='absolute right-10 lg:right-16 top-[20%] animate-floatingrotation -z-10' />
         </>
      }
       <Projectandabout />
