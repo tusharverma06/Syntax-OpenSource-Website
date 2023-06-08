@@ -4,6 +4,7 @@ import aboutprofile2 from "../../assets/images/aboutprofile2.png";
 import aboutprofile3 from "../../assets/images/aboutprofile3.png";
 import downArrow from "../../assets/images/downArrow.svg";
 
+
 const Card = () => {
   const array = [
     {
