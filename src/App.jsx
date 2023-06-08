@@ -66,24 +66,24 @@ function App() {
   const y = useTransform(
     scrollYProgress,
     [0.1, 0.12, 0.15, 0.20,0.25,0.30,0.35,0.40,0.45,0.50,0.55,0.60,0.65,0.70,0.75,0.80],
-    ["0vh", "80vh", "110vh", "160vh","240vh","260vh","370vh","480vh","490vh","500vh","540vh","540vh","540vh","640vh","640vh","640vh"] 
+    ["0vh", "80vh", "110vh", "160vh","240vh","230vh","370vh","480vh","490vh","500vh","540vh","480vh","540vh","640vh","640vh","640vh"] 
   );
   const xHomeplanet = useTransform(
     scrollYProgress,
-    [0, 0.12, 0.15, 0.20,0.25,0.30 ,0.35,0.37,0.40],
-    ["0vw", "-1vw", "-2.5vw", "-4vw","-4vw","-4vw" ,"-4vw","-30vw","-50vw"]
+    [0, 0.12, 0.15, 0.20,0.25,0.30 ,0.35,0.37,0.40,0.45,0.50,0.55],
+    ["0vw", "-1vw", "-2.5vw", "-4vw","-4vw","-4vw" ,"-4vw","-30vw","-50vw", "-50vw", "-50vw","-4vw"]
   );
   // animation for homeplanet
   const yHomeplanet = useTransform(
     scrollYProgress,
-    [0.1, 0.12, 0.15, 0.20,0.25,0.30,0.35,0.40],
-    ["0vh", "-10vh", "-50vh", "-40vh","50vh","40vh","130vh","150vh" ]
+    [0.1, 0.12, 0.15, 0.20,0.25,0.30,0.35,0.40,0.45,0.50,0.55],
+    ["0vh", "-10vh", "-50vh", "-40vh","50vh","40vh","130vh","150vh", "150vh","250vh", "330vh" ]
   );
   // rotate animation for homeplanet
   const rotate = useTransform(
     scrollYProgress,
-    [0.1, 0.12, 0.15, 0.20,0.25,0.30 ,0.35,0.40],
-    ["0deg", "90deg", "100deg", "180deg","350deg","360deg" ,"450deg","490deg"]
+    [0.1, 0.12, 0.15, 0.20,0.25,0.30 ,0.35,0.40, ,0.45,0.50,0.55],
+    ["0deg", "90deg", "100deg", "180deg","350deg","360deg" ,"450deg","490deg", "490deg", "560deg","490deg", "720deg" ]
   );
   // smooth transition for homeplanet
   const transitionHomeplanet = useTransform(
@@ -97,7 +97,7 @@ function App() {
   const yEarth = useTransform(
     scrollYProgress,
     [0.1, 0.12, 0.15, 0.20 ,0.25,0.30,0.35,0.40,0.45,0.50,0.55,0.60,0.65,0.70,0.75,0.80],
-    ["0vh", "10vh", "30vh", "120vh","150vh","220vh","270vh","300vh","370vh","420vh","500vh","540vh","630vh","630vh","700vh","760vh" ]
+    ["0vh", "10vh", "30vh", "120vh","150vh","220vh","270vh","300vh","370vh","420vh","500vh","450vh","630vh","630vh","700vh","760vh" ]
   );
   // x animation for earth
   const xEarth = useTransform(
