@@ -1,6 +1,4 @@
 import React, { useState } from 'react'
-import { RiMenuFoldLine } from 'react-icons/ri'
-import { GiCrossedBones } from 'react-icons/gi'
 import { Link } from 'react-scroll';
 import { motion } from 'framer-motion'
 import { useScroll, useTransform } from 'framer-motion'
