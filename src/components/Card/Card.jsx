@@ -2,7 +2,7 @@ import React from 'react';
 import aboutprofile from "../../assets/images/aboutprofile.png";
 import aboutprofile2 from "../../assets/images/aboutprofile2.png";
 import aboutprofile3 from "../../assets/images/aboutprofile3.png";
-import { AiFillCaretUp } from 'react-icons/ai';
+import downArrow from "../../assets/images/downArrow.svg";
 
 const Card = () => {
   const array = [
@@ -79,9 +79,9 @@ const Card = () => {
         >
           <div className='flex flex-col'>
             <div className='flex flex-row gap-5'>
-              <img src={item.image} alt='' className='w-28 rounded-full' />
+              <img src={item.image} alt='' className='rounded-full w-28' />
               <div className='flex flex-col'>
-                <p className='uppercase font-semibold'>{item.title.head}</p>
+                <p className='font-semibold uppercase'>{item.title.head}</p>
                 <p>{item.title.designation}</p>
                 <p>Age: {item.title.age}</p>
               </div>
@@ -89,8 +89,8 @@ const Card = () => {
 
             <div className='mt-5'>{item.description}</div>
             <div className='flex justify-center mt-5'>
-              <button className='bg-black rounded-lg text-white py-2 px-5 flex justify-between gap-5'>
-                Connect <AiFillCaretUp className='mt-[6px]' />
+              <button className='flex items-center justify-between gap-2 px-5 py-2 text-white bg-black rounded-lg'>
+                Connect <img alt='downArrow' src={downArrow} className='mt-[6px] w-4 h-2' />
               </button>
             </div>
           </div>
