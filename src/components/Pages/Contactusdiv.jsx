@@ -44,7 +44,7 @@ const Contactusdiv = () => {
             
           </motion.div>
             <div className="flex flex-col items-center justify-center sm:flex-row gap-36">
-        <div className="p-10 rounded-lg bg-[#4a4a4a]  bg-opacity-50 w-[361px] backdrop-blur h-[320px] flex flex-col justify-center items-center">
+        <div className="p-10   rounded-lg bg-[#4a4a4a]  bg-opacity-50 w-[361px] backdrop-blur h-[360px] flex flex-col justify-center items-center">
           <div className="flex flex-row items-center justify-center gap-5 font-Kanit ">
             <img src={disclogo} className="w-[120px]" alt="" />
             <div className="flex flex-col gap-5">
@@ -62,7 +62,7 @@ const Contactusdiv = () => {
             at.
           </p>
         </div>
-        <div className="p-10  rounded-lg bg-[#4a4a4a]  bg-opacity-50 w-[361px] h-[320px] backdrop-blur flex flex-col justify-center items-center">
+        <div className="p-10  rounded-lg bg-[#4a4a4a]  bg-opacity-50 w-[361px] h-[360px] backdrop-blur flex flex-col justify-center items-center">
           <div className="flex flex-row items-center justify-center gap-5 font-Kanit">
             <div>   <img src={instalogo} width="120px" className="mt-5 mb-6" alt="" /> </div>
             <div className="flex flex-col gap-5 whitespace-nowrap">
