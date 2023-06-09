@@ -72,25 +72,20 @@ scroll-behavior:smooth
 }
 
 
-/* width */
-::-webkit-scrollbar {
-  width: 5px;
-}
 
-/* Track */
-::-webkit-scrollbar-track {
-  box-shadow: inset 1px 1px 2px #0D152C; 
-  background-color: #0D172E;
-
-}
+/* Remove ScrollBar */ 
+  ::-webkit-scrollbar {
+    display: none;
+  }
  
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: #000;
-  border-radius: 10px;
-}
+      /* Hide scrollbar for Chrome, Safari and Opera */
+      .no-scrollbar::-webkit-scrollbar {
+          display: none;
+      }
 
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background-blend-mode: color-burn; 
-}
+      /* Hide scrollbar for IE, Edge and Firefox */
+      .no-scrollbar {
+          -ms-overflow-style: none;  /* IE and Edge */
+          scrollbar-width: none;  /* Firefox */
+      }
+    
