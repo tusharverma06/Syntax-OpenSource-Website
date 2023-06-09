@@ -97,7 +97,7 @@ function App() {
   const yEarth = useTransform(
     scrollYProgress,
     [0.1, 0.12, 0.15, 0.20 ,0.25,0.30,0.35,0.40,0.45,0.50,0.55,0.60,0.65,0.70,0.75,0.80],
-    ["0vh", "10vh", "30vh", "120vh","150vh","220vh","270vh","300vh","370vh","420vh","500vh","450vh","630vh","630vh","700vh","760vh" ]
+    ["0vh", "10vh", "30vh", "120vh","150vh","220vh","270vh","300vh","370vh","420vh","500vh","450vh","630vh","630vh","700vh","700vh" ]
   );
   // x animation for earth
   const xEarth = useTransform(
