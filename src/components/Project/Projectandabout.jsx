@@ -18,9 +18,10 @@ const Projectandabout = memo(() => {
   );
   return (
     <div className='relative w-full pt-16 min-h-[60vh] lg:min-h-screen'>
-      <div className="w-5/6 sm:w-11/12 max-w-[56.125rem] h-max min-h-[70vh] bg-[rgba(43,43,43,0.26)] border border-[#fff] border-opacity-50 mx-auto rounded-[14px]  backdrop-blur-[10px]  flex flex-col items-center justify-center gap-16 px-4 py-2  sm:py-4 sm:px-10 z-[1] 2xl:max-w-4xl" >
-        <h1 className="w-[98%] sm:w-[90%] text-2xl font-bold text-center transition-all duration-1000 cursor-pointer group sm:text-4xl lg:text-5xl xl:text-6xl">WE ARE SYNTAX ERREUR
-        <span class="block w-0 group-hover:w-full   transition-all duration-500 h-0.5 navLink"></span>
+      <div className="w-5/6 sm:w-11/12 max-w-[56.125rem] h-max min-h-[70vh] bg-[rgba(43,43,43,0.26)] border border-[#fff] border-opacity-50 mx-auto rounded-[14px]  backdrop-blur-[10px]  flex flex-col items-center justify-center gap-12 px-4 py-2  sm:py-4 sm:px-6 z-[1] 2xl:max-w-4xl" >
+        <h1 className="w-[98%] sm:w-[90%] text-2xl font-bold text-center transition-all duration-1000 p-4 tracking-normal- rounded-lg hover:bg-slate-900 cursor-pointer group sm:text-4xl lg:text-5xl xl:text-6xl">
+          WE ARE SYNTAX ERREUR
+        <span class="block w-0 group-hover:w-full   transition-all duration-1000 h-0.5 navLink"></span>
         </h1>
         <p className="w-full sm:w-[87%] text-sm font-medium leading-6 text-left sm:text-lg xl:text-xl xl:leading-8 font-Kanit">
         At Syntax, we're not just your average IT consulting firm. We're a team of tech enthusiasts who love what we do. Our mission? To bring your ideas to life! Whether it's web development, app development - we've got you covered. We'll work closely with you to understand your unique needs and create tailored solutions that make your business thrive. With us by your side, you'll experience the perfect blend of user experiance, innovation, and friendly support. Let's embark on this exciting tech journey together!F
