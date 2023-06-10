@@ -16,15 +16,15 @@ const Contactusdiv = () => {
   const height = useTransform(scrollYProgress, [0, 0.8], ["0%", "100%"])
   const transitionWhiteLine = useTransform(
     scrollYProgress,
-    [0.1, 0.12, 0.15, 0.20,0.25,0.30 ,0.35,0.40],
-    ["0.5s", "0.5s", "0.5s", "0.5s","0.5s","0.5s" ,"0.5s","0.5s"]
+    [0.1, 0.12, 0.15, 0.20, 0.25, 0.30, 0.35, 0.40],
+    ["0.5s", "0.5s", "0.5s", "0.5s", "0.5s", "0.5s", "0.5s", "0.5s"]
   );
 
   return (
     <Element name="Contact">
       <div className='relative flex items-center justify-center h-screen mt-8 sm:mt-0 ' ref={targetRef}>
         {/* White line */}
-        <motion.div className='w-0 border-[2px] h-[45%] border-solid border-white  absolute top-0 z-[-1]  mx-auto  sm:left-[50%]' style={{ height, transition: transitionWhiteLine,transitionDelay:"500ms" }} >
+        <motion.div className='w-0 border-[2px] h-[45%] border-solid border-white  absolute top-0 z-[-1]  mx-auto  sm:left-[50%]' style={{ height, transition: transitionWhiteLine, transitionDelay: "500ms" }} >
         </motion.div>
         {/* Contact us div */}
         <Link activeClass="active"
@@ -33,58 +33,61 @@ const Contactusdiv = () => {
           smooth={true}
           offset={-70}
           duration={1000}>
-            <div className='flex flex-col items-center justify-center gap-10'>
+          <div className='flex flex-col items-center justify-center gap-10'>
 
-          
-          <motion.div className=' flex items-center uppercase group z-10 justify-center h-16 mx-auto text-[25px] leading-9 font-semibold tracking-wider w-56 backdrop-blur-2xl cursor-pointer rounded-[14px] bg-bgPrimary xl:mt-8' style={
-            { opacity }
-          }>
-            
-            CONTACT US
-            
-          </motion.div>
+
+            <motion.div className=' flex items-center uppercase group z-10 justify-center h-16 mx-auto text-[25px] leading-9 font-semibold tracking-wider w-56 backdrop-blur-2xl cursor-pointer rounded-[14px] hover:bg-slate-900
+transition-all duration-1000 bg-bgPrimary xl:mt-8' style={
+                { opacity }
+              }>
+              <span>
+                CONTACT US
+                <span class="block w-0 group-hover:w-full transition-all duration-1000 h-0.5 navLink"></span>
+              </span>
+
+            </motion.div>
             <div className="flex flex-col items-center justify-center sm:flex-row gap-36">
-        <div className="p-10   rounded-lg bg-[#4a4a4a]  bg-opacity-50 w-[361px] backdrop-blur h-[360px] flex flex-col justify-center items-center">
-          <div className="flex flex-row items-center justify-center gap-5 font-Kanit ">
-            <img src={disclogo} className="w-[120px]" alt="" />
-            <div className="flex flex-col gap-5">
+              <div className="p-10   rounded-lg bg-[#4a4a4a]  bg-opacity-50 w-[361px] backdrop-blur h-[360px] flex flex-col justify-center items-center">
+                <div className="flex flex-row items-center justify-center gap-5 font-Kanit ">
+                  <img src={disclogo} className="w-[120px]" alt="" />
+                  <div className="flex flex-col gap-5">
 
-              <p>Join Us on Discord</p>
-              <div className="flex justify-start">
-                <button className="bg-[#4a4a4a] bg-opacity-30 flex px-3 justify-center items-center gap-2 rounded-sm ">Join<img  src="https://img.icons8.com/material-rounded/24/FFFFFF/long-arrow-right.png" alt="long-arrow-right"/></button>
+                    <p>Join Us on Discord</p>
+                    <div className="flex justify-start">
+                      <button className="bg-[#4a4a4a] bg-opacity-30 flex px-3 justify-center items-center gap-2 rounded-sm ">Join<img src="https://img.icons8.com/material-rounded/24/FFFFFF/long-arrow-right.png" alt="long-arrow-right" /></button>
+                    </div>
+                  </div>
+                </div>
+                <p className="w-[300px] ">
+                  {" "}
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto cum
+                  commodi expedita velit eum amet! Laudantium nemo distinctio magnam
+                  at.
+                </p>
+              </div>
+              <div className="p-10  rounded-lg bg-[#4a4a4a]  bg-opacity-50 w-[361px] h-[360px] backdrop-blur flex flex-col justify-center items-center">
+                <div className="flex flex-row items-center justify-center gap-5 font-Kanit">
+                  <div>   <img src={instalogo} width="120px" className="mt-5 mb-6" alt="" /> </div>
+                  <div className="flex flex-col gap-5 whitespace-nowrap">
+
+                    <p>Join Us on Instagram</p>
+                    <div className="flex justify-start">
+                      <button className="bg-[#4a4a4a] bg-opacity-30 flex px-3 justify-center items-center gap-2 rounded-sm ">Join<img src="https://img.icons8.com/material-rounded/24/FFFFFF/long-arrow-right.png" alt="long-arrow-right" /> </button>
+                    </div>
+                  </div>
+                </div>
+                <p className="w-[300px] ">
+                  {" "}
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto cum
+                  commodi expedita velit eum amet! Laudantium nemo distinctio magnam
+                  at.
+                </p>
               </div>
             </div>
           </div>
-          <p className="w-[300px] ">
-            {" "}
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto cum
-            commodi expedita velit eum amet! Laudantium nemo distinctio magnam
-            at.
-          </p>
-        </div>
-        <div className="p-10  rounded-lg bg-[#4a4a4a]  bg-opacity-50 w-[361px] h-[360px] backdrop-blur flex flex-col justify-center items-center">
-          <div className="flex flex-row items-center justify-center gap-5 font-Kanit">
-            <div>   <img src={instalogo} width="120px" className="mt-5 mb-6" alt="" /> </div>
-            <div className="flex flex-col gap-5 whitespace-nowrap">
-
-              <p>Join Us on Instagram</p>
-              <div className="flex justify-start">
-                <button className="bg-[#4a4a4a] bg-opacity-30 flex px-3 justify-center items-center gap-2 rounded-sm ">Join<img  src="https://img.icons8.com/material-rounded/24/FFFFFF/long-arrow-right.png" alt="long-arrow-right"/> </button>
-              </div>
-            </div>
-          </div>
-          <p className="w-[300px] ">
-            {" "}
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto cum
-            commodi expedita velit eum amet! Laudantium nemo distinctio magnam
-            at.
-          </p>
-        </div>
-      </div>
-      </div>
         </Link>
         {/* White line */}
-        <motion.div className='w-0 border-[2px] h-[45%] border-solid border-white  absolute bottom-0 z-[-1]  mx-auto  sm:left-[50%]' style={{ height, transition: transitionWhiteLine,transitionDelay:"500ms" }}>
+        <motion.div className='w-0 border-[2px] h-[45%] border-solid border-white  absolute bottom-0 z-[-1]  mx-auto  sm:left-[50%]' style={{ height, transition: transitionWhiteLine, transitionDelay: "500ms" }}>
         </motion.div>
       </div>
     </Element>
