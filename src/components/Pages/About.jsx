@@ -1,9 +1,6 @@
 import React, { memo, useRef } from "react";
-import abouthr from '../../assets/images/abouthr.svg'
-import abouthr2 from '../../assets/images/abouthr2.svg'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import { Element } from "react-scroll";
-import Card from "../Card/Card";
 
 
 // import Navbar2 from "./Navbar2";
@@ -16,41 +13,15 @@ const About = memo(() => {
     offset: ["start end", "end start"],
   });
 
-  const height = useTransform(scrollYProgress, [0, 0.85], ["0%", "100%"])
+  const height = useTransform(scrollYProgress, [0, 0.3], ["0vh", "120vh"])
 
 // TRansition to make it better(Line)
   const transitionWhiteLine = useTransform(
     scrollYProgress,
     [0.1, 0.12, 0.15, 0.20, 0.25, 0.30, 0.35, 0.40],
-    ["1s", "1s", "1s", "1s", "1s", "1s", "1s", "1s"]
+    ["2s", "2s", "2s", "2s", "2s", "2s", "2s", "2s"]
   );
 
-
-  // For Left and Right in Card Section
-
-  const contentRef = useRef()
-
-
-  const scrollLeft = () => {
-
-    if (contentRef.current) {
-
-      contentRef.current.scrollLeft -= 300
-
-    }
-
-  }
-
-
-  const scrollRight = () => {
-
-    if (contentRef.current) {
-
-      contentRef.current.scrollLeft += 300
-
-    }
-
-  }
 
 
   return (
@@ -65,10 +36,10 @@ const About = memo(() => {
             <br />
             <br />
 
-            <section className="flex flex-col justify-center sm:flex sm:flex-row sm:justify-between  pt-10 sm:pt-0   text-white rounded-lg backdrop-blur-sm gap-24 sm:gap-0  bg-opacity-80 bg-[rgba(43,43,43,0.26)] sm:w-[85%] w-full z-10 ">
-              <div className=" h-0 w-0 sm:w-[500px] sm:h-[212px] sm:flex sm:items-center sm:justify-start sm:px-16">
+            <section className="flex flex-col justify-center sm:flex sm:flex-row sm:justify-between  pt-10 sm:pt-0   text-white rounded-lg backdrop-blur-sm gap-8 sm:gap-0  bg-opacity-80 bg-[rgba(43,43,43,0.26)] sm:w-[85%] w-full z-10 ">
+              <div className=" sm:w-[500px] sm:h-[212px] sm:flex sm:items-center sm:justify-start sm:px-16">
                 {" "}
-                <h1 className="px-6 mt-2 text-5xl sm:text-5xl sm:mt-5 font-Kanit">About</h1>
+                <h1 className="px-6 mt-2 text-5xl text-center sm:text-5xl sm:mt-5 font-Kanit sm:text-left">About</h1>
               </div>
               <div className="bg-[#101010] px-6 pb-2  pt-5 sm:pr-0 sm:w-[720px]" >
                 <p className=" leading-7  sm:px-[40px] text-lg">
@@ -83,9 +54,9 @@ const About = memo(() => {
                 </p>
               </div>
             </section>
-            <section className="backdrop-blur-sm text-white flex flex-col justify-center sm:flex sm:flex-row sm:justify-between gap-0  bg-opacity-80  pt-[10px] sm:w-[85%] w-full pb-[20px] sm:py-0 rounded-lg  bg-[rgba(43,43,43,0.26)] z-10">
-              <div className=" h-28 w-44 sm:w-[500px] sm:h-[212px] sm:flex sm:items-center sm:justify-start sm:px-16">
-                <h1 className="px-6 mt-5 text-5xl sm:text-5xl font-Kanit whitespace-nowrap">
+            <section className="backdrop-blur-sm text-white flex flex-col justify-center sm:flex sm:flex-row sm:justify-between gap-8  bg-opacity-80  pt-[10px] sm:w-[85%] w-full pb-[20px] sm:py-0 rounded-lg  bg-[rgba(43,43,43,0.26)] z-10">
+              <div className=" sm:w-[500px] sm:h-[212px] sm:flex sm:items-center sm:justify-start sm:px-16">
+                <h1 className="px-6 mt-5 text-5xl text-center sm:text-left sm:text-5xl font-Kanit whitespace-nowrap">
                   What we do
                 </h1>
               </div>
@@ -105,38 +76,7 @@ const About = memo(() => {
             </section>
           </motion.div>
         </motion.div>
-        <div className="flex flex-col gap-4 mb bg-[#0B0B0B] bg-fixed bg-center bg-no-repeat bg-cover min-h-[100vh] z-10 relative">
-          <p className="flex items-center justify-center pt-8 text-5xl font-Kanit ">The TEAM</p>
-          <img src={abouthr} className="w-full mt-8" alt="" />
-
-
-
-          <div ref={contentRef}
-            className="flex flex-row items-center justify-start p-8 overflow-x-auto scrollbar-hide scroll-smooth ">
-            <div>
-              <Card />
-            </div>
-          </div>
-
-          <div className="relative flex items-center justify-center gap-8 p-2 overflow-x-auto">
-            <button onClick={scrollLeft} className="text-2xl"><img src="https://img.icons8.com/ios-glyphs/30/FFFFFF/sort-left.png" alt="" /></button>
-            <button onClick={scrollRight} className="text-2xl"><img src="https://img.icons8.com/ios-glyphs/30/FFFFFF/sort-right.png" alt="" /></button>
-          </div>
-
-          <img src={abouthr2} className="w-full mt-8 mb-10" alt="" />
-
-
-        </div>
-
-        {/* <motion.div className=" h-[70vh] flex justify-end overflow-x-hidden">
-<motion.img 
-src={aboutplanet2} 
-alt=""
-
-className="relative  top-[-120px] left-[170px] "
-
-   />
-        </motion.div> */}
+        
       </Element>
     </>
   );
