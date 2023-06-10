@@ -16,6 +16,7 @@ import moon from './assets/images/moon.svg'
 import NavBar from './components/Navbar/NavBar'
 import { useState } from 'react'
 import earthclear from './assets/images/earthclear.png'
+import Team from './components/Pages/Team'
 function App() {
   //for responsiveness
   let width;
@@ -41,50 +42,63 @@ function App() {
     offset: ["start end", "end start"],
   });
   
+  
+  
   // scale animation for moon
   const scale = useTransform(
     scrollYProgress,
     [0.1,0.12,0.15, 0.20,0.25,0.30,0.35,0.40,0.45,0.50,0.55],
-    [1,2, 5.2, 8,8,8,4,4,4,2,2]
+    [1,2, 2.2, 1.5,8,8,4,4,4,2,2]
   );
-
-  
 
   // animate x for moon
   const x = useTransform(
     scrollYProgress,
-    [0.1,   0.12,    0.15,    0.20,    0.25,   0.30,   0.35,   0.40,  0.45,  0.50],
-    ["0vw", "-55vw", "-70vw", "-85vw","-75vw","-70vw","-50vw","-30vw","-30vw","0vw"]
+    [0.1,   0.12,    0.15,    0.20,    0.25,   0.30,   0.35,   0.40,  0.45,  0.50 ],
+    ["-5vw", "-35vw", "-40vw", "-70vw","-75vw","-70vw","-50vw","-30vw","-30vw","0vw"]
   );
+  
+
+  // animate y for moon
+  const y = useTransform(
+    scrollYProgress,
+    [0.1, 0.12, 0.15, 0.20,0.25,0.30,0.35,0.40,0.45,0.50,0.55,0.60,0.65,0.70,0.75,0.80 , 0.85],
+    ["-8vh", "30vh", "45vh", "60vh","240vh","230vh","370vh","480vh","490vh","500vh","540vh","480vh","540vh","640vh","650vh","700vh","740vh"] 
+  );
+  
 //  transition for moon
   const transition = useTransform(
     scrollYProgress,
     [0.1,   0.12,    0.15,    0.20,    0.25,   0.30,   0.35,   0.40,  0.45,  0.50],
     ["0.5s", "0.5s", "0.5s", "0.5s","0.5s","0.5s","0.5s","0.5s","0.5s","0.5s"]
   );
-  // animate y for moon
-  const y = useTransform(
-    scrollYProgress,
-    [0.1, 0.12, 0.15, 0.20,0.25,0.30,0.35,0.40,0.45,0.50,0.55,0.60,0.65,0.70,0.75,0.80],
-    ["0vh", "80vh", "110vh", "160vh","240vh","230vh","370vh","480vh","490vh","500vh","540vh","480vh","540vh","640vh","640vh","640vh"] 
-  );
+  
+  
+  // animation for homeplanet
   const xHomeplanet = useTransform(
     scrollYProgress,
     [0, 0.12, 0.15, 0.20,0.25,0.30 ,0.35,0.37,0.40,0.45,0.50,0.55],
     ["0vw", "-1vw", "-2.5vw", "-4vw","-4vw","-4vw" ,"-4vw","-30vw","-50vw", "-50vw", "-50vw","-4vw"]
   );
+
+
+
   // animation for homeplanet
   const yHomeplanet = useTransform(
     scrollYProgress,
     [0.1, 0.12, 0.15, 0.20,0.25,0.30,0.35,0.40,0.45,0.50,0.55],
     ["0vh", "-10vh", "-50vh", "-40vh","50vh","40vh","130vh","150vh", "150vh","250vh", "330vh" ]
   );
+
+
   // rotate animation for homeplanet
   const rotate = useTransform(
     scrollYProgress,
-    [0.1, 0.12, 0.15, 0.20,0.25,0.30 ,0.35,0.40, ,0.45,0.50,0.55],
-    ["0deg", "90deg", "100deg", "180deg","350deg","360deg" ,"450deg","490deg", "490deg", "560deg","490deg", "720deg" ]
+    [0.1,0.15, 0.20,0.25,0.30 ,0.35,0.40, ,0.45,0.50,0.55],
+    ["0deg","90deg", "180deg","350deg","360deg" ,"450deg","490deg", "490deg", "560deg","490deg", "720deg" ]
   );
+
+  
   // smooth transition for homeplanet
   const transitionHomeplanet = useTransform(
     scrollYProgress,
@@ -126,14 +140,14 @@ function App() {
      {
       windowWidth > 768  ? 
       <>
-        <motion.img src="https://i.ibb.co/bXc0zxY/homeplanet.png"  alt="homeplanet"  className='absolute -bottom-1/3 lg:-bottom-[90%] lg:w-2/3  -z-10 lg:left-[20%]'
+        <motion.img src="https://i.ibb.co/bXc0zxY/homeplanet.png"  alt="homeplanet"  className='absolute -bottom-1/3 lg:-bottom-[80%]  lg:w-[61%]   -z-10 lg:left-[20%]'
          style={{rotate,
           y:yHomeplanet,
           x:xHomeplanet,
           transition:transitionHomeplanet,
         }}
         />
-        <motion.img src="https://i.ibb.co/QQjhF4n/earthclear.png" alt="earth" width='100px'  
+        {/* <motion.img src="https://i.ibb.co/QQjhF4n/earthclear.png" alt="earth" width='100px'  
         className='absolute left-14 top-1/2 -z-10' style={{
           y:yEarth,
           x:xEarth,
@@ -142,7 +156,7 @@ function App() {
         }}
         />
         <motion.img src={moon} alt="moon"  className='absolute right-10 lg:right-16 top-1/2 -z-10' style={{scale,x,y,transition,
-        }}/>
+        }}/> */}
       </>
         : 
         <>
@@ -156,6 +170,7 @@ function App() {
 
         <Project />
         <About />
+        <Team />
         <Contributors windowWidth={windowWidth} />
         <Contactusdiv/>
         <Contactus/>

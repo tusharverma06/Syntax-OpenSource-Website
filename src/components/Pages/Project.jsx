@@ -22,7 +22,7 @@ const Project = memo(() => {
   const transitionWhiteLine = useTransform(
     scrollYProgress,
     [0.1, 0.12, 0.15, 0.20, 0.25, 0.30, 0.35, 0.40],
-    ["1s", "3s", "3s", "3s", "3s", "3s", "1s", "1s"]
+    ["3s", "3s", "3s", "3s", "3s", "3s", "3s", "3s"]
   );
   return (
 

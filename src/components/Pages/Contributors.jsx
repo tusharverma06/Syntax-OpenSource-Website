@@ -32,7 +32,7 @@ const Contributors = memo(() => {
 
 
   //Setting height for white line in top of contributor's page 
-  const height = useTransform(scrollYProgress, [0, 0.4], ["0%", "50%"
+  const height = useTransform(scrollYProgress, [0, 0.5], ["0%", "50%"
     // `${windowWidth < 600 ?
     //   // less than 600px responsive code for line height
     //   '25%'
@@ -68,7 +68,7 @@ const Contributors = memo(() => {
   const transitionWhiteLine = useTransform(
     scrollYProgress,
     [0.1, 0.12, 0.15, 0.20, 0.25, 0.30, 0.35, 0.40],
-    ["0.5s", "0.5s", "0.5s", "0.5s", "0.5s", "0.5s", "0.5s", "0.5s"]
+    ["1.5s", "1.5s", "1.5s", "1.5s", "1.5s", "1.5s", "1.5s", "1.5s"]
   );
 
   return (
@@ -80,15 +80,19 @@ const Contributors = memo(() => {
         </motion.div>
 
         {/* Contributors heading */}
-        <div className="z-30 flex items-center group justify-center h-16 mx-auto text-[25px] leading-9 font-semibold tracking-wider w-56 backdrop-blur-2xl cursor-pointer rounded-[14px] bg-bgPrimary xl:mt-8">
+        <div className="z-30 flex items-center group justify-center h-16 mx-auto hover:bg-slate-900 text-[25px] leading-9 font-semibold tracking-wider w-56 backdrop-blur-2xl cursor-pointer rounded-[14px] bg-bgPrimary xl:mt-8 transition-all duration-1000">
           <span>
-            Contributors
-          <span class="block w-0 group-hover:w-full   transition-all duration-500 h-0.5 navLink"></span>
+            CONTRIBUTORS
+          <span class="block w-0 group-hover:w-full transition-all duration-1000 h-0.5 navLink"></span>
             </span>
+            {/* <span class="">
+              CONTRIBUTORS
+            <span class="absolute left-0 bottom-0 right-0 h-0.5 bg-white transform scale-x-0 group-hover:scale-x-100  transition-transform duration-1000"></span>
+            </span> */}
         </div>
         {/* Main circle containing ids */}
         <div
-          className={`${windowWidth<300? 'w-[17rem] h-[17rem] px-2 py-10':'w-[20rem] h-[20rem] px-8 py-10'} sm:w-[25.6875rem] sm:h-[25.375rem] sm:px-8 lg:px-0 lg:py-10 xl:py-14  gradient-border xl:px-10 sm:py-16 2xl:px-10 2xl:py-20  mx-auto rounded-full z-30 flex flex-wrap items-center justify-center gap-4 sm:gap-10 relative sm:max-w-[40rem] backdrop-blur-xl bg-black bg-opacity-[0.56]`}
+          className={`${windowWidth < 300 ? 'w-[17rem] h-[17rem] px-2 py-10' : 'w-[20rem] h-[20rem] px-8 py-10'} sm:w-[25.6875rem] sm:h-[25.375rem] sm:px-8 lg:px-0 lg:py-10 xl:py-14  gradient-border xl:px-10 sm:py-16 2xl:px-10 2xl:py-20  mx-auto rounded-full z-30 flex flex-wrap items-center justify-center gap-4 sm:gap-10 relative sm:max-w-[40rem] backdrop-blur-xl bg-black bg-opacity-[0.56] border-4 border-white`}
         >
           {contributors.map(contributor => <Participant
             key={contributor.id}
