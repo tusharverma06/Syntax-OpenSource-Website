@@ -76,11 +76,11 @@ const Card = () => {
       {array.map((item, index) => (
         <div
           key={index}
-          className='flex justify-center items-center bg-white w-[300px] h-[400px] text-black mx-auto rounded-2xl p-5 shadow-lg mr-6'
+          className='flex justify-center items-center bg-white w-[290px] h-max  sm:w-[300px] sm:h-[400px] text-black mx-auto rounded-2xl p-5 shadow-lg mr-6'
         >
           <div className='flex flex-col'>
             <div className='flex flex-row gap-5'>
-              <img src={item.image} alt='' className='rounded-full w-28' />
+              <img src={item.image} alt='' className='w-20 rounded-full sm:w-28' />
               <div className='flex flex-col'>
                 <p className='font-semibold uppercase'>{item.title.head}</p>
                 <p>{item.title.designation}</p>
