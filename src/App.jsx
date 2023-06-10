@@ -78,7 +78,7 @@ function App() {
   const xHomeplanet = useTransform(
     scrollYProgress,
     [0, 0.12, 0.15, 0.20,0.25,0.30 ,0.35,0.37,0.40,0.45,0.50,0.55],
-    ["0vw", "-1vw", "-2.5vw", "-4vw","-4vw","-4vw" ,"-4vw","-30vw","-50vw", "-50vw", "-50vw","-4vw"]
+    ["0vw", "-1vw", "-2.5vw", "-4vw","-4vw","-4vw" ,"-4vw","-30vw","-50vw", "-50vw", "-50vw","0vw"]
   );
 
 
@@ -87,7 +87,7 @@ function App() {
   const yHomeplanet = useTransform(
     scrollYProgress,
     [0.1, 0.12, 0.15, 0.20,0.25,0.30,0.35,0.40,0.45,0.50,0.55],
-    ["0vh", "-10vh", "-50vh", "-40vh","50vh","40vh","130vh","150vh", "150vh","250vh", "330vh" ]
+    ["0vh", "-10vh", "-50vh", "-40vh","50vh","40vh","130vh","150vh", "150vh","250vh", "365vh" ]
   );
 
 
@@ -103,7 +103,7 @@ function App() {
   const transitionHomeplanet = useTransform(
     scrollYProgress,
     [0.1, 0.12, 0.15, 0.20,0.25,0.30 ,0.35,0.40, 0.45,0.50,0.55],
-    ["0.5s", "0.5s", "0.5s", "0.5s","0.5s","0.5s" ,"0.5s","0.5s", "1s", "1s", "1s"]
+    ["0.8s", "0.8s", "0.8s", "0.8s","0.8s","0.8s" ,"0.8s","0.8s", "2s", "2s", "2s"]
   );
     
 
