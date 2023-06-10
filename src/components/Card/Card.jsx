@@ -76,7 +76,7 @@ const Card = () => {
       {array.map((item, index) => (
         <div
           key={index}
-          className='flex justify-center items-center bg-white w-[290px] h-max  sm:w-[300px] sm:h-[400px] text-black mx-auto rounded-2xl p-5 shadow-lg mr-6'
+          className='flex justify-center items-center bg-white w-[290px] h-max  sm:w-[350px] sm:h-[400px] text-black mx-auto rounded-2xl p-5 shadow-lg mr-6'
         >
           <div className='flex flex-col'>
             <div className='flex flex-row gap-5'>
