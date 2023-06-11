@@ -13,25 +13,11 @@ import { useRef } from 'react';
 
 SwiperCore.use([Autoplay, Navigation]);
 const Project = memo(() => {
-  const targetRef = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: targetRef,
-    offset: ["start end", "end start"],
-  });
-  const height = useTransform(scrollYProgress, [0, 0.6], ["0%", "100%"])
-  const transitionWhiteLine = useTransform(
-    scrollYProgress,
-    [0.1, 0.12, 0.15, 0.20, 0.25, 0.30, 0.35, 0.40],
-    ["3s", "3s", "3s", "3s", "3s", "3s", "3s", "3s"]
-  );
+
   return (
 
     <Element name='Projects' className='relative w-full h-[125vh] sm:h-screen '>
-      <div ref={targetRef}>
-        {/* White Line */}
-        <motion.div className='w-0 border-[2px] border-solid border-white h-[456px] absolute mx-auto top-0 left-[50%] 2xl:left-[50%]' style={{ height, transition: transitionWhiteLine }}>
-        </motion.div>
-      </div>
+      
       <div className="max-w-[1260px] flex items-center justify-center mx-auto absolute sm:overflow-hidden w-full top-28 sm:top-16 md:top-20 left-1/2 -translate-x-1/2 " >
         <Carousel />
       </div>

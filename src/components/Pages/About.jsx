@@ -13,13 +13,13 @@ const About = memo(() => {
     offset: ["start end", "end start"],
   });
 
-  const height = useTransform(scrollYProgress, [0, 0.3], ["0vh", "120vh"])
+  const height = useTransform(scrollYProgress, [0, 0.8], ["0vh", "120vh"])
 
 // TRansition to make it better(Line)
   const transitionWhiteLine = useTransform(
     scrollYProgress,
-    [0.1, 0.12, 0.15, 0.20, 0.25, 0.30, 0.35, 0.40],
-    ["2s", "2s", "2s", "2s", "2s", "2s", "2s", "2s"]
+    [0, 0.12, 0.15, 0.20, 0.25, 0.30, 0.35, 0.40],
+    ["3s", "3s", "3s", "3s", "3s", "3s", "3s", "3s"]
   );
 
 
@@ -29,8 +29,8 @@ const About = memo(() => {
       <Element name="About" className="relative" >
         {/* White line */}
           {/* White line */}
-          <motion.div className='w-0 border-[2px] h-[30%] xl:h-[17.5%]   border-solid border-white  absolute top-0 z-[1]  mx-auto  left-[50%]' style={{ height: height, transition: transitionWhiteLine,transitionDelay:"500ms" }}>
-        </motion.div>
+          {/* <motion.div className='w-0 border-[2px] h-[30%] xl:h-[17.5%]   border-solid border-white  absolute top-0 z-[1]  mx-auto  left-[50%]' style={{ height: height, transition: transitionWhiteLine,animationDelay:"10000ms" }}>
+        </motion.div> */}
         <motion.div className="">
           <motion.div className="container flex flex-col items-center justify-around gap-10 p-4 mx-auto">
             <br />
