@@ -33,7 +33,7 @@ const Team = () => {
   }
 
     return (
-        <div className="flex flex-col gap-4 mb bg-[#0B0B0B] bg-fixed bg-center bg-no-repeat bg-cover min-h-[100vh] z-10 relative mt-44">
+        <div className="flex flex-col gap-4 mb bg-[#0B0B0B] bg-fixed bg-center bg-no-repeat bg-cover min-h-[104vh] z-10 relative mt-44">
             <p className="flex items-center justify-center pt-8 text-5xl font-bold font-Kanit ">THE TEAM</p>
             <img src={abouthr} className="w-full mt-8" alt="" />
 
