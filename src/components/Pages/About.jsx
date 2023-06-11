@@ -56,7 +56,7 @@ const About = memo(() => {
                   create tailored solutions that make your business thrive. With
                   us by your side, you'll experience the perfect blend of user
                   experiance, innovation, and friendly support. Let's embark on
-                  this exciting tech journey together!
+                  this exciting tech journey together!
                 </p>
               </div>
             </section>
@@ -77,7 +77,7 @@ const About = memo(() => {
                   have achieved impressive growth with our discord community and
                   young people who follow us for our journey and experience.
                   Moving forward we are committed to providing innovating
-                  solutions to drive your business's  success.
+                  solutions to drive your business's  success.
                 </p>
               </div>
             </section>

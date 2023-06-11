@@ -80,7 +80,7 @@ const Contributors = memo(() => {
         </motion.div>
 
         {/* Contributors heading */}
-        <div className="z-30 flex items-center group justify-center h-16 mx-auto hover:bg-slate-900 text-[25px] leading-9 font-semibold tracking-wider w-56 backdrop-blur-2xl cursor-pointer rounded-[14px] bg-bgPrimary xl:mt-8 transition-all duration-1000">
+        <div className="z-30 flex items-center group justify-center h-16 mx-auto hover:bg-slate-900 text-[25px] leading-9 font-semibold tracking-wider w-64 backdrop-blur-2xl cursor-pointer rounded-[14px] bg-bgPrimary xl:mt-8 transition-all duration-1000">
           <span>
             CONTRIBUTORS
           <span class="block w-0 group-hover:w-full transition-all duration-1000 h-0.5 navLink"></span>
