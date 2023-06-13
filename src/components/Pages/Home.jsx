@@ -10,8 +10,8 @@ const Home = () => {
   });
   const opacity = useTransform(
     scrollYProgress,
-    [0.1, 0.12, 0.14, 0.30],
-    [1, 0.3, 0, 0]
+    [0.1, 0.12, 0.4, 0.60,0.7],
+    [1, 1, 1, 0.1, 0]
   );
   // const y = useTransform(
   //   scrollYProgress,
@@ -34,12 +34,12 @@ const handleGo = () => setHover(false)
 
   return (
     <Element name="Home"  > 
-      <div className='relative flex flex-col items-center justify-center h-screen bg-center bg-cover' ref={targetRef1}>        
+      <div className='relative flex flex-col items-center justify-center h-[70vh] sm:h-screen bg-center bg-cover' ref={targetRef1}>        
        <motion.div className='absolute '  >
         <motion.div className='heading--text p-2 transition-all ease-in-out duration-500 text-4xl uppercase cursor-default border-white  lg:text-8xl lg:p-4 text-white font-Kanit border-[10px] bottom-72 font-bold'
         style={{opacity}}
         >
-          <div className="w-full h-full ease-in-out duration-800 gradient-text">
+          <div className="w-full h-full ease-in-out duration-800 gradient-text whitespace-nowrap">
             Syn<span>tax Er</span>reur
           </div>
           </motion.div>
