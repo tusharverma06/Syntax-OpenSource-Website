@@ -45,8 +45,8 @@ const Contactusdiv = () => {
             >
               CONTACT US
             </motion.div>
-            <div className="flex flex-col items-center justify-center sm:flex-row gap-36">
-            <div className="p-10  rounded-lg bg-[#4a4a4a]  bg-opacity-50 w-[361px] h-[360px] backdrop-blur flex flex-col justify-center items-center">
+            <div className="flex flex-col items-center justify-center gap-12 sm:flex-row sm:gap-36">
+              <div className="p-10  rounded-lg bg-[#4a4a4a]  bg-opacity-50 w-[361px] h-[360px] backdrop-blur flex flex-col justify-center items-center">
                 <div className="flex flex-row items-center justify-center gap-5 font-Kanit">
                   <div>
                     {" "}
@@ -57,20 +57,20 @@ const Contactusdiv = () => {
                       alt=""
                     />{" "}
                   </div>
-                  <div className="flex flex-col gap-5 whitespace-nowrap">
-                    <p>Join Us on Instagram</p>
+                  <div className="flex flex-col justify-evenly gap-5 whitespace-nowrap w-[120px] h-[120px] ">
+                    <p className="text-center">Join Us <br /> Discord</p>
                     <div className="flex justify-start">
-                    <button className=" flex px-3 justify-center items-center gap-2 rounded-sm ">
-                      <Link to="/" className="button-animation" target="_blank">
-    <span className="font-Kanit capitalize flex justify-center items-center gap-5 w-20 h-5 text-sm">
-    Join
-     <img
-                          src="https://img.icons8.com/material-rounded/24/FFFFFF/long-arrow-right.png"
-                          alt="long-arrow-right"
-                        />{" "} </span>
-    <div class="liquid"></div>
-</Link>
-                        
+                      <button className="flex items-center justify-center gap-2 px-3 rounded-sm ">
+                        <Link to="/" className="button-animation" target="_blank">
+                          <span className="flex items-center justify-center w-20 h-5 gap-5 text-sm capitalize font-Kanit">
+                            Join
+                            <img
+                              src="https://img.icons8.com/material-rounded/24/FFFFFF/long-arrow-right.png"
+                              alt="long-arrow-right"
+                            />{" "} </span>
+                          <div class="liquid"></div>
+                        </Link>
+
                       </button>
                     </div>
                   </div>
@@ -93,20 +93,20 @@ const Contactusdiv = () => {
                       alt=""
                     />{" "}
                   </div>
-                  <div className="flex flex-col gap-5 whitespace-nowrap">
-                    <p>Join Us on Instagram</p>
+                  <div className="flex flex-col justify-evenly gap-5 whitespace-nowrap w-[120px] h-[120px] ">
+                    <p className="text-center">Join Us <br /> Instagram</p>
                     <div className="flex justify-start">
-                      <button className=" flex px-3 justify-center items-center gap-2 rounded-sm ">
-                      <Link to="/" className="button-animation" target="_blank">
-    <span className="font-Kanit capitalize flex justify-center items-center gap-5 w-20 h-5 text-sm">
-    Join
-     <img
-                          src="https://img.icons8.com/material-rounded/24/FFFFFF/long-arrow-right.png"
-                          alt="long-arrow-right"
-                        />{" "} </span>
-    <div class="liquid"></div>
-</Link>
-                        
+                      <button className="flex items-center justify-center gap-2 px-3 rounded-sm ">
+                        <Link to="/" className="button-animation" target="_blank">
+                          <span className="flex items-center justify-center w-20 h-5 gap-5 text-sm capitalize font-Kanit">
+                            Join
+                            <img
+                              src="https://img.icons8.com/material-rounded/24/FFFFFF/long-arrow-right.png"
+                              alt="long-arrow-right"
+                            />{" "} </span>
+                          <div class="liquid"></div>
+                        </Link>
+
                       </button>
                     </div>
                   </div>
