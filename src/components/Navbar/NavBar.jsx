@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Link } from 'react-scroll';
 import { motion } from 'framer-motion'
 import { useScroll, useTransform } from 'framer-motion'
@@ -7,12 +7,25 @@ import { forwardRef } from 'react';
 
 const NavBar = forwardRef((props, ref, windowWidth) => {
   const [showMediaIcons, setShowMediaIcons] = useState(true)
-  const handleToggle = () => {
-    setShowMediaIcons(!showMediaIcons)
+  const [sidebarOpen, setSidebarOpen] = useState(false);
 
-  }
+  useEffect(() => {
+    if (sidebarOpen) {
+      document.body.classList.add('sidebar-open');
+    } else {
+      document.body.classList.remove('sidebar-open');
+    }
+  }, [sidebarOpen]);
+
+  const handleToggle = () => {
+    setSidebarOpen(!sidebarOpen);
+  };
+  // const handleToggle = () => {
+  //   setShowMediaIcons(!showMediaIcons)
+
+  // }
   const handleLinkClick = () => {
-    setShowMediaIcons(true)
+    setSidebarOpen(true)
   };
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -28,6 +41,7 @@ const NavBar = forwardRef((props, ref, windowWidth) => {
 
   var prevScrollpos = window.pageYOffset;
   window.onscroll = function () {
+    setSidebarOpen(false)
     var currentScrollPos = window.pageYOffset;
     if (prevScrollpos > currentScrollPos) {
       document.getElementById("navbar").style.top = "0";
@@ -42,8 +56,9 @@ const NavBar = forwardRef((props, ref, windowWidth) => {
     prevScrollpos = currentScrollPos;
   }
   return (
-    <div className="w-full" ref={ref}>
-      <div id='navbar' className='flex justify-between lg:justify-around items-center w-full  py-8 px-8 lg:w-[90%] xl:w-[70%]  lg:mt-12   fixed top-0 left-0 lg:left-1/2 lg:-translate-x-1/2 text-white font-Kanit lg:bg-[rgba(43,43,43,0.26)]  lg:bg-opacity-20    backdrop-blur-md rounded-lg h-32  z-50 2xl:max-w-7xl '>
+    <div className={`${sidebarOpen ? 'touch-none' : ''} w-full`}>
+      <div id='navbar'
+        className='flex justify-between lg:justify-around items-center w-full py-3 sm:py-8 px-8 lg:w-[90%] xl:w-[70%] lg:mt-12 fixed top-0 left-0 lg:left-1/2 lg:-translate-x-1/2 text-white font-Kanit lg:bg-[rgba(43,43,43,0.26)] lg:bg-opacity-20 backdrop-blur-md rounded-lg h-24 sm:h-32 z-50 2xl:max-w-7xl'        >
         <div>
           <Link activeClass="active"
             to="Home"
@@ -58,12 +73,15 @@ const NavBar = forwardRef((props, ref, windowWidth) => {
           </Link>
         </div>
         {
-          showMediaIcons ? <img src="https://img.icons8.com/ios-filled/30/FFFFFF/top-menu.png" className='block cursor-pointer lg:hidden ' onClick={handleToggle} alt="" />: " "
+          showMediaIcons ? <img src="https://icon-library.com/images/menu-icon-png-3-lines/menu-icon-png-3-lines-5.jpg" className='block cursor-pointer lg:hidden w-7 ' onClick={handleToggle} alt="" /> : " "
         }
 
-        <div id='linkSpacing' className={` space-x-7  text-xl  flex flex-col lg:items-center justify-center lg:justify-evenly gap-5  absolute bg-slate-800    backdrop-blur-xl  lg:bg-none lg:bg-opacity-0 lg:backdrop-blur-none lg:relative  lg:flex lg:p-4 lg:rounded-md top-0 right-0 w-9/12   h-screen  z-40 lg:flex-row lg:h-full   ${showMediaIcons ? "hidden" : "block"}`}>
+        <div id='linkSpacing'
+          className={`space-x-7 text-xl flex flex-col lg:items-center justify-center lg:justify-evenly gap-5 absolute bg-slate-800 backdrop-blur-xl lg:bg-none lg:bg-opacity-0 lg:backdrop-blur-none lg:relative lg:flex lg:p-4 lg:rounded-md top-0 right-0 w-9/12 h-screen z-40 lg:flex-row lg:h-full ${sidebarOpen ? 'block' : 'hidden'
+            }`}
+        >
 
-        <img width="30" height="30" src="https://img.icons8.com/ios/30/FFFFFF/multiply-2.png"   className='absolute block text-white cursor-pointer right-8 top-12 Cross lg:hidden' onClick={() => handleToggle()} /> 
+          <img width="30" height="30" src="https://img.icons8.com/ios/30/FFFFFF/multiply-2.png" className='absolute block text-white cursor-pointer right-8 top-12 Cross lg:hidden' onClick={() => handleToggle()} />
           <Link activeClass="active"
             to="Projects"
             spy={true}
