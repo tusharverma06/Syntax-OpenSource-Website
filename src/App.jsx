@@ -157,7 +157,7 @@ function App() {
               }}
             />
             {/* <motion.img src="https://i.ibb.co/QQjhF4n/earthclear.png" alt="earth" width='100px'  
-        className='absolute left-14 top-1/2 -z-10' style={{
+        className='absolute left-14 top-1/2 -z-10' style={{a
           y:yEarth,
           x:xEarth,
           scale:scaleEarth,
