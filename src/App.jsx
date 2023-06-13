@@ -94,8 +94,8 @@ function App() {
   // rotate animation for homeplanet
   const rotate = useTransform(
     scrollYProgress,
-    [0.1, 0.15, 0.20, 0.25, 0.30, 0.35, 0.40, , 0.45, 0.50, 0.55],
-    ["0deg", "90deg", "180deg", "350deg", "340deg", "450deg", "490deg", "490deg", "560deg", "490deg", "720deg"]
+    [0.1, 0.15, 0.20, 0.25, 0.30, 0.32, 0.35, 0.40, , 0.45, 0.50, 0.55],
+    ["0deg", "90deg", "180deg", "320deg", "340deg", "360deg", "450deg", "490deg", "490deg", "560deg", "490deg", "720deg"]
   );
 
 
@@ -135,7 +135,7 @@ function App() {
 
 
   // white line for about and projects
-  const height = useTransform(scrollYProgress, [0, 0.35,0.44,0.5,0.65 ], ["0%", "80%", "120%", "180%","180%"])
+  const height = useTransform(scrollYProgress, [0, 0.35,0.44,0.5,0.95 ], ["0%", "80%", "120%", "120%","120%"])
   const transitionWhiteLine = useTransform(
     scrollYProgress,
     [0.1, 0.12, 0.15, 0.20, 0.25, 0.30, 0.35, 0.40],
@@ -148,7 +148,7 @@ function App() {
       {
         windowWidth > 768 ?
           <>
-            <motion.img src="https://i.ibb.co/bXc0zxY/homeplanet.png" alt="homeplanet" className='absolute -bottom-1/3 lg:-bottom-[80%]  lg:w-[61%]   -z-10 lg:left-[20%]'
+            <motion.img src="https://i.ibb.co/bXc0zxY/homeplanet.png" alt="homeplanet" className='absolute -bottom-1/3 lg:-bottom-[80%] md:w-[95%]  lg:w-[61%]   -z-10 lg:left-[20%]'
               style={{
                 rotate,
                 y: yHomeplanet,
@@ -177,7 +177,6 @@ function App() {
       <Projectandabout />
       <div >
         <div className='relative min-h-screen'>
-
           <div ref={targetRef}>
             {/* White Line */}
             <motion.div className='w-0 border-[2px] border-solid border-white h-[456px] absolute mx-auto top-0 left-[50%] 2xl:left-[50%]' style={{ height, transition: transitionWhiteLine }}>
