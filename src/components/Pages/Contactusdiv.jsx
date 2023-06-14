@@ -46,10 +46,14 @@ const Contactusdiv = () => {
         >
           <div className="flex flex-col items-center justify-center gap-10">
             <motion.div
-              className=" flex items-center uppercase group z-10 justify-center h-16 mx-auto text-[25px] leading-9 font-semibold tracking-wider w-56 backdrop-blur-2xl cursor-pointer rounded-[14px] bg-bgPrimary xl:mt-8"
+              className=" flex items-center uppercase group z-10 justify-center h-16 mx-auto text-[25px] leading-9 font-semibold tracking-wider w-56 backdrop-blur-2xl cursor-pointer rounded-[14px] bg-bgPrimary xl:mt-8 transition-all duration-1000 hover:bg-slate-900"
               style={{ opacity }}
             >
-              CONTACT US
+              <span>
+                CONTACT US
+                <span class="block w-0 group-hover:w-full transition-all duration-1000 h-0.5 navLink"></span>
+              </span>
+
             </motion.div>
             <div className="flex flex-col md:flex-col lg:flex-row  items-center justify-center gap-12 sm:flex-row sm:gap-36">
               <div className="p-10  rounded-lg bg-[#4a4a4a]  bg-opacity-50 sm:w-[361px] w-[350px] sm:h-[360px] h-[350px] backdrop-blur flex flex-col justify-center items-center">
