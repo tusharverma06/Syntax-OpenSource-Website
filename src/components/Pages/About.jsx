@@ -60,7 +60,7 @@ const About = memo(() => {
                 </p>
               </div>
             </section>
-            <section className="backdrop-blur-sm text-white flex flex-col justify-center sm:flex sm:flex-row sm:justify-between gap-0  bg-opacity-80  pt-[10px] sm:w-[85%] w-full pb-[20px] sm:py-0 rounded-lg  bg-[rgba(43,43,43,0.26)] z-10">
+            <section className="backdrop-blur-sm text-white flex flex-col justify-center sm:flex sm:flex-row sm:justify-between gap-10 sm:gap-0  bg-opacity-80  pt-[10px] sm:w-[85%] w-full pb-[20px] sm:py-0 rounded-lg  bg-[rgba(43,43,43,0.26)] z-10">
               <div className=" sm:w-[500px] sm:h-[212px] sm:flex sm:items-center  sm:justify-start sm:px-16">
                 <h1 className="px-6 mt-5 text-5xl text-center sm:text-left sm:text-5xl font-Kanit whitespace-nowrap">
                   What we do
