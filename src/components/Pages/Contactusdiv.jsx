@@ -23,7 +23,8 @@ const Contactusdiv = () => {
   return (
     <Element name="Contact">
       <div
-        className="relative flex items-center justify-center h-screen mt-8 sm:mt-0 "
+        className="relative flex items-center justify-center h-screen mt-0
+         sm:mt-0 "
         ref={targetRef}
       >
         {/* White line */}
@@ -70,7 +71,7 @@ const Contactusdiv = () => {
                     <p className="text-center">
                       Join Us <br /> Discord
                     </p>
-                    <div className="flex justify-start">
+                    <div className="flex justify-center">
                       <button className="flex items-center justify-center gap-2 px-3 rounded-sm ">
                         <Link
 onClick={()=>window.open("https://discord.com/invite/M3B5nueqXf","_blank")}
@@ -111,7 +112,7 @@ onClick={()=>window.open("https://discord.com/invite/M3B5nueqXf","_blank")}
                     <p className="text-center">
                       Join Us <br /> Instagram
                     </p>
-                    <div className="flex justify-start">
+                    <div className="flex justify-center">
                       <button className="flex items-center justify-center gap-2 px-3 rounded-sm " >
                     
                         <Link

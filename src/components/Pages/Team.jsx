@@ -34,7 +34,7 @@ const Team = () => {
 
   return (
     <div >
-      <div  className="flex flex-col gap-4 mb bg-[#0B0B0B] bg-fixed bg-center bg-no-repeat bg-cover sm:min-h-[104vh] max-h-[120vh] 3xl:min-h-[50vh]   min-h-[100vh]  z-10 relative">
+      <div  className="flex flex-col  gap-4 mb justify-center bg-[#0B0B0B] bg-fixed bg-center bg-no-repeat bg-cover sm:min-h-[104vh] max-h-[120vh] 3xl:min-h-[50vh]   min-h-[100vh]  z-10 relative">
         <p className="flex items-center justify-center pt-8 text-5xl font-bold font-Kanit ">THE TEAM</p>
        <Element name='Team'>
         <img src={abouthr} className="w-full mt-8" alt="" />

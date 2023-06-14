@@ -45,14 +45,14 @@ const Contactus = () => {
               </div>
             </div>
 
-            <div className="flex flex-col sm:flex-row sm:px-0 px-5 sm:justify-start lg:justify-start  lg:items-center sm:items-start font-Kanit  ">
-             <div className="flex sm:items-center sm:flex-row flex-col  justify-start gap-4   w-full">
+            <div className="flex flex-col sm:flex-row sm:px-0 px-5 sm: lg:justify-between  lg:items-center sm:items-start font-Kanit  ">
+             <div className="flex sm:items-center sm:flex-row flex-col  justify-start gap-4">
 
               <h4 className="sm:text-3xl text-xl ">I'd like to discuss </h4>
               <div>
                 <select
                   id="countries"
-                  className="py-2.5 px-2 lg:w-52 md:w-40  text-sm sm:w-64 w-full text-gray-900 bg-transparent border-0 border-b-2 border-l-0 border-white-300 dark:bg-[#1A2935] dark:placeholder-gray-400 dark:text-white  dark:focus:border-black-500 focus:outline-none ">
+                  className="py-2.5 text-center px-2 lg:w-62  md:w-40  text-sm sm:w-64 w-full text-gray-900 bg-transparent border-0 border-b-2 border-l-0 border-white-300 dark:bg-[#1A2935] dark:placeholder-gray-400 dark:text-white  dark:focus:border-black-500 focus:outline-none ">
 
                   <option selected className=" font-Kanit">
                     Select a Topic
@@ -76,7 +76,7 @@ const Contactus = () => {
               </div>
              </div>
 
-              <div className="flex flex-row items-center gap-5 sm:pt-0 pt-8">
+              <div className="flex flex-row items-center gap-5 sm:pt-0 pt-8 w-190">
                 <label className="sm:text-3xl text-xl font-Kanit lg:whitespace-nowrap md:whitespace-nowrap ">
                   project idea & design brief{" "}
                 </label>
