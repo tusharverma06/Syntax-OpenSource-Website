@@ -58,7 +58,7 @@ const NavBar = forwardRef((props, ref, windowWidth) => {
   return (
     <div className={`${sidebarOpen ? 'touch-none' : ''} w-full`}>
       <div id='navbar'
-        className='flex justify-between lg:justify-around items-center w-full py-3 sm:py-8 px-8 lg:w-[90%] xl:w-[70%] lg:mt-12 fixed top-0 left-0 lg:left-1/2 lg:-translate-x-1/2 text-white font-Kanit lg:bg-[rgba(43,43,43,0.26)] lg:bg-opacity-20 backdrop-blur-md rounded-lg h-24 sm:h-32 z-50 2xl:max-w-7xl'        >
+        className='flex justify-between lg:justify- items-center w-full py-3 sm:py-8 px-8 lg:w-[90%] xl:w-[70%] lg:mt-12 fixed top-0 left-0 lg:left-1/2 lg:-translate-x-1/2 text-white font-Kanit lg:bg-[rgba(43,43,43,0.26)] lg:bg-opacity-20 backdrop-blur-md rounded-lg h-20 sm:h-32 z-50 2xl:max-w-7xl'        >
         <div>
           <Link activeClass="active"
             to="Home"
@@ -66,14 +66,14 @@ const NavBar = forwardRef((props, ref, windowWidth) => {
             smooth={true}
             offset={-70}
             duration={500}>
-            <motion.p className=' w-60 h-12 pt-1 mr-8 text-xl text-center uppercase border-[3.16px] border-white cursor-pointer lg:text-3xl lg:w-64 max-w-none text-white font-Kanit font-bold tracking-wide' style={{ opacity: windowWidth > 700 ? opacity : '1' }}   >
+            <motion.p className=' w-44 h-10 flex items-center justify-center sm:h-12 pt-1 mr-8 text-xl text-center uppercase border-[3.16px] border-white cursor-pointer lg:text-3xl lg:w-64 max-w-none text-white font-Kanit font-bold tracking-wide' style={{ opacity: windowWidth > 700 ? opacity : '1' }}   >
               <span className='gradient-text whitespace-nowrap'
               >Syntax erreur</span>
             </motion.p>
           </Link>
         </div>
         {
-          showMediaIcons ? <img src="https://img.icons8.com/ios/28/ffffff/menu--v1.png" className='block cursor-pointer lg:hidden  mb-2' onClick={handleToggle} alt="" /> : " "
+          showMediaIcons ? <img src="https://img.icons8.com/ios/28/ffffff/menu--v1.png" className='block w-6 mb-2 cursor-pointer lg:hidden' onClick={handleToggle} alt="" /> : " "
         }
 
         <div id='linkSpacing'
@@ -81,7 +81,7 @@ const NavBar = forwardRef((props, ref, windowWidth) => {
             }`}
         >
 
-          <img width="30" height="30" src="https://img.icons8.com/ios/28/ffffff/delete-sign--v1.png" alt="delete-sign--v1" className='absolute block text-white cursor-pointer right-8 top-7 Cross lg:hidden' onClick={() => handleToggle()} />
+          <img width="30" height="30" src="https://img.icons8.com/ios/30/FFFFFF/multiply-2.png" className='absolute block text-white cursor-pointer right-8 top-12 Cross lg:hidden' onClick={() => handleToggle()} />
           <Link activeClass="active"
             to="Projects"
             spy={true}
@@ -90,15 +90,6 @@ const NavBar = forwardRef((props, ref, windowWidth) => {
             duration={2000}
             className={`tracking-wider cursor-pointer bg-transparent group`} onClick={handleLinkClick}>
             Projects
-            <span class="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 navLink"></span>
-          </Link>
-          <Link activeClass="active"
-            to="Team"
-            spy={true}
-            smooth={true}
-            offset={-70}
-            duration={1000} className={`tracking-wider  cursor-pointer group`} onClick={handleLinkClick}>
-            Team
             <span class="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 navLink"></span>
           </Link>
           <Link activeClass="active"

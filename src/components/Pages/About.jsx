@@ -39,15 +39,15 @@ const About = memo(() => {
             <br />
             <br />
 
-            <section className="flex flex-col justify-center sm:flex sm:flex-row sm:justify-between  pt-10 sm:pt-0   text-white rounded-lg backdrop-blur-sm gap-8 sm:gap-0  bg-opacity-80 bg-[rgba(43,43,43,0.26)] sm:w-[85%] w-full z-10 ">
-              <div className=" sm:w-[500px] sm:h-[212px] sm:flex sm:items-center sm:justify-start sm:px-16">
+            <section className="flex flex-col items-center justify-center sm:flex sm:flex-row sm:justify-between  pt-10 sm:pt-0   text-white rounded-lg backdrop-blur-sm gap-8 sm:gap-0  bg-opacity-80 bg-[rgba(43,43,43,0.26)] sm:w-[85%] w-full z-10 ">
+              <div className=" sm:w-[50%] sm:h-[212px] sm:flex sm:items-center sm:justify-center">
                 {" "}
-                <h1 className="px-6 mt-2 text-4xl text-center sm:text-5xl sm:mt-5 font-Kanit sm:text-left">
+                <h1 className="px-6 mt-2 text-4xl text-center sm:px-0 sm:mt-0 sm:text-5xl font-Kanit sm:text-left">
                   About
                 </h1>
               </div>
-              <div className="bg-[#101010] px-6 pb-4  pt-5  sm:pr-0  xl:w-[720px]">
-                <p className=" leading-7  sm:px-[40px] text-[#1rem]">
+              <div className="bg-[#101010] px-8 flex items-stretch justify-center py-8   sm:w-1/2">
+                <p className=" leading-7  text-justify px-3 text-[#1rem]">
                   At Syntax, we're not just your average IT consulting firm.
                   We're a team of tech enthusiasts who love what we do. Our
                   mission? To bring your ideas to life! Whether it's web
@@ -60,15 +60,15 @@ const About = memo(() => {
                 </p>
               </div>
             </section>
-            <section className="backdrop-blur-sm text-white flex flex-col justify-center sm:flex sm:flex-row sm:justify-between gap-10 sm:gap-0  bg-opacity-80  pt-[10px] sm:w-[85%] w-full pb-[20px] sm:py-0 rounded-lg  bg-[rgba(43,43,43,0.26)] z-10">
-              <div className=" sm:w-[500px] sm:h-[212px] sm:flex sm:items-center  sm:justify-start sm:px-16">
-                <h1 className="px-6 sm:pb-0 pb-4 mt-5 text-4xl text-center sm:text-left sm:text-5xl font-Kanit  ">
+            <section className="backdrop-blur-sm text-white flex flex-col items-center justify-center sm:flex sm:flex-row sm:justify-between gap-10 sm:gap-0  bg-opacity-80  pt-10 sm:w-[85%] w-full  sm:py-0 rounded-lg  bg-[rgba(43,43,43,0.26)] z-10">
+              <div className=" sm:w-[50%] sm:h-[212px] sm:flex sm:items-center sm:justify-center">
+                <h1 className="px-6 mt-2 text-4xl text-center sm:px-0 sm:mt-0 sm:text-5xl font-Kanit sm:text-left">
                   What we do
                 </h1>
               </div>
 
-              <div className="bg-[#101010] w-full pt-5 sm:pr-3 xl:w-[720px] ">
-                <p className=" leading-7 px-6 pb-4 sm:px-[40px] lg:pl-16 lg:pb-4 text-lg">
+              <div className="bg-[#101010] px-8 flex items-stretch justify-center py-8  sm:w-1/2">
+                <p className=" leading-7  text-justify px-3 text-[#1rem]">
                   We have a successful track record of working with 8+
                   interactive websites and apps which have seamless performance.
                   Our dedication and excellence has attracted a growing client
