@@ -153,8 +153,8 @@ const Carousel = () => {
                                         return <div className="flex items-center transition-all ease-in-out duration-1000  justify-center hover:w-[55%] sm:w-[35%] rounded-xl">
                                             <motion.img
                                                 src={image}
-                                                alt=""
-                                                className="object-cover transition-all duration-700 ease-in-out cursor-pointer sm:object-cover rounded-xl hover:scale-110 w-28 sm:w-full"
+                                                alt="" 
+                                                className="object-cover transition-all  duration-700 ease-in-out cursor-pointer sm:object-cover rounded-xl hover:scale-110 w-28 sm:w-full"
                                                 onClick={() => setIsOpen(!isOpen)}
                                             />
                                         </div>
