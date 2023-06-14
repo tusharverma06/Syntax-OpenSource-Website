@@ -148,7 +148,7 @@ const Carousel = () => {
                                     </div>
                                 </div>
                                 {/* Project Images */}
-                                <div className="relative flex flex-wrap items-start w-full gap-5 py-20 overflow-auto transition-all duration-1000 rounded-r-lg bg-black/75 justify-evenly sm:w-1/2 h-1/2 sm:h-full">
+                                <div className="relative flex flex-wrap items-start w-full gap-5 py-20 overflow-auto transition-all duration-1000 rounded-l-lg rounded-r-lg sm:rounded-l-none bg-black/75 justify-evenly sm:w-1/2 h-1/2 sm:h-full">
                                     {item.image.map((image) => {
                                         return <div className="flex items-center transition-all ease-in-out duration-1000  justify-center hover:w-[55%] sm:w-[35%] rounded-xl">
                                             <motion.img
