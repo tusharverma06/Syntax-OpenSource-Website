@@ -79,11 +79,9 @@ const Contactusdiv = () => {
                     </div>
                   </div>
                 </div>
-                <p className="w-[240px] ">
+                <p className="w-full px-5 text-justify">
                   {" "}
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Iusto cum commodi expedita velit eum amet! Laudantium nemo
-                  distinctio magnam at.
+                  Join our Discord server for engaging discussions on our work process, valuable advice for young developers, and relaxed sessions where we dive into all things app and web development. Let's connect, learn, and chill together!
                 </p>
               </div>
               <div className="p-10  rounded-lg bg-[#4a4a4a]  bg-opacity-50 w-[361px] h-[360px] backdrop-blur flex flex-col justify-center items-center">
@@ -115,11 +113,9 @@ const Contactusdiv = () => {
                     </div>
                   </div>
                 </div>
-                <p className="w-[240px] ">
+                <p className="w-full px-5 text-justify">
                   {" "}
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Iusto cum commodi expedita velit eum amet! Laudantium nemo
-                  distinctio magnam at.
+                  Follow our Instagram for an inspiring journey from student to young CEO in the web development field. Meet our talented team as they share their coding and development experiences, empowering and motivating aspiring developers along the way.
                 </p>
               </div>
             </div>
