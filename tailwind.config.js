@@ -28,7 +28,10 @@ export default {
       },
       animation: {
         floatingrotation: "floatingrotation 40s infinite linear"
-      } 
+      },
+      screens: {
+        "3xl":{ "min": "1700px" },
+      }
     },
   },
   plugins: [
