@@ -117,8 +117,8 @@ const Card = () => {
           <div className='flex flex-col items-center justify-around h-full sm:items-start'>
             <div className='flex flex-col items-center justify-center gap-5 sm:flex-row'>
               <img src={item.title.img} alt='' className='w-20 h-20 rounded-full sm:h-28 sm:w-28 ' />
-              <div className='flex flex-col'>
-                <p className='font-semibold uppercase' >{item.title.head}</p>
+              <div className='flex flex-col items-start'>
+                <p className='font-semibold uppercase ' >{item.title.head}</p>
                 <p className='text-center'>{item.title.designation}</p>
                 {/* <p>Age: {item.title.age}</p> */}
               </div>
@@ -126,13 +126,13 @@ const Card = () => {
 
             <div className='mt-5'>{item.description}</div>
             <div className='flex justify-center w-full mt-3'>
-              <button className='flex items-center justify-between gap-2 px-5 py-2 text-white transition-all duration-1000 bg-black border border-black rounded-lg connect group hover:text-black hover:bg-white'>
+              <a className='flex items-center justify-between gap-2 px-5 py-2 text-white transition-all duration-1000 bg-black border border-black rounded-lg connect group hover:text-black hover:bg-white' href={item.title.link} target='_blank'>
                 Connect
-                <img className='mt-[6px] w-4 h-2 fill-black group-hover:hidden block transition-all duration-1000' xmlns="http://www.w3.org/2000/svg"
-                  width="20" height="8" src="https://img.icons8.com/ios-glyphs/16/ffffff/sort-down.png" alt="sort-down" />
-                <img className='mt-[6px] w-4 h-2 fill-black group-hover:block hidden transition-all duration-1000' xmlns="http://www.w3.org/2000/svg"
-                  width="20" height="8" src="https://img.icons8.com/ios-glyphs/16/000000/sort-down.png" alt="sort-down" />
-              </button>
+                <img className='block transition-all duration-1000 fill-black group-hover:hidden' xmlns="http://www.w3.org/2000/svg"
+                  width="20" height="20" src="https://img.icons8.com/ios-glyphs/20/ffffff/sort-down.png" alt="sort-down" />
+                <img className='hidden transition-all duration-1000 fill-black group-hover:block' xmlns="http://www.w3.org/2000/svg"
+                  width="20" height="20" src="https://img.icons8.com/ios-glyphs/20/000000/sort-down.png" alt="sort-down" />
+              </a>
               <br />
             </div>
             {/* <div className='flex justify-center pt-2'>
