@@ -23,8 +23,7 @@ const Contactusdiv = () => {
   return (
     <Element name="Contact">
       <div
-        className="relative flex items-center justify-center h-screen mt-0
-         sm:mt-0 "
+        className="relative flex items-center justify-center h-screen mt-0 sm:mt-0 "
         ref={targetRef}
       >
         {/* White line */}
@@ -56,7 +55,7 @@ const Contactusdiv = () => {
               </span>
 
             </motion.div>
-            <div className="flex flex-col md:flex-col lg:flex-row  items-center justify-center gap-12 sm:flex-row sm:gap-36">
+            <div className="flex flex-col items-center justify-center gap-12 md:flex-col lg:flex-row sm:flex-row sm:gap-36">
               <div className="p-10  rounded-lg bg-[#4a4a4a]  bg-opacity-50 sm:w-[361px] w-[350px] sm:h-[360px] h-[350px] backdrop-blur flex flex-col justify-center items-center">
                 <div className="flex flex-row items-center justify-center gap-5 font-Kanit">
                   <div>
@@ -91,7 +90,7 @@ onClick={()=>window.open("https://discord.com/invite/M3B5nueqXf","_blank")}
                     </div>
                   </div>
                 </div>
-                <p className="w-[240px] ">
+                <p className="w-full px-5 text-justify">
                   {" "}
                   Join our Discord server for engaging discussions, valuable
                   advice, and relaxed sessions on app and web development. Let's
@@ -133,7 +132,7 @@ onClick={()=>window.open("https://discord.com/invite/M3B5nueqXf","_blank")}
                     </div>
                   </div>
                 </div>
-                <p className="w-[240px] ">
+                <p className="w-full px-5 text-justify">
                   {" "}
                   Follow our Instagram for inspiring web development journeys
                   from student to CEO. Meet our team, gain coding insights, and
