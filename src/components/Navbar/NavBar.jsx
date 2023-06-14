@@ -73,7 +73,7 @@ const NavBar = forwardRef((props, ref, windowWidth) => {
           </Link>
         </div>
         {
-          showMediaIcons ? <img src="https://icon-library.com/images/menu-icon-png-3-lines/menu-icon-png-3-lines-5.jpg" className='block cursor-pointer lg:hidden w-7 ' onClick={handleToggle} alt="" /> : " "
+          showMediaIcons ? <img src="https://img.icons8.com/ios/28/ffffff/menu--v1.png" className='block cursor-pointer lg:hidden  mb-2' onClick={handleToggle} alt="" /> : " "
         }
 
         <div id='linkSpacing'
@@ -81,7 +81,7 @@ const NavBar = forwardRef((props, ref, windowWidth) => {
             }`}
         >
 
-          <img width="30" height="30" src="https://img.icons8.com/ios/30/FFFFFF/multiply-2.png" className='absolute block text-white cursor-pointer right-8 top-12 Cross lg:hidden' onClick={() => handleToggle()} />
+          <img width="30" height="30" src="https://img.icons8.com/ios/28/ffffff/delete-sign--v1.png" alt="delete-sign--v1" className='absolute block text-white cursor-pointer right-8 top-7 Cross lg:hidden' onClick={() => handleToggle()} />
           <Link activeClass="active"
             to="Projects"
             spy={true}
@@ -90,6 +90,15 @@ const NavBar = forwardRef((props, ref, windowWidth) => {
             duration={2000}
             className={`tracking-wider cursor-pointer bg-transparent group`} onClick={handleLinkClick}>
             Projects
+            <span class="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 navLink"></span>
+          </Link>
+          <Link activeClass="active"
+            to="Team"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={1000} className={`tracking-wider  cursor-pointer group`} onClick={handleLinkClick}>
+            Team
             <span class="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 navLink"></span>
           </Link>
           <Link activeClass="active"

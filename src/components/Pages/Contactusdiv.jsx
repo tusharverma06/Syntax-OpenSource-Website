@@ -16,7 +16,7 @@ const Contactusdiv = () => {
   const height = useTransform(scrollYProgress, [0, 0.8], ["0%", "100%"]);
   const transitionWhiteLine = useTransform(
     scrollYProgress,
-    [0.1, 0.12, 0.15, 0.20, 0.25, 0.30, 0.35, 0.40],
+    [0.1, 0.12, 0.15, 0.2, 0.25, 0.3, 0.35, 0.4],
     ["0.5s", "0.5s", "0.5s", "0.5s", "0.5s", "0.5s", "0.5s", "0.5s"]
   );
 
@@ -27,8 +27,14 @@ const Contactusdiv = () => {
         ref={targetRef}
       >
         {/* White line */}
-        <motion.div className='w-0 border-[2px] h-[45%] border-solid border-white  absolute top-0 z-[-1]  mx-auto  sm:left-[50%]' style={{ height, transition: transitionWhiteLine, transitionDelay: "500ms" }} >
-        </motion.div>
+        <motion.div
+          className="w-0 border-[2px] h-[45%] border-solid border-white  absolute top-0 z-[-1]  mx-auto  sm:left-[50%]"
+          style={{
+            height,
+            transition: transitionWhiteLine,
+            transitionDelay: "500ms",
+          }}
+        ></motion.div>
         {/* Contact us div */}
         <Link
           activeClass="active"
@@ -45,77 +51,88 @@ const Contactusdiv = () => {
             >
               CONTACT US
             </motion.div>
-            <div className="flex flex-col items-center justify-center gap-12 sm:flex-row sm:gap-36">
-              <div className="p-10  rounded-lg bg-[#4a4a4a]  bg-opacity-50 w-[361px] h-[360px] backdrop-blur flex flex-col justify-center items-center">
+            <div className="flex flex-col md:flex-col lg:flex-row  items-center justify-center gap-12 sm:flex-row sm:gap-36">
+              <div className="p-10  rounded-lg bg-[#4a4a4a]  bg-opacity-50 sm:w-[361px] w-[350px] sm:h-[360px] h-[350px] backdrop-blur flex flex-col justify-center items-center">
                 <div className="flex flex-row items-center justify-center gap-5 font-Kanit">
                   <div>
                     {" "}
                     <img
                       src={disclogo}
-                      width="120px"
-                      className="mt-5 mb-6"
+                      className="mt-5 mb-6 sm:w-[120px] w-[100px]"
                       alt=""
                     />{" "}
                   </div>
                   <div className="flex flex-col justify-evenly gap-5 whitespace-nowrap w-[120px] h-[120px] ">
-                    <p className="text-center">Join Us <br /> Discord</p>
+                    <p className="text-center">
+                      Join Us <br /> Discord
+                    </p>
                     <div className="flex justify-start">
                       <button className="flex items-center justify-center gap-2 px-3 rounded-sm ">
-                        <Link to="/" className="button-animation" target="_blank">
+                        <Link
+onClick={()=>window.open("https://discord.com/invite/M3B5nueqXf","_blank")}
+                          className="button-animation"
+                          target="_blank"
+                        >
                           <span className="flex items-center justify-center w-20 h-5 gap-5 text-sm capitalize font-Kanit">
                             Join
                             <img
                               src="https://img.icons8.com/material-rounded/24/FFFFFF/long-arrow-right.png"
                               alt="long-arrow-right"
-                            />{" "} </span>
+                            />{" "}
+                          </span>
                           <div class="liquid"></div>
                         </Link>
-
                       </button>
                     </div>
                   </div>
                 </div>
                 <p className="w-[240px] ">
                   {" "}
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Iusto cum commodi expedita velit eum amet! Laudantium nemo
-                  distinctio magnam at.
+                  Join our Discord server for engaging discussions, valuable
+                  advice, and relaxed sessions on app and web development. Let's
+                  connect, learn, and chill together!
                 </p>
               </div>
-              <div className="p-10  rounded-lg bg-[#4a4a4a]  bg-opacity-50 w-[361px] h-[360px] backdrop-blur flex flex-col justify-center items-center">
+              <div className="p-10  rounded-lg bg-[#4a4a4a]  bg-opacity-50 sm:w-[361px] w-[350px] sm:h-[360px] h-[350px] backdrop-blur flex flex-col justify-center items-center">
                 <div className="flex flex-row items-center justify-center gap-5 font-Kanit">
                   <div>
                     {" "}
                     <img
                       src={instalogo}
-                      width="120px"
-                      className="mt-5 mb-6"
+                      className="mt-5 mb-6 sm:w-[120px] w-[100px]"
                       alt=""
                     />{" "}
                   </div>
                   <div className="flex flex-col justify-evenly gap-5 whitespace-nowrap w-[120px] h-[120px] ">
-                    <p className="text-center">Join Us <br /> Instagram</p>
+                    <p className="text-center">
+                      Join Us <br /> Instagram
+                    </p>
                     <div className="flex justify-start">
-                      <button className="flex items-center justify-center gap-2 px-3 rounded-sm ">
-                        <Link to="/" className="button-animation" target="_blank">
+                      <button className="flex items-center justify-center gap-2 px-3 rounded-sm " >
+                    
+                        <Link
+                         onClick={()=>window.open("https://www.instagram.com/syntaxerreur05?igshid=MzRIODBiNWFIZA","_blank")}
+                          className="button-animation"
+                          
+                        >
                           <span className="flex items-center justify-center w-20 h-5 gap-5 text-sm capitalize font-Kanit">
                             Join
                             <img
                               src="https://img.icons8.com/material-rounded/24/FFFFFF/long-arrow-right.png"
                               alt="long-arrow-right"
-                            />{" "} </span>
+                            />{" "}
+                          </span>
                           <div class="liquid"></div>
                         </Link>
-
                       </button>
                     </div>
                   </div>
                 </div>
                 <p className="w-[240px] ">
                   {" "}
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Iusto cum commodi expedita velit eum amet! Laudantium nemo
-                  distinctio magnam at.
+                  Follow our Instagram for inspiring web development journeys
+                  from student to CEO. Meet our team, gain coding insights, and
+                  get empowered as an aspiring developer.
                 </p>
               </div>
             </div>

@@ -34,15 +34,18 @@ const Team = () => {
 
   return (
     <div >
-      <Element name={"Team"} className="flex flex-col gap-4 mb bg-[#0B0B0B] bg-fixed bg-center bg-no-repeat bg-cover min-h-[104vh] z-10 relative">
+      <div  className="flex flex-col gap-4 mb bg-[#0B0B0B] bg-fixed bg-center bg-no-repeat bg-cover min-h-[104vh] z-10 relative">
         <p className="flex items-center justify-center pt-8 text-5xl font-bold font-Kanit ">THE TEAM</p>
+       <Element name='Team'>
         <img src={abouthr} className="w-full mt-8" alt="" />
+
+       </Element>
 
 
 
         <div ref={contentRef}
           className="flex flex-row items-center justify-start p-8 overflow-x-auto scrollbar-hide scroll-smooth ">
-          <div>
+          <div >
             <Card />
           </div>
         </div>
@@ -55,7 +58,7 @@ const Team = () => {
         <img src={abouthr2} className="w-full mt-8 mb-10" alt="" />
 
 
-      </Element>
+      </div>
     </div>
   )
 }

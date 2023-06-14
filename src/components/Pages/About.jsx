@@ -42,12 +42,12 @@ const About = memo(() => {
             <section className="flex flex-col justify-center sm:flex sm:flex-row sm:justify-between  pt-10 sm:pt-0   text-white rounded-lg backdrop-blur-sm gap-8 sm:gap-0  bg-opacity-80 bg-[rgba(43,43,43,0.26)] sm:w-[85%] w-full z-10 ">
               <div className=" sm:w-[500px] sm:h-[212px] sm:flex sm:items-center sm:justify-start sm:px-16">
                 {" "}
-                <h1 className="px-6 mt-2 text-5xl text-center sm:text-5xl sm:mt-5 font-Kanit sm:text-left">
+                <h1 className="px-6 mt-2 text-4xl text-center sm:text-5xl sm:mt-5 font-Kanit sm:text-left">
                   About
                 </h1>
               </div>
               <div className="bg-[#101010] px-6 pb-4  pt-5  sm:pr-0  xl:w-[720px]">
-                <p className=" leading-7  sm:px-[40px] text-lg">
+                <p className=" leading-7  sm:px-[40px] text-[#1rem]">
                   At Syntax, we're not just your average IT consulting firm.
                   We're a team of tech enthusiasts who love what we do. Our
                   mission? To bring your ideas to life! Whether it's web
@@ -62,14 +62,21 @@ const About = memo(() => {
             </section>
             <section className="backdrop-blur-sm text-white flex flex-col justify-center sm:flex sm:flex-row sm:justify-between gap-0  bg-opacity-80  pt-[10px] sm:w-[85%] w-full pb-[20px] sm:py-0 rounded-lg  bg-[rgba(43,43,43,0.26)] z-10">
               <div className=" sm:w-[500px] sm:h-[212px] sm:flex sm:items-center  sm:justify-start sm:px-16">
-                <h1 className="px-6 mt-5 text-5xl text-center sm:text-left sm:text-5xl font-Kanit whitespace-nowrap">
+                <h1 className="px-6 sm:pb-0 pb-4 mt-5 text-4xl text-center sm:text-left sm:text-5xl font-Kanit  ">
                   What we do
                 </h1>
               </div>
 
               <div className="bg-[#101010] w-full pt-5 sm:pr-3 xl:w-[720px] ">
-                <p className=" leading-7 px-6 sm:px-[40px] lg:pl-16 lg:pb-4 text-lg">
-                We have a successful track record of working with 8+ interactive websites and apps which have seamless performance. Our dedication and excellence has attracted a growing client base with them fully entrusting us with their digital needs. We have achieved impressive growth with our discord community and young people who follow us for our journey and experience. Moving forward we are committed to providing innovating solutions to drive your business's  success.
+                <p className=" leading-7 px-6 pb-4 sm:px-[40px] lg:pl-16 lg:pb-4 text-lg">
+                  We have a successful track record of working with 8+
+                  interactive websites and apps which have seamless performance.
+                  Our dedication and excellence has attracted a growing client
+                  base with them fully entrusting us with their digital needs.
+                  We have achieved impressive growth with our discord community
+                  and young people who follow us for our journey and experience.
+                  Moving forward we are committed to providing innovating
+                  solutions to drive your business's success.
                 </p>
               </div>
             </section>
