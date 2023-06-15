@@ -17,6 +17,7 @@ import NavBar from './components/Navbar/NavBar'
 import { useState } from 'react'
 import earthclear from './assets/images/earthclear.png'
 import Team from './components/Pages/Team'
+import { Analytics } from '@vercel/analytics/react';
 function App() {
   //for responsiveness
   let width;
@@ -189,6 +190,7 @@ function App() {
         <Contributors windowWidth={windowWidth} />
         <Contactusdiv />
         <Contactus />
+        <Analytics />
       </div>
       <Marquee />
 
