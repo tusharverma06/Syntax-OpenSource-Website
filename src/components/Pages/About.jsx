@@ -23,7 +23,7 @@ const About = memo(() => {
 
   return (
     <>
-      <Element name="About" className="relative mb-44">
+      <Element name="About" className="relative mt-44 md:mt-0 mb-44">
         {/* White line */}
         {/* White line */}
         {/* <motion.div
