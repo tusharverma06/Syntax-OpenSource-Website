@@ -51,8 +51,8 @@ const Team = () => {
         </div>
 
         <div className="relative flex items-center justify-center gap-8 p-2 overflow-x-auto">
-          <button onClick={scrollLeft} className="text-2xl"><img src="https://img.icons8.com/ios-glyphs/30/FFFFFF/sort-left.png" alt="" /></button>
-          <button onClick={scrollRight} className="text-2xl"><img src="https://img.icons8.com/ios-glyphs/30/FFFFFF/sort-right.png" alt="" /></button>
+          <button onClick={scrollLeft} className="text-2xl opacity-60 hover:opacity-100 duration-150 hover:scale-110"><img src="https://img.icons8.com/ios-glyphs/30/FFFFFF/sort-left.png" alt="" /></button>
+          <button onClick={scrollRight} className="text-2xl opacity-60  hover:opacity-100 duration-150 hover:scale-110"><img src="https://img.icons8.com/ios-glyphs/30/FFFFFF/sort-right.png" alt="" /></button>
         </div>
 
         <img src={abouthr2} className="w-full mt-8 mb-10" alt="" />

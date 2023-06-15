@@ -172,13 +172,13 @@ const Carousel = () => {
             <div className="absolute -bottom-24 sm:-right-7  lg:-right-10  sm:top-20 flex flex-row sm:flex-col items-center justify-center xl:gap-12 gap-10 pl-[6px] w-[62%] sm:px-2 md:px-0 md:w-[10%] lg:px-0 sm:w-[10%] lg:w-[4%]  xl:px-0 h-12 sm:h-96">
 
                 <button
-                    className="text-[50px] sm:text-[70px]  lg:text-[100px] xl:text-[120px] h-20 2xl:h-32 2xl:text-[180px] font-extralight text-center flex items-center justify-center bg-none p-2 sm:p-0"
+                    className="text-[50px] sm:text-[70px]  lg:text-[100px] xl:text-[120px] h-20 2xl:h-32 2xl:text-[180px] font-extralight text-center flex items-center justify-center bg-none p-2 sm:p-0 opacity-60 hover:opacity-100 duration-150 focus:scale-110"
                     onClick={prevItem}
                 >
                     <img src={LeftArrowIcon} alt="" className="w-8 h-8 sm:w-9 lg:w-10 sm:h-16" />
                 </button>
                 <button
-                    className="text-[50px] sm:text-[70px]  lg:text-[100px] xl:text-[120px] h-20 2xl:h-32 2xl:text-[180px] font-extralight text-center flex items-center justify-center bg-none p-2  sm:p-0"
+                    className="text-[50px] sm:text-[70px]  lg:text-[100px] xl:text-[120px] h-20 2xl:h-32 2xl:text-[180px] font-extralight text-center flex items-center justify-center bg-none p-2  sm:p-0 opacity-60 hover:opacity-100 duration-150 focus:scale-110"
                     onClick={nextItem}
                 >
                     <img src={RightArrowIcon} alt="" className="w-8 h-8 sm:w-9 lg:w-10 sm:h-20" />
