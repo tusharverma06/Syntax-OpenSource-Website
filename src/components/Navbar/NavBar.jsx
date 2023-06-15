@@ -102,6 +102,15 @@ const NavBar = forwardRef((props, ref, windowWidth) => {
             <span class="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 navLink"></span>
           </Link>
           <Link activeClass="active"
+            to="Team"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={1000} className={`tracking-wider  cursor-pointer group`} onClick={handleLinkClick}>
+            Team
+            <span class="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 navLink"></span>
+          </Link>
+          <Link activeClass="active"
             to="Contributors"
             spy={true}
             smooth={true}
