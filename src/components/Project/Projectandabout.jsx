@@ -24,7 +24,7 @@ const Projectandabout = memo(() => {
         <span class="block w-0 group-hover:w-full   transition-all duration-1000 h-0.5 navLink"></span>
         </h1>
         <p className="w-full sm:w-[87%] text-sm font-medium leading-6 text-left sm:text-lg xl:text-xl xl:leading-8 font-Kanit">
-        SyntaxErreur is a software development company with 6 months of experience. They have worked with more than 5 clients on web and app development. The team is passionate about creating high-quality software and has experience in a variety of programming languages and web development frameworks. They are also committed to providing excellent customer service. SyntaxErreur can help you with all of your software development needs, from web development to app development. They have the experience, expertise, and customer service to help you succeed.
+        SyntaxErreur is a software development company. We have worked with more than 5 clients on web and app development. Our team is passionate about creating high-quality software and has experience in a variety of programming languages and web development frameworks. We are also committed to providing excellent customer service. SyntaxErreur can help you with all of your software development needs, from web development to app development. We have the experience, expertise, and customer service to help you succeed.
         </p>
       </div>
       {/* white line */}
