@@ -166,6 +166,6 @@ scroll-behavior:smooth
     }
     
     .button-animation:hover {
-        box-shadow: 0 0 5px #7293ff, inset 0 0 5px #7293ff;
-        transition-delay: 0.2s;
+        box-shadow: 0 0 8px #5e81ff, inset 0 0 3px #ffffff;
+        transition-delay: 0.01s;
     }
