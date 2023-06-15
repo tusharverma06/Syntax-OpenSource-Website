@@ -24,7 +24,7 @@ const Projectandabout = memo(() => {
         <span class="block w-0 group-hover:w-full   transition-all duration-1000 h-0.5 navLink"></span>
         </h1>
         <p className="w-full sm:w-[87%] text-sm font-medium leading-6 text-left sm:text-lg xl:text-xl xl:leading-8 font-Kanit">
-        At Syntax, we're not just your average IT consulting firm. We're a team of tech enthusiasts who love what we do. Our mission? To bring your ideas to life! Whether it's web development, app development - we've got you covered. We'll work closely with you to understand your unique needs and create tailored solutions that make your business thrive. With us by your side, you'll experience the perfect blend of user experiance, innovation, and friendly support. Let's embark on this exciting tech journey together
+        SyntaxErreur is a software development company with 6 months of experience. They have worked with more than 5 clients on web and app development. The team is passionate about creating high-quality software and has experience in a variety of programming languages and web development frameworks. They are also committed to providing excellent customer service. SyntaxErreur can help you with all of your software development needs, from web development to app development. They have the experience, expertise, and customer service to help you succeed.
         </p>
       </div>
       {/* white line */}

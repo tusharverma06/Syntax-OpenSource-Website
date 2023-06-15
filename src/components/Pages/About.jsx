@@ -69,14 +69,7 @@ const About = memo(() => {
 
               <div className="bg-[#101010] px-8 flex items-stretch justify-center py-8  sm:w-1/2">
                 <p className=" leading-7  text-justify px-3 text-[#1rem]">
-                  We have a successful track record of working with 8+
-                  interactive websites and apps which have seamless performance.
-                  Our dedication and excellence has attracted a growing client
-                  base with them fully entrusting us with their digital needs.
-                  We have achieved impressive growth with our discord community
-                  and young people who follow us for our journey and experience.
-                  Moving forward we are committed to providing innovating
-                  solutions to drive your business's success.
+                We are a software development company that helps businesses of all sizes create high-quality, custom web apps and mobile apps. We have a team of experienced developers who are experts in a variety of programming languages and web development frameworks. We understand that every project is different, so we are flexible and adaptable to your specific needs. We are also committed to providing excellent customer service and communication throughout the development process.
                 </p>
               </div>
             </section>
