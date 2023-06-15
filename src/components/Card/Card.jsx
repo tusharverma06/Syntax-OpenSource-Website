@@ -38,7 +38,7 @@ const Card = () => {
       image: aboutprofile2,
       title: {
         head: 'Vedant Sawant',
-        designation: 'Cofounder',
+        designation: 'Cofounder & Full Stack Developer',
         img: noOne,
 
         name: 'Twitter',
@@ -51,7 +51,7 @@ const Card = () => {
       image: aboutprofile,
       title: {
         head: 'Rohit Ghosh',
-        designation: 'Cofounder',
+        designation: 'Cofounder & Full Stack Developer',
         img: noOne,
         name: 'Instagram',
         link: "https://instagram.com/rohit_7703?igshid=MzRlODBiNWFlZA=="
@@ -62,7 +62,7 @@ const Card = () => {
       image: aboutprofile,
       title: {
         head: 'Manas Mishra',
-        designation: 'Cofounder',
+        designation: 'Cofounder @ Full Stack Developer',
         img: noOne,
         name: 'Instagram',
         link: "https://instagram.com/manas_129?igshid=MzRlODBiNWFlZA=="
@@ -73,7 +73,7 @@ const Card = () => {
       image: aboutprofile2,
       title: {
         head: 'Vasudha Singh',
-        designation: 'Core ',
+        designation: 'Operations Head',
         img: noOne,
 
         name: 'Twitter',
