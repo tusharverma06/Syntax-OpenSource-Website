@@ -62,7 +62,7 @@ const Card = () => {
       image: aboutprofile,
       title: {
         head: 'Manas Mishra',
-        designation: 'Cofounder @ Full Stack Developer',
+        designation: 'Cofounder & Full Stack Developer',
         img: noOne,
         name: 'Instagram',
         link: "https://instagram.com/manas_129?igshid=MzRlODBiNWFlZA=="
