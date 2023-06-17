@@ -87,8 +87,8 @@ function App() {
   // animation for homeplanet
   const yHomeplanet = useTransform(
     scrollYProgress,
-    [0.1, 0.12, 0.15, 0.20, 0.25, 0.30, 0.35, 0.40, 0.45, 0.50, 0.55],
-    ["0vh", "-10vh", "-50vh", "-40vh", "50vh", "40vh", "130vh", "160vh", "160vh", "250vh", "365vh"]
+    [0.1, 0.12, 0.15, 0.20, 0.25, 0.30, 0.35, 0.40, 0.45, 0.50, 0.53, 0.55],
+    ["0vh", "-10vh", "-50vh", "-40vh", "50vh", "40vh", "130vh", "160vh", "160vh", "250vh","320vh", "380vh"]
   );
 
 
