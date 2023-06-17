@@ -16,7 +16,10 @@ import Kodiac2 from '../../assets/projectImages/kodiac2.svg'
 import Kodiac3 from '../../assets/projectImages/kodiac3.svg'
 import Kodiac4 from '../../assets/projectImages/kodiac4.svg'
 import Kodiac5 from '../../assets/projectImages/kodiac5.svg'
-
+import POS1 from '../../assets/projectImages/POS1.svg'
+import POS2 from '../../assets/projectImages/POS2.svg'
+import POS3 from '../../assets/projectImages/POS3.svg'
+import POS4 from '../../assets/projectImages/POS4.svg'
 const Carousel = () => {
 
     const items = [
@@ -62,6 +65,27 @@ const Carousel = () => {
             title: 'News App',
             description: 'The news app notify you when a news is released instantly. Our flutter team successfully completed the app for an agency within 3 months of a time period. The project contained the app, the backend panel and rest api with AWS servers.',
             image: [`${Khabar2}`, `${Khabar1}`, `${Khabar3}`, `${Khabar4}`],
+            softwareUsed: [
+                {
+                    url: `https://cdn.iconscout.com/icon/free/png-256/free-flutter-2038877-1720090.png`,
+                    title: 'Flutter'
+                },
+                {
+                    url: `https://static-00.iconduck.com/assets.00/aws-icon-512x512-hniukvcn.png`,
+                    title: 'AWS'
+                },
+                {
+                    url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQl4MSNDS6m3kMsNnerP9jlQj0i9J9XmXz4eoKLDYc&s',
+                    title: 'Rest API'
+                }
+            ]
+
+        },
+        {
+            id: 4,
+            title: 'POS',
+            description: 'A point of sale (POS) is a place where a customer executes the payment for goods or services and where sales taxes may become payable. A POS transaction may occur in person or online, with receipts generated either in print or electronically. Cloud-based POS systems are becoming increasingly popular among merchants. We used Flutter to create it, and it took us 12-15 days to finish.',
+            image: [`${POS1}`, `${POS2}`, `${POS3}`, `${POS4}`],
             softwareUsed: [
                 {
                     url: `https://cdn.iconscout.com/icon/free/png-256/free-flutter-2038877-1720090.png`,
@@ -154,7 +178,7 @@ const Carousel = () => {
                                             <motion.img
                                                 src={image}
                                                 alt="" 
-                                                className="object-cover transition-all  duration-700 ease-in-out cursor-pointer sm:object-cover rounded-xl hover:scale-110 w-28 sm:w-full"
+                                                className="object-cover transition-all duration-700 ease-in-out cursor-pointer sm:object-cover rounded-xl hover:scale-110 w-28 sm:w-full"
                                                 onClick={() => setIsOpen(!isOpen)}
                                             />
                                         </div>
