@@ -7,7 +7,10 @@ import noOne from '../../assets/images/noOne.png'
 import monisha from '../../assets/images/monisha.jpeg'
 import Aryanser from '../../assets/images/Aryanser.png'
 import vedant from '../../assets/images/Vedant.png'
+import rohit from '../../assets/images/rohit.png'
 import arya from '../../assets/images/arya.png'
+import bedant from '../../assets/images/bedant.png'
+
 const Card = () => {
   const array = [
     {
@@ -38,8 +41,8 @@ const Card = () => {
       image: aboutprofile2,
       title: {
         head: 'Vedant Sawant',
-        designation: 'Cofounder & Full Stack Developer',
-        img: noOne,
+        designation: 'Cofounder',
+        img: bedant,
 
         name: 'Twitter',
         link: "https://linktr.ee/vedants73"
@@ -51,10 +54,10 @@ const Card = () => {
       image: aboutprofile,
       title: {
         head: 'Rohit Ghosh',
-        designation: 'Cofounder & Full Stack Developer',
-        img: noOne,
+        designation: 'Cofounder',
+        img: rohit,
         name: 'Instagram',
-        link: "https://instagram.com/rohit_7703?igshid=MzRlODBiNWFlZA=="
+        link: "https://linktr.ee/RohitGhosh7703"
       },
       description: 'A dedicated co-founder at Syntax Erreur, contributing as a versatile full-stack developer, seamlessly bridging the gap between frontend and backend for exceptional results.      '
     },
@@ -62,7 +65,7 @@ const Card = () => {
       image: aboutprofile,
       title: {
         head: 'Manas Mishra',
-        designation: 'Cofounder & Full Stack Developer',
+        designation: 'Cofounder',
         img: noOne,
         name: 'Instagram',
         link: "https://instagram.com/manas_129?igshid=MzRlODBiNWFlZA=="
