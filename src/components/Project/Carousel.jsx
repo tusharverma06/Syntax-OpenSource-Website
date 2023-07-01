@@ -26,7 +26,7 @@ const Carousel = () => {
         {
             id: 1,
             title: 'KODIAC LABS',
-            description: 'Our development team created a revolutionary website that seamlessly integerate discord bots with non fungible tokens(NFTS). The client Provided a visually-stunning design, and our team expertly utilized the react framework to bring it to life in just three weeks',
+            description: 'Our development team created a revolutionary website that seamlessly integerate discord bots with non fungible tokens(NFTS). The client Provided a visually-stunning design, and our team expertly utilized the react framework to bring it to life.',
             image: [`${Kodiac2}`, `${Kodiac1}`, `${Kodiac3}`, `${Kodiac4}`, `${Kodiac5}`],
             softwareUsed: [
                 {
@@ -46,7 +46,7 @@ const Carousel = () => {
         {
             id: 2,
             title: 'Carbon Coins',
-            description: 'We developed the innovative Carbon Coins mobile app, utilizing flutter technology and utilizing firebase as its database, to efficiently track and reduce carbon emissions from vehicles. Our team successfully delivered this solution in just two months.',
+            description: 'We developed the innovative Carbon Coins mobile app, utilizing flutter technology and utilizing firebase as its database, to efficiently track and reduce carbon emissions from vehicles.',
             image: [`${CarbonCoin1}`, `${CarbonCoin2}`, `${CarbonCoin3}`, `${CarbonCoin4}`],
             softwareUsed: [
                 {
@@ -63,7 +63,7 @@ const Carousel = () => {
         {
             id: 3,
             title: 'News App',
-            description: 'The news app notify you when a news is released instantly. Our flutter team successfully completed the app for an agency within 3 months of a time period. The project contained the app, the backend panel and rest api with AWS servers.',
+            description: 'Our Flutter team at SyntaxErreur successfully developed a news app that instantly notifies users about breaking news. Stay informed with the latest news at your fingertips.',
             image: [`${Khabar2}`, `${Khabar1}`, `${Khabar3}`, `${Khabar4}`],
             softwareUsed: [
                 {
@@ -73,10 +73,6 @@ const Carousel = () => {
                 {
                     url: `https://static-00.iconduck.com/assets.00/aws-icon-512x512-hniukvcn.png`,
                     title: 'AWS'
-                },
-                {
-                    url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQl4MSNDS6m3kMsNnerP9jlQj0i9J9XmXz4eoKLDYc&s',
-                    title: 'Rest API'
                 }
             ]
 
@@ -84,7 +80,7 @@ const Carousel = () => {
         {
             id: 4,
             title: 'POS',
-            description: 'A point of sale (POS) is where customers pay for goods or services. It can be in person or online, with receipts in print or electronic format. Cloud-based POS systems are popular, and we used Flutter to create ours in 20-30 days.',
+            description: 'A point of sale (POS) is where customers pay for goods or services. It can be in person or online, with receipts in print or electronic format. Cloud-based POS systems are popular.',
             image: [`${POS1}`, `${POS2}`, `${POS3}`, `${POS4}`],
             softwareUsed: [
                 {
@@ -177,7 +173,7 @@ const Carousel = () => {
                                         return <div className="flex items-center transition-all ease-in-out duration-1000  justify-center hover:w-[55%] sm:w-[35%] rounded-xl">
                                             <motion.img
                                                 src={image}
-                                                alt="" 
+                                                alt=""
                                                 className="object-cover transition-all duration-700 ease-in-out cursor-pointer sm:object-cover rounded-xl hover:scale-110 w-28 sm:w-full"
                                                 onClick={() => setIsOpen(!isOpen)}
                                             />
@@ -210,10 +206,10 @@ const Carousel = () => {
             </div>
         </div>
 
-          
 
- 
-        );
+
+
+    );
 };
 
 export default Carousel;
