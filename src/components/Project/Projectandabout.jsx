@@ -21,10 +21,11 @@ const Projectandabout = memo(() => {
       <div className="w-5/6 sm:w-11/12 max-w-[56.125rem] h-max min-h-[70vh] bg-[rgba(43,43,43,0.26)] border border-[#fff] border-opacity-50 mx-auto rounded-[14px]  backdrop-blur-[10px]  flex flex-col items-center justify-center gap-12 px-4 py-2  sm:py-4 sm:px-6 z-[1] 2xl:max-w-4xl" >
         <h1 className="w-[98%] sm:w-[90%] text-2xl font-bold text-center transition-all duration-1000 p-4 tracking-normal- rounded-lg hover:bg-slate-900 cursor-pointer group sm:text-4xl lg:text-5xl xl:text-6xl">
           WE ARE SYNTAX ERREUR
-        <span class="block w-0 group-hover:w-full   transition-all duration-1000 h-0.5 navLink"></span>
+          <span class="block w-0 group-hover:w-full   transition-all duration-1000 h-0.5 navLink"></span>
         </h1>
         <p className="w-full sm:w-[87%] text-sm font-medium leading-6 text-left sm:text-lg xl:text-xl xl:leading-8 font-Kanit">
-        SyntaxErreur is a software development company. We have worked with more than 5 clients on web and app development. Our team is passionate about creating high-quality software and has experience in a variety of programming languages and web development frameworks. We are also committed to providing excellent customer service. SyntaxErreur can help you with all of your software development needs, from web development to app development. We have the experience, expertise, and customer service to help you succeed.
+          SyntaxErreur is a software development company. Over the years, we have successfully partnered with numerous clients on various web and app development projects.
+          Our team is passionate about creating high-quality software and has experience in a variety of programming languages and web development frameworks. We are also committed to providing excellent customer service. SyntaxErreur can help you with all of your software development needs, from web development to app development. We have the experience, expertise, and customer service to help you succeed.
         </p>
       </div>
       {/* white line */}
