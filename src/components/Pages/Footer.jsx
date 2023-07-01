@@ -5,7 +5,8 @@ import { Link } from 'react-scroll'
 const Footer = () => {
   return (
     <div>
-      <div className="relative z-10 flex flex-col px-4 md:flex-row justify-center items-center gap-16 bg-[#161616]  pt-4 pb-4 pr-5">
+      <div className="relative z-10 flex flex-col px-4 md:flex-row justify-center items-center gap-16 bg-[#161616] py-4 pr-5">
+      
         <Link
           to='Home'
           spy={true}
@@ -17,12 +18,12 @@ const Footer = () => {
         <div className='flex items-center '>
 
           <p className="text-lg font-light text-left font-Kanit ">
-            Based in Mumbai, India
+            Based in Mumbai, India and Colombo, Sri Lanka
           </p>
 
         </div>
         <div className="mt-1 ml-5">
-          <h1 className="whitespace-nowrap font-extrabold font-Kanit uppercase flex justify-center text-[28px] ">
+          <h1 className="whitespace-nowrap gap-4 font-extrabold font-Kanit uppercase flex justify-center text-[28px] ">
             SYNTAX  <img src={SElogo} width="50px" /> ERREUR
           </h1>
 
