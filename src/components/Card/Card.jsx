@@ -10,6 +10,9 @@ import vedant from '../../assets/images/Vedant.png'
 import rohit from '../../assets/images/rohit.png'
 import arya from '../../assets/images/arya.png'
 import bedant from '../../assets/images/bedant.png'
+import vasudha from '../../assets/images/vasudha.png'
+import manas from '../../assets/images/manas.png'
+import kaushik from '../../assets/images/kaushik.png'
 
 const Card = () => {
   const array = [
@@ -66,7 +69,7 @@ const Card = () => {
       title: {
         head: 'Manas Mishra',
         designation: 'Cofounder',
-        img: noOne,
+        img: manas,
         name: 'Instagram',
         link: "https://instagram.com/manas_129?igshid=MzRlODBiNWFlZA=="
       },
@@ -77,7 +80,7 @@ const Card = () => {
       title: {
         head: 'Vasudha Singh',
         designation: 'Operations Head',
-        img: noOne,
+        img: vasudha,
 
         name: 'Twitter',
         link: "https://www.linkedin.com/in/vasudha-singh-b61299246/"
@@ -111,7 +114,7 @@ const Card = () => {
       title: {
         head: 'Kaushik  Patil',
         designation: 'Social Media Manager',
-        img: noOne,
+        img: kaushik,
         name: 'Twitter',
         link: "https://instagram.com/kaushikk_who?igshid=MzRlODBiNWFlZA=="
       },
