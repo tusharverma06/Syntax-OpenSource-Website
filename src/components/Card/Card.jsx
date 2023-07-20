@@ -11,7 +11,7 @@ import rohit from '../../assets/images/rohit.png'
 import arya from '../../assets/images/arya.png'
 import bedant from '../../assets/images/bedant.png'
 import vasudha from '../../assets/images/vasudha.png'
-import manas from '../../assets/images/noOne.png'      // change the src once we have pic of manas
+import manas from '../../assets/images/NewNoOne.png'      // change the src once we have pic of manas
 import kaushik from '../../assets/images/kaushik.png'
 
 const Card = () => {
